@@ -1,0 +1,58 @@
+# =================================================================================
+# General
+# =================================================================================
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# =================================================================================
+# Nix and direnv
+# =================================================================================
+# These files are specific to your local environment and should not be committed.
+# The 'flake.lock' file, however, SHOULD be committed to ensure reproducibility.
+/.direnv/
+# .envrc
+
+# =================================================================================
+# Gradle
+# =================================================================================
+# Gradle cache and build outputs are generated locally and can be very large.
+.gradle/
+build/
+app/build/
+gradlew
+gradlew.bat
+/bin/
+app/bin/
+
+# Ignore Gradle Wrapper's jar file, but not the properties file.
+# This allows others to use the correct wrapper version without checking in a binary.
+/gradle/wrapper/gradle-wrapper.jar
+
+# Ignore Gradle build output files not captured by the 'build' directory rule
+.gradletasknamecache
+*buildOutputCleanup/
+
+# =================================================================================
+# Java
+# =================================================================================
+# Compiled class files, JARs, and other build artifacts
+*.class
+*.jar
+*.war
+*.ear
+
+# =================================================================================
+# Other
+# =================================================================================
+# Secrets and local configuration
+# It's good practice to explicitly ignore common secret file names
+secrets.yaml
+secrets.json
+local.properties
+.env
