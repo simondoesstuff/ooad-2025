@@ -33,7 +33,7 @@ val entrypointNames = listOf(
 
 // automatically creates a run task for each name.
 entrypointNames.forEach { name ->
-    val mainPath = "tech.simonwalker.ooad.$name.Main"
+    val mainPath = "ooad.$name.Main"
 
     tasks.register<ShadowJar>("build-$name") {
         group = "Application"

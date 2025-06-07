@@ -1,4 +1,4 @@
-package tech.simonwalker.ooad.project1a;
+package ooad.project1a;
 
 public class Analyzer {
     public double calculateMean(double[] data) {

@@ -1,4 +1,4 @@
-package tech.simonwalker.ooad.project1a;
+package ooad.project1a;
 
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
