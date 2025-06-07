@@ -29,6 +29,7 @@ tasks.named("shadowJar") { enabled = false }
 
 val entrypointNames = listOf(
     "project1a",
+    "project1b",
 )
 
 // automatically creates a run task for each name.
