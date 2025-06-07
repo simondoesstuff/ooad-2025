@@ -1,0 +1,24 @@
+❯ java -jar build/libs/project1b.jar
+Tokens
+IN      AD      CS      LC
+VO      RA      ET      CA
+TER     ME      ME      TI
+OW      LI      SH      PR
+ANO     ING     PO
+
+Clues
+My hungry mouth consumes paper and ink, crying out when I'm empty.
+I follow you all day but flee when the sun bids farewell.
+I am a mountain with a fiery temper.
+I am a time machine for frozen memories.
+The place where minutes are taken and hours are lost.
+The art of looking for trouble and misdiagnosing the remedy.
+
+
+Answer Key
+PRINTER
+SHADOW
+VOLCANO
+CAMERA
+MEETING
+POLITICS
