@@ -27,8 +27,6 @@ build/
 app/build/
 gradlew
 gradlew.bat
-/bin/
-app/bin/
 
 # Ignore Gradle Wrapper's jar file, but not the properties file.
 # This allows others to use the correct wrapper version without checking in a binary.
@@ -37,6 +35,25 @@ app/bin/
 # Ignore Gradle build output files not captured by the 'build' directory rule
 .gradletasknamecache
 *buildOutputCleanup/
+
+# =================================================================================
+# IDE Files (IntelliJ, VSCode, Eclipse)
+# =================================================================================
+# JetBrains IDEs (IntelliJ IDEA, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Visual Studio Code
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
+/bin/
+app/bin/
 
 # =================================================================================
 # Java
