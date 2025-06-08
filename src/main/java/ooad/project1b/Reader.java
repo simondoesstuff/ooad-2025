@@ -37,6 +37,7 @@ public class Reader {
         for (String word : initialWords) {
             words.add(word.toUpperCase());
         }
+
         clues.addAll(Arrays.asList(initialClues));
     }
 
