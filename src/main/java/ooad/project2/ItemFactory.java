@@ -80,12 +80,8 @@ public class ItemFactory {
     }
 
     /**
-     * Builds a new item of a given class with random attributes
-     * except, for Item:
-     *    .purchasePrice, 0
-     *    .listPrice, 0
-     *    .dayArrived, -1
-     *    .newOrUsed, true
+     * Builds a new item of a given class with random attributes.
+     * Does not provide listPrice, purchasePrice, dayArrived, newOrUsed, or any sale details.
      *
      * @param itemClass The concrete class of the item to build.
      * @return A fully constructed, randomized Item.
@@ -94,15 +90,13 @@ public class ItemFactory {
         Supplier<Item.Builder<?>> builderSupplier = builders.get(itemClass);
 
         if (builderSupplier == null) {
+            // should never throw
             throw new IllegalArgumentException("No builder registered for class: " + itemClass.getName());
         }
 
-        var builder = builderSupplier.get();
-        builder.purchasePrice(0)
-               .listPrice(0)
-               .dayArrived(-1)
-               .condition(Utils.getRandomEnum(Condition.class))
-               .newOrUsed(true);
+        var builder = builderSupplier.get()
+            .name(trivialName(itemClass.getSimpleName()))
+            .condition(Utils.getRandomEnum(Condition.class));
 
         return switch(builder) {
             // music
@@ -125,6 +119,6 @@ public class ItemFactory {
     }
 
     private static String trivialName(String x) {
-        return x + "(" + RAND.nextInt(10) + ")";
+        return x + "(" + Utils.makeFunnyName() + ")";
     }
 }
