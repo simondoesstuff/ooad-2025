@@ -18,12 +18,17 @@
         pkgs = import nixpkgs {
           inherit system;
         };
+
+        jdk = pkgs.jdk21;
       in
       {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            gradle
-            jdk21
+            jdk
+
+            (callPackage gradle-packages.gradle_8 {
+              java = jdk;
+            })
           ];
         };
       }
