@@ -1,6 +1,7 @@
 package ooad.project2;
 
 import ooad.project2.model.store.Store;
+import ooad.project2.musicLand.MusicLandSimulator;
 
 /**
  * Main entry point for the MusicLand simulation.

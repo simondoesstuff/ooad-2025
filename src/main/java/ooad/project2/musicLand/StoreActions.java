@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 import ooad.project2.ItemFactory;
 import ooad.project2.Utils;
 import ooad.project2.model.Bank;
-import ooad.project2.model.Condition;
+import ooad.project2.model.item.Condition;
 import ooad.project2.model.Customer;
 import ooad.project2.model.item.Item;
 import ooad.project2.model.store.Clerk;

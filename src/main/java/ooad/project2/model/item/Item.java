@@ -1,7 +1,5 @@
 package ooad.project2.model.item;
 
-import ooad.project2.model.Condition;
-
 public abstract class Item {
     protected final String name;
     protected final double purchasePrice;

@@ -1,6 +1,6 @@
 package ooad.project2;
 
-import ooad.project2.model.Condition;
+import ooad.project2.model.item.Condition;
 import ooad.project2.model.item.Item;
 import ooad.project2.model.item.clothing.Bandana;
 import ooad.project2.model.item.clothing.Hat;

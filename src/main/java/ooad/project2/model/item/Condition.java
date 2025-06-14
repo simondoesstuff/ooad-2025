@@ -1,4 +1,4 @@
-package ooad.project2.model;
+package ooad.project2.model.item;
 
 /**
  * Represents the condition of an item.

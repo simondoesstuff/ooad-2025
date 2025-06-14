@@ -1,15 +1,15 @@
-package ooad.project2;
-
-import ooad.project2.model.item.Item;
-import ooad.project2.model.store.Clerk;
-import ooad.project2.model.store.Store;
-import ooad.project2.musicLand.StoreActions;
-import ooad.project2.model.Bank;
+package ooad.project2.musicLand;
 
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import ooad.project2.ItemFactory;
+import ooad.project2.model.Bank;
+import ooad.project2.model.item.Item;
+import ooad.project2.model.store.Clerk;
+import ooad.project2.model.store.Store;
 
 /**
  * Main simulation class for MusicLand.
