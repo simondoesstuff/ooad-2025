@@ -3,16 +3,15 @@ package ooad.project2.model.item;
 import ooad.project2.model.Condition;
 
 public abstract class Item {
-    protected String name;
-    protected double purchasePrice;
-    protected double listPrice;
-    protected boolean newOrUsed;
-    protected int dayArrived;
-    protected Condition condition;
-    protected double salePrice;
-    protected int daySold;
+    protected final String name;
+    protected final double purchasePrice;
+    protected double listPrice; // decreases due to damage
+    protected final boolean newOrUsed;
+    protected final int dayArrived;
+    protected Condition condition; // decreases due to damage
+    protected double salePrice; // updates on sale
+    protected int daySold; // updates on sale
 
-    // The constructor is now protected and takes a Builder
     protected Item(Builder<?> builder) {
         this.name = builder.name;
         this.purchasePrice = builder.purchasePrice;
@@ -25,17 +24,21 @@ public abstract class Item {
     public String getName() { return name; }
     public double getPurchasePrice() { return purchasePrice; }
     public double getListPrice() { return listPrice; }
+    public double getSalePrice() { return salePrice; }
+    public int getDayArrived() { return dayArrived; }
+    public int getDaySold() { return daySold; }
     public Condition getCondition() { return condition; }
 
-    public void sold(double salePrice, int daySold) {
+    public void markSold(double salePrice, int daySold) {
         this.salePrice = salePrice;
-        this.daySold = -1;
+        this.daySold = daySold;
     }
 
     public boolean damage() {
         if (this.condition == Condition.POOR) {
             return true;
         }
+
         this.condition = Condition.values()[this.condition.ordinal() - 1];
         this.listPrice *= 0.80;
         return false;
@@ -43,8 +46,8 @@ public abstract class Item {
 
     @Override
     public String toString() {
-        return String.format("%-25s | Condition: %-10s | List Price: $%.2f",
-                this.getClass().getSimpleName() + " (" + name + ")", condition, listPrice);
+        return String.format("%-25s | Condition: %-10s | Purchase Price: $%.2f",
+                name, condition, purchasePrice);
     }
 
     // ------------------------
