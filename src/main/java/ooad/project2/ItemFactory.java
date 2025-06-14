@@ -24,9 +24,12 @@ import ooad.project2.model.item.music.players.RecordPlayer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Set;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.Supplier;
 
 /**
@@ -36,14 +39,14 @@ import java.util.function.Supplier;
  * populates it with random data to create a new item.
  */
 public class ItemFactory {
-    private static final Random RAND = new Random();
+    private static final Random rand = ThreadLocalRandom.current();
 
     // A map of item classes to a function that creates a new builder for that class.
-    private static final Map<Class<? extends Item>, Supplier<Item.Builder<?>>> builders;
+    private static final Map<Class<? extends Item>, Supplier<Item.Builder<?>>> builders = new HashMap<>();
     private static final List<Class<? extends Item>> itemTypes;
+    private static final Set<String> knownNames = new HashSet<>();
 
     static {
-        builders = new HashMap<>();
         builders.put(CD.class, CD.Builder::new);
         builders.put(Vinyl.class, Vinyl.Builder::new);
         builders.put(PaperScore.class, PaperScore.Builder::new);
@@ -69,7 +72,7 @@ public class ItemFactory {
     }
 
     public static Class<? extends Item> getRandomItemType() {
-        return itemTypes.get(RAND.nextInt(itemTypes.size()));
+        return itemTypes.get(rand.nextInt(itemTypes.size()));
     }
 
     /**
@@ -103,15 +106,15 @@ public class ItemFactory {
             case Music.Builder<?> b -> b.band(trivialName("band"))
                                         .album(trivialName("album"));
             // instruments
-            case Stringed.Builder<?> b -> b.isElectric(RAND.nextBoolean());
+            case Stringed.Builder<?> b -> b.isElectric(rand.nextBoolean());
             case Flute.Builder b -> b.type(Utils.getRandomEnum(Flute.FluteMaterial.class));
             case Harmonica.Builder b -> b.key(Utils.getRandomEnum(Harmonica.HarmonicaKey.class));
             // clothing
-            case Hat.Builder b -> b.hatSize(RAND.nextDouble(10));
+            case Hat.Builder b -> b.hatSize(rand.nextDouble(10));
             case Shirt.Builder b -> b.shirtSize(Utils.getRandomEnum(Shirt.ShirtSize.class));
             // (musical) accessories
-            case PracticeAmp.Builder b -> b.wattage(RAND.nextDouble(10));
-            case Cable.Builder b -> b.length(RAND.nextDouble(10));
+            case PracticeAmp.Builder b -> b.wattage(rand.nextDouble(10));
+            case Cable.Builder b -> b.length(rand.nextDouble(10));
             case Strings.Builder b -> b.type(Utils.getRandomEnum(Strings.StringType.class));
             //
             default -> builder;
@@ -119,6 +122,9 @@ public class ItemFactory {
     }
 
     private static String trivialName(String x) {
-        return x + "(" + Utils.makeFunnyName() + ")";
+        var name = x + "(" + Utils.makeFunnyName() + ")";
+        if (knownNames.contains(name)) return trivialName(x);
+        knownNames.add(name);
+        return name;
     }
 }
