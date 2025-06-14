@@ -14,7 +14,7 @@ public class Vinyl extends Music {
 
 		@Override
 		protected Builder self() {
-            return self();
+            return this;
 		}
     }
 }
