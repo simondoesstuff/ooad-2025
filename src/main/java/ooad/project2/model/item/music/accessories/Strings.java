@@ -15,7 +15,7 @@ public class Strings extends Item {
     // --------------------------
 
     public static enum StringType {
-        Guitar, Bass, Mandolin
+        GUITAR, BASS, MANDOLIN
     }
 
     public static class Builder extends Item.Builder<Builder> {

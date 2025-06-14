@@ -13,7 +13,7 @@ public class Flute extends Wind {
     // ----------------------
 
     public static enum FluteMaterial {
-        Silver, Wood, Gold
+        SILVER, WOOD, GOLD
     }
 
     public static class Builder extends Wind.Builder<Builder> {
