@@ -16,6 +16,11 @@ eg, `gradle build-project1b` to build the second program under project1.
 **Run**: jars are located (after built) in `build/libs`  
 eg: to run task project1b, `java -jar build/libs/project1b.jar`
 
+## Utilities
+
+PlantUML is included in the nix flake to render UML diagrams from .puml files.  
+`plantuml file.puml` to render it into a png, `file.png` in the same directory.
+
 # Project Details
 
 ### Project1

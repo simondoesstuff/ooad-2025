@@ -29,6 +29,8 @@
             (callPackage gradle-packages.gradle_8 {
               java = jdk;
             })
+
+            plantuml
           ];
         };
       }
