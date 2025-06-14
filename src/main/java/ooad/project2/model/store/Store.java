@@ -1,0 +1,52 @@
+package ooad.project2.model.store;
+
+import ooad.project2.model.item.Item;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Store {
+    private final List<Item> inventory;
+    private final List<Item> soldItems;
+    private final CashRegister cashRegister;
+    private final List<Clerk> staff;
+    private final List<Order> pendingOrders;
+
+    public Store() {
+        this.inventory = new ArrayList<>();
+        this.soldItems = new ArrayList<>();
+        this.cashRegister = new CashRegister();
+        this.staff = new ArrayList<>();
+        this.pendingOrders = new ArrayList<>();
+    }
+
+    public void addStaff(Clerk clerk) {
+        staff.add(clerk);
+    }
+
+    public void addItem(Item item) {
+        inventory.add(item);
+    }
+
+    public void addOrder(Order order) {
+        pendingOrders.add(order);
+    }
+
+    public void sellItem(Item item, double salePrice, int daySold) {
+        item.markSold(salePrice, daySold);
+        inventory.remove(item);
+        soldItems.add(item);
+        cashRegister.add(salePrice);
+    }
+
+    public double getInventoryValue() {
+        return inventory.stream().mapToDouble(Item::getPurchasePrice).sum();
+    }
+
+    // Getters
+    public List<Item> getInventory() { return inventory; }
+    public List<Item> getSoldItems() { return soldItems; }
+    public CashRegister getCashRegister() { return cashRegister; }
+    public List<Clerk> getStaff() { return staff; }
+    public List<Order> getPendingOrders() { return pendingOrders; }
+}
