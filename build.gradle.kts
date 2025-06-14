@@ -4,6 +4,9 @@ plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
     id("com.gradleup.shadow") version "9.0.0-beta15"
+    // proj lombok adds utility annotations such as @getter & @setter
+    // TODO: fix IDE integration with lombok
+    // id("io.freefair.lombok") version "8.13.1"
 }
 
 repositories {
@@ -30,6 +33,7 @@ tasks.named("shadowJar") { enabled = false }
 val entrypointNames = listOf(
     "project1a",
     "project1b",
+    "project2",
 )
 
 // automatically creates a run task for each name.
