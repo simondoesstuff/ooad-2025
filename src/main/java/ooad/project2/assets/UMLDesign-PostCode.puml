@@ -225,7 +225,7 @@ Store o-- CashRegister
 Store o-- Item : inventory
 Store o-- Clerk
 Item --> Condition : has a
-Clerk ..> Customer : serves
+StoreActions ..> Customer : serves
 
 ItemFactory ..> item : creates
 @enduml
