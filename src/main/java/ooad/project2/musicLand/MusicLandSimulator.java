@@ -98,6 +98,10 @@ public class MusicLandSimulator {
         actions.leaveTheStore();
     }
 
+    /**
+     * Summary of the final items in the inventory,
+     * the total items sold, and the financial summary.
+     */
     private void printFinalSummary() {
         System.out.println("\n########################################");
         System.out.println("###### 30-DAY SIMULATION COMPLETE ######");

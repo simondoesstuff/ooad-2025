@@ -27,11 +27,19 @@ public abstract class Item {
     public int getDaySold() { return daySold; }
     public Condition getCondition() { return condition; }
 
+    /**
+     * combined setter for salePrice & daySold
+     */
     public void markSold(double salePrice, int daySold) {
         this.salePrice = salePrice;
         this.daySold = daySold;
     }
 
+    /**
+     * lowers condition by 1 level
+     * @returns true if the item was at POOR which indicates
+     * it should be now considered destroyed
+     */
     public boolean damage() {
         if (this.condition == Condition.POOR) {
             return true;

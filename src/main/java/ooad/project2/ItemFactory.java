@@ -101,6 +101,7 @@ public class ItemFactory {
             .name(trivialName(itemClass.getSimpleName()))
             .condition(Utils.getRandomEnum(Condition.class));
 
+        // specify random specific attributes based on subtype
         return switch(builder) {
             // music
             case Music.Builder<?> b -> b.band(trivialName("band"))

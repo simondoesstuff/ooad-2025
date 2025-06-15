@@ -32,6 +32,10 @@ public class Store {
         pendingOrders.add(order);
     }
 
+    /**
+     * Marks the item as sold, removes it from the inventory,
+     * and adds the item's salePrice to the register.
+     */
     public void sellItem(Item item, double salePrice, int daySold) {
         item.markSold(salePrice, daySold);
         inventory.remove(item);
@@ -39,6 +43,9 @@ public class Store {
         cashRegister.add(salePrice);
     }
 
+    /**
+     * Get the total inventory sum purchasePrice
+     */
     public double getInventoryValue() {
         return inventory.stream().mapToDouble(Item::getPurchasePrice).sum();
     }
