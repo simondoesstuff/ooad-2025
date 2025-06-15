@@ -1,5 +1,18 @@
 package ooad.project2.model.item;
 
+// INFO: --> OO Term:  Inheritance
+//  classes in the items package follow an inheritance hierarchy.
+
+// INFO: --> OO Term:  Identity
+//  as Item in the hierarchy are instantiated, each has a unique
+//  identity even if it has identical attributes. This lets
+//  items be stored or sold as individuals despite potentially
+//  having identical state.
+
+/**
+ * Base class for the item inheritance hierarchy.
+ * Represents an item that can be bought/sold at a Store.
+ */
 public abstract class Item {
     protected final String name;
     protected final double purchasePrice;

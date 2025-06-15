@@ -5,6 +5,14 @@ import ooad.project2.model.item.Item;
 import java.util.ArrayList;
 import java.util.List;
 
+// INFO: --> OO Term:  Polymorphism
+//  The store maintains the inventory List<Item> and operates on it without
+//  knowing anything about a specific subtype, yet remains compatible.
+
+/**
+ * Encapsulates basic Store utilties and maintains an Inventory set of Items
+ * and a set of sold items. Tracks a list of pending orders and a cash register.
+ */
 public class Store {
     private final List<Item> inventory;
     private final List<Item> soldItems;

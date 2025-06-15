@@ -1,5 +1,9 @@
 package ooad.project2.model.store;
 
+// INFO: --> OO Term:  Encapsulation
+//  the cash register state is encapsulated which prevents improper
+//  usage of the cash register (ie, negative cash)
+
 /**
  * prevents cash from becoming negative
  */

@@ -32,6 +32,11 @@ import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.Supplier;
 
+// INFO: --> OO Term:  Abstraction
+//  Callers should be able to create random items, of a random item type, and of
+//  random attributes, without needing to know implementation details of any one
+//  item or even the total item subtypes that exist.
+
 /**
  * An ItemFactory for creating items using the Builder pattern.
  * This factory decouples the simulation logic from the concrete item classes.
