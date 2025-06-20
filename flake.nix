@@ -31,7 +31,12 @@
             })
 
             plantuml
+            lombok
           ];
+
+          shellHook = ''
+            export JDTLS_JVM_ARGS="-javaagent:${pkgs.lombok}"
+          '';
         };
       }
     );
