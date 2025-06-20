@@ -34,6 +34,7 @@ val entrypointNames = listOf(
     "project1a",
     "project1b",
     "project2",
+    "project3",
 )
 
 // automatically creates a run task for each name.
