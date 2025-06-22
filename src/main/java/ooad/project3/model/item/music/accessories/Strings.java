@@ -1,6 +1,6 @@
-package ooad.project2.model.item.music.accessories;
+package ooad.project3.model.item.music.accessories;
 
-import ooad.project2.model.item.Item;
+import ooad.project3.model.item.Item;
 
 public class Strings extends Item {
     private StringType type;

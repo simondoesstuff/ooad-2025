@@ -1,15 +1,15 @@
-package ooad.project2.model.item.music;
+package ooad.project3.model.item.music;
 
-public class Vinyl extends Music {
-    public Vinyl(Builder builder) {
+public class PaperScore extends Music {
+    public PaperScore(Builder builder) {
         super(builder);
     }
 
     public static class Builder extends Music.Builder<Builder> {
 
 		@Override
-		public Vinyl build() {
-            return new Vinyl(this);
+		public PaperScore build() {
+            return new PaperScore(this);
 		}
 
 		@Override

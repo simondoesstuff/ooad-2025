@@ -1,4 +1,4 @@
-package ooad.project2.model.item.music;
+package ooad.project3.model.item.music;
 
 public class Vinyl extends Music {
     public Vinyl(Builder builder) {

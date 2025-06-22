@@ -1,4 +1,4 @@
-package ooad.project2.model.item.music.instruments.wind;
+package ooad.project3.model.item.music.instruments.wind;
 
 public class Flute extends Wind {
     private FluteMaterial type;

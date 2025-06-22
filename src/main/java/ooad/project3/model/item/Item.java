@@ -1,4 +1,4 @@
-package ooad.project2.model.item;
+package ooad.project3.model.item;
 
 // INFO: --> OO Term:  Inheritance
 //  classes in the items package follow an inheritance hierarchy.

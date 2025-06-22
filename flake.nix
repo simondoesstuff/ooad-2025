@@ -24,12 +24,18 @@
       {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            jdk
-
             (callPackage gradle-packages.gradle_8 {
               java = jdk;
             })
+
+            jdk
+            plantuml
+            lombok
           ];
+
+          shellHook = ''
+            export JDTLS_JVM_ARGS="-javaagent:${pkgs.lombok}"
+          '';
         };
       }
     );

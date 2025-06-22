@@ -1,0 +1,232 @@
+@startuml
+
+!theme crt-amber
+
+<style>
+header {
+  HorizontalAlignment left
+}
+</style>
+
+header
+Changes:
+
+- Simplified Clerk: eliminated a circular relationship between Clerk & Store by extracting store management logic into StoreAction; clerk is now almost only a container
+- Item, Hierarchical Builder Pattern: due to unanticipated complexity regarding the ItemFactory and the need to modify items after randomization, a very flexible Builder pattern was implemented that parallels the Item inheritance hierarchy.
+- More enums: many fields in Item subtypes (such as FluteMaterial) were changed to use enums.
+endheader
+
+package "model" {
+
+  package "item" {
+    enum Condition {
+      POOR
+      FAIR
+      GOOD
+      VERY_GOOD
+      EXCELLENT
+    }
+
+    abstract class Item <<Builder>> {
+      String name
+      double purchasePrice
+      double listPrice
+      boolean newOrUsed
+      int dayArrived
+      Condition condition
+      double salePrice
+      int daySold
+      boolean damage()
+    }
+
+    note top
+      All subclasses of 'Item' follow a hierarchical
+      builder pattern. See baeldung.com link in the
+      source code.
+    end note
+
+
+    abstract class Music <<Builder>> extends Item {
+String band
+      String album
+    }
+    class PaperScore <<Builder>> extends Music {}
+    class CD <<Builder>> extends Music {}
+    class Vinyl <<Builder>> extends Music {}
+
+    abstract class Players <<Builder>> extends Item {}
+    class CDPlayer <<Builder>> extends Players {}
+    class RecordPlayer <<Builder>> extends Players {}
+    class MP3Player <<Builder>> extends Players {}
+
+    abstract class Instruments <<Builder>> extends Item {}
+    abstract class Stringed <<Builder>> extends Instruments {
+      boolean isElectric
+    }
+    class Guitar <<Builder>> extends Stringed {}
+    class Bass <<Builder>> extends Stringed {}
+    class Mandolin <<Builder>> extends Stringed {}
+
+    abstract class Wind <<Builder>> extends Instruments {}
+    class Flute <<Builder>> extends Wind {
+      FluteMaterial type
+    }
+
+    enum FluteMaterial {
+      SILVER
+      WOOD
+      GOLD
+    }
+
+    Flute --> FluteMaterial: has a
+
+    class Harmonica <<Builder>> extends Wind {
+      HarmonicaKey key
+    }
+
+    enum HarmonicaKey {
+      A
+      C
+      F
+      G
+    }
+
+    Harmonica --> HarmonicaKey: has a
+
+    abstract class Clothing <<Builder>> extends Item {}
+    class Hat <<Builder>> extends Clothing {
+      String hatSize
+    }
+    class Shirt <<Builder>> extends Clothing {
+      ShirtSize shirtSize
+    }
+
+    enum ShirtSize {
+      XS
+      S
+      M
+      LG
+      XL
+    }
+
+    Shirt --> ShirtSize : has a
+    class Bandana <<Builder>> extends Clothing {}
+
+    abstract class Accessories <<Builder>> extends Item {}
+    class PracticeAmp <<Builder>> extends Accessories {
+      int wattage
+    }
+    class Cable <<Builder>> extends Accessories {
+      int length
+    }
+    class Strings <<Builder>> extends Accessories {
+      StringType type
+    }
+
+    enum StringType {
+      GUITAR
+      BASS
+      MANDOLIN
+    }
+
+    Strings --> StringType: has a
+  }
+
+  package "store" {
+    class Order {
+      int arrivalDay;
+      List<Item> items;
+    }
+
+    class Store {
+      List<Item> inventory
+      List<Item> soldItems
+      CashRegister register
+      List<Clerk> staff
+      List<Order> orders
+      sellItem(Item item, double salePrice, int daySold)
+      getInventoryValue()
+    }
+    Store o-- Order
+
+    class CashRegister {
+      double cash
+      add(double)
+      withdraw(double)
+      getCash()
+    }
+
+    class Clerk {
+      double cleaningDamageChance
+      int daysWorkedInARow
+    }
+
+    class Customer {
+      String name
+      int id
+    }
+  }
+
+  class Bank <<singleton>> {
+    double totalWithdrawn
+    getInstance()
+    provideFunds(double)
+  }
+
+}
+
+class ItemFactory <<factory>> {
+  Map<Class<? extends Item>, Supplier<Item.Builder<?>>> builders
+  Set<String> knownNames // ensures unique names
+  buildRandomItem(Class<? extends Item>)
+}
+
+package musicLand {
+
+  class StoreActions {
+    Store store
+    int today
+    Clerk activeClerk
+
+    getAvailableClerks()
+    marchDay()
+    getReadyOrders()
+    getAvailableItemTypes()
+    makeRandomItem(Class<? extends Item> type, int day)
+    arriveAtStore()
+    checkRegister()
+    goToBank()
+    doInventory()
+    placeAnOrder()
+    openTheStore()
+    -handleBuyingCustomer()
+    -handleSellingCustomer()
+    cleanTheStore()
+    leaveTheStore()
+  }
+  StoreActions o-- Store : manages
+  StoreActions o-- Clerk
+  StoreActions ..> Bank : withdraws
+  StoreActions ..> ItemFactory : makes items
+
+  class MusicLandSimulator {
+    StoreActions actions
+    run()
+    -setupStore(StoreActions actions)
+    -selectClerk()
+    -runDailyActions()
+    -printFinalSummary()
+  }
+  MusicLandSimulator *-- StoreActions
+}
+
+' Relationships
+Store o-- CashRegister
+Store o-- Item : inventory
+Store o-- Clerk
+Item --> Condition : has a
+StoreActions ..> Customer : serves
+
+ItemFactory ..> item : creates
+@enduml
+
