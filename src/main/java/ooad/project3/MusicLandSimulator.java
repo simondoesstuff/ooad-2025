@@ -1,4 +1,4 @@
-package ooad.project3.musicLand;
+package ooad.project3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,6 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import ooad.project3.ItemFactory;
 import ooad.project3.model.Bank;
 import ooad.project3.model.item.Item;
 import ooad.project3.model.store.Clerk;
@@ -143,7 +142,7 @@ public class MusicLandSimulator {
             store.getInventory().forEach(System.out::println);
         }
 
-        System.out.printf("\nTotal value of remaining inventory (by purchase price): $%.2f\n", store.getInventoryValue());
+        System.out.printf("\nTotal value of remaining inventory (by purchase price): $%.2f\n", store.getInventory().getTotalPurchasePrice());
 
         System.out.println("\n--- Items Sold ---");
         double totalSales = 0;

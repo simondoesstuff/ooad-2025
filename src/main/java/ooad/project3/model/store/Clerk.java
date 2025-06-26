@@ -95,7 +95,7 @@ public class Clerk {
      */
     public void doInventory() {
         System.out.printf("%s is doing inventory. Total purchase value of items: $%.2f\n",
-                getName(), store.getInventoryValue());
+                getName(), store.getInventory().getTotalPurchasePrice());
 
         var types = store.getAvailableItemTypes();
 

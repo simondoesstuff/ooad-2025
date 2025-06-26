@@ -2,8 +2,11 @@ package ooad.project3.model.store;
 
 import ooad.project3.ItemFactory;
 import ooad.project3.model.item.Item;
+import ooad.project3.model.Inventory;
 
 import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -16,20 +19,15 @@ import java.util.stream.Collectors;
  */
 public class Store {
     @Getter
-    private final List<Item> inventory;
+    private final Inventory inventory = new Inventory();
     @Getter
-    private final List<Item> soldItems;
+    private final ArrayList<Item> soldItems = new ArrayList<>();
     @Getter
-    private final CashRegister cashRegister;
+    private final CashRegister cashRegister = new CashRegister();
     @Getter
-    private final List<Order> orders;
+    private final ArrayList<Order> orders = new ArrayList<>();
 
-    public Store() {
-        this.inventory = new ArrayList<>();
-        this.soldItems = new ArrayList<>();
-        this.cashRegister = new CashRegister();
-        this.orders = new ArrayList<>();
-    }
+    public Store() {}
 
     public void addItem(Item item) {
         inventory.add(item);
@@ -48,13 +46,6 @@ public class Store {
         inventory.remove(item);
         soldItems.add(item);
         cashRegister.add(salePrice);
-    }
-
-    /**
-     * Get the total inventory sum purchasePrice
-     */
-    public double getInventoryValue() {
-        return inventory.stream().mapToDouble(Item::getPurchasePrice).sum();
     }
 
     /**
