@@ -3,7 +3,7 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
-    id("com.gradleup.shadow") version "9.0.0-beta15"
+    id("com.github.johnrengelman.shadow") version "8.1.1" // Or the latest stable version
 }
 
 dependencies {
@@ -15,7 +15,7 @@ dependencies {
     testAnnotationProcessor("org.projectlombok:lombok:1.18.38")
 
     // guava provides a wonderful event bus
-    implementation("com.google.guava:guava:33.1.0-jre")
+    implementation("com.google.guava:guava:20.0")
 }
 
 repositories {
@@ -46,18 +46,36 @@ val entrypointNames = listOf(
     "project3",
 )
 
-// automatically creates a run task for each name.
+// This loop registers a custom ShadowJar task for each entrypoint.
 entrypointNames.forEach { name ->
     val mainPath = "ooad.$name.Main"
 
     tasks.register<ShadowJar>("build-$name") {
         group = "Application"
-        description = "Runs the $mainPath entrypoint"
-        archiveFileName = "$name.jar"
+        description = "Builds a standalone, executable JAR for $name"
+        archiveFileName.set("$name.jar")
 
-        from(sourceSets.main.get().output)
+        // FIX #1: This includes external dependencies (like Guava) in the JAR.
+        // The original script was missing this, so dependencies were not being packaged.
+        // This line configures the task to use the 'runtimeClasspath', which contains
+        // all your 'implementation' dependencies.
+        configurations = listOf(project.configurations.runtimeClasspath.get())
+
+        // FIX #2: This ensures only relevant source files are included for this entrypoint.
+        // The original script used `from(sourceSets.main.get().output)` without filtering,
+        // which copied ALL compiled classes into EVERY jar.
+        // This `from` block now filters to include only the classes in the specific
+        // package for this entrypoint (e.g., `ooad.project1a`).
+        from(sourceSets.main.get().output) {
+            include("ooad/$name/**")
+
+            // NOTE: If you have common code shared between projects (e.g., in a package
+            // like `ooad.common`), you will need to add an additional `include` for it:
+            // include("ooad/common/**")
+        }
+
         manifest {
-          attributes(mapOf("Main-Class" to mainPath))
+            attributes("Main-Class" to mainPath)
         }
     }
 }
@@ -65,5 +83,7 @@ entrypointNames.forEach { name ->
 tasks.register("buildJars") {
     group = "Build"
     description = "Builds all standalone, executable JARs."
+    // This was correct. It depends on all tasks of type ShadowJar, which, because
+    // the default is disabled, are only the ones generated in the loop above.
     dependsOn(tasks.withType<ShadowJar>())
 }
