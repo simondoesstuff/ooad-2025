@@ -34,7 +34,7 @@
           ];
 
           shellHook = ''
-            export JDTLS_JVM_ARGS="-javaagent:${pkgs.lombok}"
+            export JDTLS_JVM_ARGS="-javaagent:${pkgs.lombok}/share/java/lombok.jar"
           '';
         };
       }
