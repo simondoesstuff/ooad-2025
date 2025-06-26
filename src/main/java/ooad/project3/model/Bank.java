@@ -1,10 +1,5 @@
 package ooad.project3.model;
 
-// INFO: --> OO Term:  Cohesion
-//  All methods & attributes of Bank cohere to the function of the Bank.
-//  Also, the existence of Bank separates Bank related functions from other
-//  classes which allows them to have better cohesion themselves.
-
 /**
  * singleton to track total money withdrawn from the bank.
  */
