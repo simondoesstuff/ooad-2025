@@ -1,35 +1,34 @@
 package ooad.project3.model.store;
 
+import ooad.project3.ItemFactory;
 import ooad.project3.model.item.Item;
 
+import lombok.Getter;
 import java.util.ArrayList;
 import java.util.List;
-
-// INFO: --> OO Term:  Polymorphism
-//  The store maintains the inventory List<Item> and operates on it without
-//  knowing anything about a specific subtype, yet remains compatible.
+import java.util.Set;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collectors;
 
 /**
  * Encapsulates basic Store utilties and maintains an Inventory set of Items
  * and a set of sold items. Tracks a list of pending orders and a cash register.
  */
 public class Store {
+    @Getter
     private final List<Item> inventory;
+    @Getter
     private final List<Item> soldItems;
+    @Getter
     private final CashRegister cashRegister;
-    private final List<Clerk> staff;
-    private final List<Order> pendingOrders;
+    @Getter
+    private final List<Order> orders;
 
     public Store() {
         this.inventory = new ArrayList<>();
         this.soldItems = new ArrayList<>();
         this.cashRegister = new CashRegister();
-        this.staff = new ArrayList<>();
-        this.pendingOrders = new ArrayList<>();
-    }
-
-    public void addStaff(Clerk clerk) {
-        staff.add(clerk);
+        this.orders = new ArrayList<>();
     }
 
     public void addItem(Item item) {
@@ -37,7 +36,7 @@ public class Store {
     }
 
     public void addOrder(Order order) {
-        pendingOrders.add(order);
+        orders.add(order);
     }
 
     /**
@@ -58,10 +57,38 @@ public class Store {
         return inventory.stream().mapToDouble(Item::getPurchasePrice).sum();
     }
 
-    // Getters
-    public List<Item> getInventory() { return inventory; }
-    public List<Item> getSoldItems() { return soldItems; }
-    public CashRegister getCashRegister() { return cashRegister; }
-    public List<Clerk> getStaff() { return staff; }
-    public List<Order> getPendingOrders() { return pendingOrders; }
+    /**
+     * Filters for orders that have arrived
+     */
+    public List<Order> getReadyOrders(int today) {
+        return this.getOrders().stream()
+             .filter(order -> order.getArrivalDay() <= today)
+             .collect(Collectors.toList());
+    }
+
+    /**
+     * the set of available item types
+     */
+    public Set<Class<? extends Item>> getAvailableItemTypes() {
+        return this.getInventory().stream()
+                .map(item -> item.getClass())
+                .distinct()
+                .collect(Collectors.toSet());
+    }
+
+    /**
+     * Create a random set of items with a reasonable purchase and list price.
+     * Specifies newOrUsed as new.
+     * As items are created, their purchase price is withdrawn from the register.
+     * If the register cannot sustain the cost, the already purchased items are returned
+     * and the process finishes with a failure announcement.
+     */
+    public Item.Builder<?> makeRandomItem(Class<? extends Item> itemType, int arrivalDay) {
+        var price = ThreadLocalRandom.current().nextDouble(1, 50);
+        return ItemFactory.buildRandom(itemType)
+                .purchasePrice(price)  // TODO: more intelligent prices
+                .listPrice(price * 2)
+                .newOrUsed(true)
+                .dayArrived(arrivalDay);
+    }
 }

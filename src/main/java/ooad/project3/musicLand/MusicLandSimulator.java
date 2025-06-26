@@ -1,5 +1,7 @@
 package ooad.project3.musicLand;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
@@ -19,29 +21,31 @@ import ooad.project3.model.store.Store;
 public class MusicLandSimulator {
     private static final Random rand = ThreadLocalRandom.current();
 
-    private final StoreActions actions;
+    private final Store store;
+    private ArrayList<Clerk> staff = new ArrayList<>();
+    private Clerk activeClerk;
     private int today = 0;
 
     public MusicLandSimulator(Store store) {
-        this.actions = new StoreActions(store);
-        setupStore(this.actions);
+        this.store = store;
+        setupStore(this.store);
     }
 
     /**
      * Initializes the store with proper works and items.
      * Impure
      */
-    private void setupStore(StoreActions actions) {
+    private void setupStore(Store store) {
         // Add staff
-        actions.getStore().addStaff(new Clerk("Fred", 0.20));
-        actions.getStore().addStaff(new Clerk("Ginger", 0.05));
+        staff.add(new Clerk("Fred", 0.20, store));
+        staff.add(new Clerk("Ginger", 0.05, store));
 
         // Initialize inventory with 3 of each item type
         for (Class<? extends Item> itemType : ItemFactory.getAllItemTypes()) {
-            var batch = Stream.generate(() -> actions.makeRandomItem(itemType, 0).build())
+            var batch = Stream.generate(() -> store.makeRandomItem(itemType, 0).build())
                     .limit(3)
                     .collect(Collectors.toList());
-            batch.forEach(item -> actions.getStore().addItem(item));
+            batch.forEach(item -> store.addItem(item));
         }
 
         System.out.println("Initial store inventory has been created.");
@@ -51,7 +55,7 @@ public class MusicLandSimulator {
      * Main simulation loop that runs for 30 days.
      */
     public void run() {
-        actions.marchDay(null); // day zero is sunday, but we want the simulation
+        marchDay(null); // day zero is sunday, but we want the simulation
                                 // to start on a monday.
 
         for (today = 1; today <= 30; today++) {
@@ -62,7 +66,7 @@ public class MusicLandSimulator {
             // is it sunday?
             if (today % 7 == 0) {
                 System.out.println("Store is closed on Sunday.");
-                actions.marchDay(null); // null: no active clerk today
+                marchDay(null); // null: no active clerk today
                 continue;
             }
 
@@ -70,15 +74,39 @@ public class MusicLandSimulator {
 
             if (clerk == null) continue;
 
-            actions.marchDay(clerk);
-            runDailyActions();
+            marchDay(clerk);
+            runDailyActions(clerk);
         }
 
         printFinalSummary();
     }
 
+    /**
+     * Go to the next day and specify a new Clerk.
+     * Inactive Clerk's days worked streaks are reset.
+     */
+    private void marchDay(Clerk todaysClerk) {
+        today++;
+        activeClerk = todaysClerk;
+
+        for (var clerk : staff) {
+            if (clerk != activeClerk) {
+                clerk.resetWorkStreak();
+            }
+        }
+    }
+
+    /**
+     * Filters the store's Clerks for ones not overworked
+     */
+    public List<Clerk> getAvailableClerks() {
+        return staff.stream()
+            .filter(c -> c.getWorkStreak() < 3)
+            .collect(Collectors.toList());
+    }
+
     private Clerk selectClerk() {
-        var clerks = actions.getAvailableClerks();
+        var clerks = getAvailableClerks();
 
         if (clerks.size() == 0) {
             System.out.println("All clerks are overworked so the store can't open today.");
@@ -88,14 +116,14 @@ public class MusicLandSimulator {
         return clerks.get(rand.nextInt(clerks.size()));
     }
 
-    private void runDailyActions() {
-        actions.arriveAtStore();
-        if (!actions.checkRegister())
-            actions.goToBank();
-        actions.doInventory();
-        actions.openTheStore();
-        actions.cleanTheStore();
-        actions.leaveTheStore();
+    private void runDailyActions(Clerk clerk) {
+        clerk.arriveAtStore();
+        if (!clerk.checkRegister())
+            clerk.goToBank();
+        clerk.doInventory();
+        clerk.openTheStore();
+        clerk.cleanTheStore();
+        clerk.leaveTheStore();
     }
 
     /**
@@ -108,8 +136,6 @@ public class MusicLandSimulator {
         System.out.println("########################################\n");
 
         System.out.println("--- Final Inventory ---");
-
-        var store = actions.getStore();
 
         if (store.getInventory().isEmpty()) {
             System.out.println("No items left in inventory.");
