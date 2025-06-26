@@ -54,7 +54,7 @@ related to the item hierarchy and the event types.
 
 **Where to find the design patterns:** (as documented in the code)
 - [Observer](src/main/java/ooad/project3/events/TheEventBus.java) (publish-subscribe actually)
-- [Strategy](src/main/java/ooad/project3/model/tuning) (the related interface and subclasses,
+- [Strategy](src/main/java/ooad/project3/model/store/tuning) (the related interface and subclasses,
 it applies to `Clerk`)
 - [Decorator](src/main/java/ooad/project3/model/item/SoldItem.java)
 
