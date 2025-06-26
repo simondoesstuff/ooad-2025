@@ -1,0 +1,55 @@
+@startuml
+title State
+
+!theme crt-amber
+
+[*] --> Simulation_Start
+state Simulation_Start: The 30-day simulation begins
+
+Simulation_Start --> Day_Start
+
+state Day_Start {
+  [*] --> Check_Date
+  state Check_Date <<choice>>
+  Check_Date --> Store_Closed: Is Sunday?
+  Check_Date --> Arrive_At_Store: Is Weekday
+  Store_Closed: Announce store is closed for the day
+  Store_Closed --> Day_End
+}
+
+Arrive_At_Store: Clerk arrives\nAdd delivered items to inventory
+Arrive_At_Store --> Check_Register
+
+Check_Register: Count and announce money in register
+Check_Register --> Check_Register_Decision <<choice>>
+Check_Register_Decision --> Go_To_Bank: Cash < $75
+Check_Register_Decision --> Do_Inventory: Cash >= $75
+
+Go_To_Bank: Withdraw $1000\nTrack total withdrawn
+Go_To_Bank --> Do_Inventory
+
+Do_Inventory: Announce total inventory value
+Do_Inventory --> Check_Inventory_Decision <<choice>>
+Check_Inventory_Decision --> Place_An_Order: Item subclass count is 0
+Check_Inventory_Decision --> Open_The_Store: All item types in stock
+
+Place_An_Order: Order 3 of each missing item type\nPay from register\nItems arrive in 1-3 days
+Place_An_Order --> Open_The_Store
+
+Open_The_Store: Handle 4-10 buying Customers\n and 1-4 selling Customers
+Open_The_Store --> Clean_The_Store
+
+Clean_The_Store: Clerk cleans\nA random item may be damaged
+Clean_The_Store --> Leave_The_Store
+
+Leave_The_Store: Clerk announces they are leaving for the day
+Leave_The_Store --> Day_End
+
+state Day_End <<choice>>
+Day_End --> Day_Start: Day < 30
+Day_End --> Print_Summary: Day == 30
+
+Print_Summary: Display final inventory, sales, and financial reports
+Print_Summary --> [*]
+
+@enduml
