@@ -4,9 +4,15 @@ plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
     id("com.gradleup.shadow") version "9.0.0-beta15"
+}
+
+dependencies {
     // proj lombok adds utility annotations such as @getter & @setter
-    // TODO: fix IDE integration with lombok
-    id("io.freefair.lombok") version "8.13.1"
+    compileOnly("org.projectlombok:lombok:1.18.38")
+    annotationProcessor("org.projectlombok:lombok:1.18.38")
+
+    testCompileOnly("org.projectlombok:lombok:1.18.38")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.38")
 }
 
 repositories {

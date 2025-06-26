@@ -1,9 +1,13 @@
 package ooad.project3.model.store;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * prevents cash from becoming negative
  */
 public class CashRegister {
+    @Getter
     private double cash;
 
     public CashRegister() {
