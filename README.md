@@ -41,6 +41,7 @@ This project contains tests. See above for details.
    `StoreEvent` classes were created to support it. This allowed me to extract nearly all logging
    from `Clerk` in a strongly typed and highly scalable way.
    - `interface Tuner` helps implement the Strategy pattern for `Clerk`
+   - 
 **Results:**
 - [Output.txt](src/main/java/ooad/project3/assets/logs/Output.txt)
 - [logs](src/main/java/ooad/project3/assets/logs)
@@ -50,6 +51,7 @@ related to the item hierarchy and the event types.
    - [eventsUML.png](src/main/java/ooad/project3/assets/eventsUML.png)
    - [itemsUML.png](src/main/java/ooad/project3/assets/itemsUML.png)
  - State machine [state.png](src/main/java/ooad/project3/assets/state.png) (of project2)
+
 **Where to find the design patterns:** (as documented in the code)
 - [Observer](src/main/java/ooad/project3/events/TheEventBus.java) (publish-subscribe actually)
 - [Strategy](src/main/java/ooad/project3/model/tuning.java) (the related interface and subclasses,
