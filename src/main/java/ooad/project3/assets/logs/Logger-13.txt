@@ -1,0 +1,35 @@
+Fred arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Bass(ToWr)
+ - added delivered item to inventory: Bass(NqJw)
+ - added delivered item to inventory: Bass(BnHu)
+ - added delivered item to inventory: CDPlayer(KuZq)
+ - added delivered item to inventory: CDPlayer(WfSd)
+ - added delivered item to inventory: CDPlayer(KdLk)
+ - added delivered item to inventory: Hat(WgLc)
+ - added delivered item to inventory: Hat(PiSr)
+ - added delivered item to inventory: Hat(LlWk)
+ - added delivered item to inventory: CD(IiAd)
+ - added delivered item to inventory: CD(VqOy)
+ - added delivered item to inventory: CD(EvSv)
+ - added delivered item to inventory: CDPlayer(PoIk)
+ - added delivered item to inventory: CDPlayer(QkKj)
+ - added delivered item to inventory: CDPlayer(TvSa)
+ - added delivered item to inventory: Bass(IlBn)
+ - added delivered item to inventory: Bass(FdIg)
+ - added delivered item to inventory: Bass(TbPe)
+ - added delivered item to inventory: Hat(OqId)
+ - added delivered item to inventory: Hat(DnSs)
+ - added delivered item to inventory: Hat(MuOh)
+Fred counts the register. Current cash: $892.74
+Fred wanted to order 3 Vinyls because they were missing from inventory and 3 were ordered, to arrive on day 16
+Fred wanted to order 3 Cables because they were missing from inventory and 3 were ordered, to arrive on day 15
+Fred wanted to order 3 Mandolins because they were missing from inventory and 3 were ordered, to arrive on day 14
+Fred is doing inventory. Total purchase value of items: $1373.09
+ - there were 56 items and 2 were damaged during tuning.
+Fred opens the store.
+ - there are 4 buying and 4 selling customers today.
+ - there were 7 total sales and 4 total purchases.
+Fred is cleaning the store.
+ - Oh no! 12 item(s) were damaged while cleaning.
+Fred locks up and goes home.

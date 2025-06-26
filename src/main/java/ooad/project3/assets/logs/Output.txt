@@ -1,0 +1,1809 @@
+Initial store inventory has been created.
+
+========================================
+================ Day 1  ================
+========================================
+Fred arrives at the store.
+Fred counts the register. Current cash: $0.00
+Cash is low. Fred is going to the bank.
+ - withdrew from the bank. New register total: $1000.00
+Fred is doing inventory. Total purchase value of items: $1387.49
+ - there were 51 items and 0 were damaged during tuning.
+ - Fred offered a Mandolin to Customer 1 for $10.90, but they hesitated.
+ - Fred sold a Mandolin to Customer 1 for $9.81 after a 10% discount.
+- sold a GigBag in a bundle!
+- sold a PracticeAmp in a bundle!
+ - Fred offered a CD to Customer 2 for $17.81, but they hesitated.
+ - Fred sold a CD to Customer 2 for $16.03 after a 10% discount.
+ - Fred sold a Guitar to Customer 3 for $9.35.
+ - Fred sold a Mandolin to Customer 4 for $77.45.
+ - Fred offered a Strings to Customer 5 for $50.39, but they hesitated.
+ - Fred sold a Strings to Customer 5 for $45.35 after a 10% discount.
+ - Fred sold a Mandolin to Customer 6 for $49.63.
+- sold a PracticeAmp in a bundle!
+- sold some Strings in a bundle!
+ - Fred sold a Bass to Customer 7 for $29.85.
+ - Fred sold a Shirt to Customer 8 for $90.18.
+ - Customer 9 wanted to buy a Mandolin but none were in inventory, so they left.
+ - Customer 10 wanted to buy a Mandolin but none were in inventory, so they left.
+ - Customer 10 wants to sell a VERY_GOOD condition used PaperScore.
+ - Customer 10 rejected the initial offer of $30.55. Fred offered 10% more: $33.61.
+ - Customer 10 decided not to sell their PaperScore and left.
+Fred opens the store.
+ - there are 9 buying and 1 selling customers today.
+ - there were 8 total sales and 0 total purchases.
+Fred is cleaning the store.
+ - Oh no! 7 item(s) were damaged while cleaning.
+Fred locks up and goes home.
+
+========================================
+================ Day 2  ================
+========================================
+Oh no! Rita was sick and cannot work today.
+Ginger arrives at the store.
+Ginger counts the register. Current cash: $1440.70
+Ginger wanted to order 3 Mandolins because they were missing from inventory and 3 were ordered, to arrive on day 4
+Ginger is doing inventory. Total purchase value of items: $1106.65
+ - there were 40 items and 0 were damaged during tuning.
+ - Ginger offered a Shirt to Customer 1 for $29.58, but they hesitated.
+ - Ginger sold a Shirt to Customer 1 for $26.62 after a 10% discount.
+ - Ginger sold a Harmonica to Customer 2 for $82.69.
+ - Ginger offered a Flute to Customer 3 for $55.68, but they hesitated.
+ - Ginger sold a Flute to Customer 3 for $50.11 after a 10% discount.
+ - Ginger offered a Vinyl to Customer 4 for $99.64, but they hesitated.
+ - Ginger sold a Vinyl to Customer 4 for $89.68 after a 10% discount.
+ - Customer 5 wanted to buy a Mandolin but none were in inventory, so they left.
+ - Ginger sold a Guitar to Customer 6 for $82.76.
+ - Ginger sold a Guitar to Customer 7 for $60.23.
+ - Ginger offered a PaperScore to Customer 8 for $82.68, but they hesitated.
+ - Ginger sold a PaperScore to Customer 8 for $74.41 after a 10% discount.
+ - Ginger sold a Shirt to Customer 9 for $19.48.
+ - Ginger offered a PracticeAmp to Customer 10 for $34.80, but they hesitated.
+ - Customer 10 would not buy the PracticeAmp, even with a discount, and left.
+ - Customer 10 wants to sell a EXCELLENT condition used Strings.
+ - Ginger bought a EXCELLENT condition used Strings from Customer 10 for $46.94.
+Ginger opens the store.
+ - there are 9 buying and 1 selling customers today.
+ - there were 8 total sales and 1 total purchases.
+Ginger is cleaning the store.
+ - Oh no! 2 item(s) were damaged while cleaning.
+Ginger locks up and goes home.
+
+========================================
+================ Day 3  ================
+========================================
+Fred arrives at the store.
+Fred counts the register. Current cash: $1833.55
+Fred wanted to order 3 Shirts because they were missing from inventory and 3 were ordered, to arrive on day 5
+Fred wanted to order 3 Guitars because they were missing from inventory and 3 were ordered, to arrive on day 6
+Fred wanted to order 3 Mandolins because they were missing from inventory and 3 were ordered, to arrive on day 6
+Fred is doing inventory. Total purchase value of items: $897.22
+ - there were 33 items and 1 were damaged during tuning.
+ - Fred sold a CDPlayer to Customer 1 for $16.63.
+ - Customer 2 wanted to buy a Guitar but none were in inventory, so they left.
+ - Fred sold a Bass to Customer 3 for $23.60.
+ - Customer 4 wanted to buy a Shirt but none were in inventory, so they left.
+ - Customer 5 wanted to buy a Guitar but none were in inventory, so they left.
+ - Fred offered a Vinyl to Customer 6 for $6.36, but they hesitated.
+ - Fred sold a Vinyl to Customer 6 for $5.72 after a 10% discount.
+ - Fred offered a Cable to Customer 7 for $16.62, but they hesitated.
+ - Customer 7 would not buy the Cable, even with a discount, and left.
+ - Fred offered a Bandana to Customer 8 for $59.18, but they hesitated.
+ - Fred sold a Bandana to Customer 8 for $53.26 after a 10% discount.
+ - Fred sold a Vinyl to Customer 9 for $74.97.
+ - Customer 10 wanted to buy a Mandolin but none were in inventory, so they left.
+ - Customer 8 wants to sell a GOOD condition used Hat.
+ - Fred bought a GOOD condition used Hat from Customer 8 for $9.10.
+ - Customer 9 wants to sell a VERY_GOOD condition used CDPlayer.
+ - Customer 9 rejected the initial offer of $38.53. Fred offered 10% more: $42.39.
+ - Fred bought a VERY_GOOD condition used CDPlayer from Customer 9 for $42.39.
+ - Customer 10 wants to sell a VERY_GOOD condition used PracticeAmp.
+ - Customer 10 rejected the initial offer of $16.80. Fred offered 10% more: $18.48.
+ - Customer 10 decided not to sell their PracticeAmp and left.
+Fred opens the store.
+ - there are 7 buying and 3 selling customers today.
+ - there were 5 total sales and 2 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+Fred is cleaning the store.
+ - Oh no! 9 item(s) were damaged while cleaning.
+Fred locks up and goes home.
+
+========================================
+================ Day 4  ================
+========================================
+Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Mandolin(MiFb)
+ - added delivered item to inventory: Mandolin(ZlMa)
+ - added delivered item to inventory: Mandolin(ZlJn)
+Rita counts the register. Current cash: $1684.77
+Rita wanted to order 3 Vinyls because they were missing from inventory and 3 were ordered, to arrive on day 6
+Rita wanted to order 3 Shirts because they were missing from inventory and 3 were ordered, to arrive on day 7
+Rita wanted to order 3 Guitars because they were missing from inventory and 3 were ordered, to arrive on day 6
+Rita is doing inventory. Total purchase value of items: $835.11
+ - there were 31 items and 6 were damaged during tuning.
+ - Customer 1 wanted to buy a Guitar but none were in inventory, so they left.
+ - Customer 2 wanted to buy a Vinyl but none were in inventory, so they left.
+ - Rita offered a PaperScore to Customer 3 for $28.37, but they hesitated.
+ - Rita sold a PaperScore to Customer 3 for $25.53 after a 10% discount.
+ - Rita sold a PracticeAmp to Customer 4 for $34.80.
+ - Customer 5 wanted to buy a Vinyl but none were in inventory, so they left.
+ - Rita offered a Flute to Customer 6 for $41.45, but they hesitated.
+ - Rita sold a Flute to Customer 6 for $37.31 after a 10% discount.
+ - Rita sold a Harmonica to Customer 7 for $44.03.
+ - Rita offered a MP3Player to Customer 8 for $53.87, but they hesitated.
+ - Rita sold a MP3Player to Customer 8 for $48.48 after a 10% discount.
+ - Rita sold a CDPlayer to Customer 9 for $67.82.
+ - Rita sold a Cable to Customer 10 for $16.62.
+ - Customer 11 wanted to buy a PracticeAmp but none were in inventory, so they left.
+ - Customer 9 wants to sell a GOOD condition used PracticeAmp.
+ - Rita bought a GOOD condition used PracticeAmp from Customer 9 for $11.98.
+ - Customer 10 wants to sell a POOR condition used Bass.
+ - Customer 10 rejected the initial offer of $0.57. Rita offered 10% more: $0.63.
+ - Rita bought a POOR condition used Bass from Customer 10 for $0.63.
+ - Customer 11 wants to sell a GOOD condition used RecordPlayer.
+ - Customer 11 rejected the initial offer of $13.56. Rita offered 10% more: $14.91.
+ - Rita bought a GOOD condition used RecordPlayer from Customer 11 for $14.91.
+Rita opens the store.
+ - there are 8 buying and 3 selling customers today.
+ - there were 7 total sales and 3 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Rita is cleaning the store.
+ - Oh no! 27 item(s) were damaged while cleaning.
+Rita locks up and goes home.
+
+========================================
+================ Day 5  ================
+========================================
+Oh no! Rita was sick and cannot work today.
+Fred arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Shirt(HaUl)
+ - added delivered item to inventory: Shirt(BjOw)
+ - added delivered item to inventory: Shirt(VyXw)
+Fred counts the register. Current cash: $1771.10
+Fred wanted to order 3 PaperScores because they were missing from inventory and 3 were ordered, to arrive on day 7
+Fred wanted to order 3 Vinyls because they were missing from inventory and 3 were ordered, to arrive on day 8
+Fred wanted to order 3 Guitars because they were missing from inventory and 3 were ordered, to arrive on day 8
+Fred wanted to order 3 Flutes because they were missing from inventory and 3 were ordered, to arrive on day 8
+Fred is doing inventory. Total purchase value of items: $628.73
+ - there were 22 items and 2 were damaged during tuning.
+ - Customer 1 wanted to buy a Vinyl but none were in inventory, so they left.
+ - Fred sold a Harmonica to Customer 2 for $55.52.
+ - Fred offered a MP3Player to Customer 3 for $31.55, but they hesitated.
+ - Fred sold a MP3Player to Customer 3 for $28.40 after a 10% discount.
+ - Fred sold a RecordPlayer to Customer 4 for $23.86.
+ - Fred offered a PracticeAmp to Customer 5 for $19.17, but they hesitated.
+ - Fred sold a PracticeAmp to Customer 5 for $17.25 after a 10% discount.
+ - Fred offered a Mandolin to Customer 6 for $33.40, but they hesitated.
+ - Fred sold a Mandolin to Customer 6 for $30.06 after a 10% discount.
+ - Fred sold a Shirt to Customer 7 for $81.24.
+ - Fred offered a Shirt to Customer 8 for $89.15, but they hesitated.
+ - Customer 8 would not buy the Shirt, even with a discount, and left.
+ - Customer 6 wants to sell a GOOD condition used Cable.
+ - Fred bought a GOOD condition used Cable from Customer 6 for $14.41.
+ - Customer 7 wants to sell a POOR condition used Shirt.
+ - Fred bought a POOR condition used Shirt from Customer 7 for $7.56.
+ - Customer 8 wants to sell a EXCELLENT condition used Mandolin.
+ - Customer 8 rejected the initial offer of $33.01. Fred offered 10% more: $36.31.
+ - Customer 8 decided not to sell their Mandolin and left.
+Fred opens the store.
+ - there are 5 buying and 3 selling customers today.
+ - there were 6 total sales and 2 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Fred is cleaning the store.
+ - Oh no! 3 item(s) were damaged while cleaning.
+Fred locks up and goes home.
+
+========================================
+================ Day 6  ================
+========================================
+Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Guitar(VuAu)
+ - added delivered item to inventory: Guitar(XbEm)
+ - added delivered item to inventory: Guitar(WiEv)
+ - added delivered item to inventory: Mandolin(GnIx)
+ - added delivered item to inventory: Mandolin(LnYu)
+ - added delivered item to inventory: Mandolin(PpCn)
+ - added delivered item to inventory: Vinyl(ZxXg)
+ - added delivered item to inventory: Vinyl(ThJa)
+ - added delivered item to inventory: Vinyl(OcIy)
+ - added delivered item to inventory: Guitar(WhOy)
+ - added delivered item to inventory: Guitar(LhEu)
+ - added delivered item to inventory: Guitar(FrCk)
+Rita counts the register. Current cash: $1632.12
+Rita wanted to order 3 PaperScores because they were missing from inventory and 3 were ordered, to arrive on day 7
+Rita wanted to order 3 MP3Players because they were missing from inventory and 3 were ordered, to arrive on day 9
+Rita wanted to order 3 PracticeAmps because they were missing from inventory and 3 were ordered, to arrive on day 7
+Rita wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 8
+Rita wanted to order 3 Flutes because they were missing from inventory and 3 were ordered, to arrive on day 9
+Rita wanted to order 3 CDPlayers because they were missing from inventory and 3 were ordered, to arrive on day 7
+Rita is doing inventory. Total purchase value of items: $733.87
+ - there were 28 items and 1 were damaged during tuning.
+ - Rita offered a Strings to Customer 1 for $37.33, but they hesitated.
+ - Rita sold a Strings to Customer 1 for $33.59 after a 10% discount.
+ - Customer 2 wanted to buy a PaperScore but none were in inventory, so they left.
+ - Rita sold a Bandana to Customer 3 for $40.23.
+ - Customer 4 wanted to buy a PracticeAmp but none were in inventory, so they left.
+ - Customer 5 wanted to buy a CDPlayer but none were in inventory, so they left.
+ - Rita sold a Cable to Customer 6 for $31.32.
+ - Customer 5 wants to sell a GOOD condition used CDPlayer.
+ - Rita bought a GOOD condition used CDPlayer from Customer 5 for $12.69.
+ - Customer 6 wants to sell a VERY_GOOD condition used MP3Player.
+ - Rita bought a VERY_GOOD condition used MP3Player from Customer 6 for $29.80.
+Rita opens the store.
+ - there are 4 buying and 2 selling customers today.
+ - there were 3 total sales and 2 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Rita is cleaning the store.
+ - Oh no! 27 item(s) were damaged while cleaning.
+Rita locks up and goes home.
+
+========================================
+================ Day 7  ================
+========================================
+Store is closed on Sunday.
+Ginger arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Shirt(GxTd)
+ - added delivered item to inventory: Shirt(KoLx)
+ - added delivered item to inventory: Shirt(YrVg)
+ - added delivered item to inventory: PaperScore(XsMb)
+ - added delivered item to inventory: PaperScore(BpSu)
+ - added delivered item to inventory: PaperScore(UtUu)
+ - added delivered item to inventory: PaperScore(DfJz)
+ - added delivered item to inventory: PaperScore(WhLn)
+ - added delivered item to inventory: PaperScore(VaQr)
+ - added delivered item to inventory: PracticeAmp(JvTi)
+ - added delivered item to inventory: PracticeAmp(SpCi)
+ - added delivered item to inventory: PracticeAmp(IfSl)
+ - added delivered item to inventory: CDPlayer(RvOt)
+ - added delivered item to inventory: CDPlayer(WmKj)
+ - added delivered item to inventory: CDPlayer(OcDi)
+Ginger counts the register. Current cash: $1196.21
+Ginger wanted to order 3 Basss because they were missing from inventory and 3 were ordered, to arrive on day 8
+Ginger wanted to order 3 RecordPlayers because they were missing from inventory and 3 were ordered, to arrive on day 10
+Ginger wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 9
+Ginger wanted to order 3 Flutes because they were missing from inventory and 3 were ordered, to arrive on day 10
+Ginger is doing inventory. Total purchase value of items: $943.26
+ - there were 36 items and 0 were damaged during tuning.
+ - Ginger sold a Guitar to Customer 1 for $77.83.
+- sold a PracticeAmp in a bundle!
+- sold some Strings in a bundle!
+- sold some Strings in a bundle!
+ - Ginger sold a Bandana to Customer 2 for $46.47.
+ - Ginger sold a Guitar to Customer 3 for $19.57.
+- sold some Strings in a bundle!
+- sold some Strings in a bundle!
+ - Ginger offered a Cable to Customer 4 for $23.06, but they hesitated.
+ - Ginger sold a Cable to Customer 4 for $20.75 after a 10% discount.
+ - Ginger offered a Hat to Customer 5 for $43.80, but they hesitated.
+ - Ginger sold a Hat to Customer 5 for $39.42 after a 10% discount.
+ - Ginger sold a Vinyl to Customer 6 for $21.27.
+ - Customer 7 wanted to buy a Strings but none were in inventory, so they left.
+ - Customer 8 wanted to buy a Bandana but none were in inventory, so they left.
+ - Ginger sold a PaperScore to Customer 9 for $95.80.
+ - Customer 10 wanted to buy a Harmonica but none were in inventory, so they left.
+ - Customer 11 wanted to buy a Strings but none were in inventory, so they left.
+ - Customer 12 wanted to buy a Flute but none were in inventory, so they left.
+ - Ginger offered a Guitar to Customer 13 for $22.24, but they hesitated.
+ - Customer 13 would not buy the Guitar, even with a discount, and left.
+ - Customer 11 wants to sell a GOOD condition used Flute.
+ - Customer 11 rejected the initial offer of $28.71. Ginger offered 10% more: $31.58.
+ - Ginger bought a GOOD condition used Flute from Customer 11 for $31.58.
+ - Customer 12 wants to sell a VERY_GOOD condition used Mandolin.
+ - Customer 12 rejected the initial offer of $10.62. Ginger offered 10% more: $11.68.
+ - Customer 12 decided not to sell their Mandolin and left.
+ - Customer 13 wants to sell a FAIR condition used CD.
+ - Ginger bought a FAIR condition used CD from Customer 13 for $12.65.
+Ginger opens the store.
+ - there are 10 buying and 3 selling customers today.
+ - there were 7 total sales and 2 total purchases.
+Ginger is cleaning the store.
+ - Oh no! 1 item(s) were damaged while cleaning.
+Ginger locks up and goes home.
+
+========================================
+================ Day 8  ================
+========================================
+Oh no! Fred was sick and cannot work today.
+Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Vinyl(SgYi)
+ - added delivered item to inventory: Vinyl(XoSo)
+ - added delivered item to inventory: Vinyl(FhAu)
+ - added delivered item to inventory: Guitar(QwHa)
+ - added delivered item to inventory: Guitar(HaVb)
+ - added delivered item to inventory: Guitar(ZzDr)
+ - added delivered item to inventory: Flute(DlDa)
+ - added delivered item to inventory: Flute(IlRa)
+ - added delivered item to inventory: Flute(QeEy)
+ - added delivered item to inventory: Harmonica(HyQz)
+ - added delivered item to inventory: Harmonica(WdSg)
+ - added delivered item to inventory: Harmonica(DxTx)
+ - added delivered item to inventory: Bass(EnWo)
+ - added delivered item to inventory: Bass(VfWc)
+ - added delivered item to inventory: Bass(AfLj)
+Rita counts the register. Current cash: $1229.40
+Rita wanted to order 3 RecordPlayers because they were missing from inventory and 3 were ordered, to arrive on day 10
+Rita wanted to order 3 Stringss because they were missing from inventory and 3 were ordered, to arrive on day 10
+Rita wanted to order 3 Cables because they were missing from inventory and 3 were ordered, to arrive on day 9
+Rita wanted to order 3 Bandanas because they were missing from inventory and 3 were ordered, to arrive on day 11
+Rita is doing inventory. Total purchase value of items: $1136.60
+ - there were 43 items and 4 were damaged during tuning.
+ - Rita sold a Vinyl to Customer 1 for $43.72.
+ - Rita offered a PracticeAmp to Customer 2 for $49.44, but they hesitated.
+ - Customer 2 would not buy the PracticeAmp, even with a discount, and left.
+ - Rita sold a MP3Player to Customer 3 for $47.69.
+ - Rita sold a Bass to Customer 4 for $67.37.
+ - Rita sold a Harmonica to Customer 5 for $72.06.
+ - Rita offered a CD to Customer 6 for $25.31, but they hesitated.
+ - Customer 6 would not buy the CD, even with a discount, and left.
+ - Customer 7 wanted to buy a Strings but none were in inventory, so they left.
+ - Customer 8 wanted to buy a MP3Player but none were in inventory, so they left.
+ - Rita offered a Bass to Customer 9 for $65.13, but they hesitated.
+ - Rita sold a Bass to Customer 9 for $58.62 after a 10% discount.
+ - Rita sold a Guitar to Customer 10 for $72.15.
+ - Rita sold a CDPlayer to Customer 11 for $6.87.
+ - Customer 8 wants to sell a EXCELLENT condition used RecordPlayer.
+ - Rita bought a EXCELLENT condition used RecordPlayer from Customer 8 for $4.24.
+ - Customer 9 wants to sell a VERY_GOOD condition used RecordPlayer.
+ - Rita bought a VERY_GOOD condition used RecordPlayer from Customer 9 for $20.73.
+ - Customer 10 wants to sell a EXCELLENT condition used PaperScore.
+ - Customer 10 rejected the initial offer of $11.85. Rita offered 10% more: $13.03.
+ - Rita bought a EXCELLENT condition used PaperScore from Customer 10 for $13.03.
+ - Customer 11 wants to sell a EXCELLENT condition used Harmonica.
+ - Customer 11 rejected the initial offer of $8.15. Rita offered 10% more: $8.96.
+ - Rita bought a EXCELLENT condition used Harmonica from Customer 11 for $8.96.
+Rita opens the store.
+ - there are 7 buying and 4 selling customers today.
+ - there were 7 total sales and 4 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Rita is cleaning the store.
+ - Oh no! 37 item(s) were damaged while cleaning.
+Rita locks up and goes home.
+
+========================================
+================ Day 9  ================
+========================================
+Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: MP3Player(OvZv)
+ - added delivered item to inventory: MP3Player(IdRl)
+ - added delivered item to inventory: MP3Player(AnPr)
+ - added delivered item to inventory: Flute(TrNb)
+ - added delivered item to inventory: Flute(YhHa)
+ - added delivered item to inventory: Flute(FsEm)
+ - added delivered item to inventory: Harmonica(DcKf)
+ - added delivered item to inventory: Harmonica(ZlBy)
+ - added delivered item to inventory: Harmonica(PkGw)
+ - added delivered item to inventory: Cable(WcWw)
+ - added delivered item to inventory: Cable(YdTs)
+ - added delivered item to inventory: Cable(KmZw)
+Rita counts the register. Current cash: $1189.71
+Rita wanted to order 3 Stringss because they were missing from inventory and 3 were ordered, to arrive on day 12
+Rita wanted to order 3 Bandanas because they were missing from inventory and 3 were ordered, to arrive on day 10
+Rita is doing inventory. Total purchase value of items: $1136.37
+ - there were 43 items and 2 were damaged during tuning.
+ - Rita sold a Flute to Customer 1 for $33.43.
+ - Rita sold a MP3Player to Customer 2 for $96.48.
+ - Rita offered a RecordPlayer to Customer 3 for $33.17, but they hesitated.
+ - Rita sold a RecordPlayer to Customer 3 for $29.86 after a 10% discount.
+ - Rita offered a Bass to Customer 4 for $60.13, but they hesitated.
+ - Rita sold a Bass to Customer 4 for $54.12 after a 10% discount.
+- sold a PracticeAmp in a bundle!
+ - Rita offered a Harmonica to Customer 5 for $88.07, but they hesitated.
+ - Customer 5 would not buy the Harmonica, even with a discount, and left.
+ - Rita sold a PaperScore to Customer 6 for $22.59.
+ - Rita sold a Guitar to Customer 7 for $38.08.
+ - Rita offered a CDPlayer to Customer 8 for $42.64, but they hesitated.
+ - Rita sold a CDPlayer to Customer 8 for $38.37 after a 10% discount.
+ - Customer 8 wants to sell a POOR condition used Bass.
+ - Rita bought a POOR condition used Bass from Customer 8 for $15.03.
+Rita opens the store.
+ - there are 7 buying and 1 selling customers today.
+ - there were 7 total sales and 1 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Rita is cleaning the store.
+ - Oh no! 36 item(s) were damaged while cleaning.
+Rita locks up and goes home.
+
+========================================
+================ Day 10 ================
+========================================
+Ginger arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: RecordPlayer(QcXi)
+ - added delivered item to inventory: RecordPlayer(NbYu)
+ - added delivered item to inventory: RecordPlayer(IiKq)
+ - added delivered item to inventory: Flute(BwTh)
+ - added delivered item to inventory: Flute(SfXm)
+ - added delivered item to inventory: Flute(TsJh)
+ - added delivered item to inventory: RecordPlayer(AuJu)
+ - added delivered item to inventory: RecordPlayer(FpGm)
+ - added delivered item to inventory: RecordPlayer(KhZw)
+ - added delivered item to inventory: Strings(DmLi)
+ - added delivered item to inventory: Strings(YtHa)
+ - added delivered item to inventory: Strings(RqPj)
+ - added delivered item to inventory: Bandana(HoUr)
+ - added delivered item to inventory: Bandana(WcKs)
+ - added delivered item to inventory: Bandana(QxSr)
+Ginger counts the register. Current cash: $1352.29
+Ginger wanted to order 3 Basss because they were missing from inventory and 3 were ordered, to arrive on day 13
+Ginger wanted to order 3 CDs because they were missing from inventory and 3 were ordered, to arrive on day 12
+Ginger wanted to order 3 CDPlayers because they were missing from inventory and 3 were ordered, to arrive on day 13
+Ginger is doing inventory. Total purchase value of items: $922.45
+ - there were 38 items and 0 were damaged during tuning.
+ - Customer 1 wanted to buy a CD but none were in inventory, so they left.
+ - Ginger offered a Hat to Customer 2 for $14.63, but they hesitated.
+ - Ginger sold a Hat to Customer 2 for $13.17 after a 10% discount.
+ - Customer 3 wanted to buy a CD but none were in inventory, so they left.
+ - Ginger sold a Shirt to Customer 4 for $16.02.
+ - Ginger offered a RecordPlayer to Customer 5 for $95.74, but they hesitated.
+ - Ginger sold a RecordPlayer to Customer 5 for $86.16 after a 10% discount.
+ - Ginger offered a Flute to Customer 6 for $24.95, but they hesitated.
+ - Ginger sold a Flute to Customer 6 for $22.45 after a 10% discount.
+ - Customer 7 wanted to buy a Bass but none were in inventory, so they left.
+ - Ginger offered a MP3Player to Customer 8 for $66.33, but they hesitated.
+ - Ginger sold a MP3Player to Customer 8 for $59.70 after a 10% discount.
+ - Ginger sold a Guitar to Customer 9 for $32.22.
+ - Ginger sold a PracticeAmp to Customer 10 for $40.74.
+ - Ginger sold a PaperScore to Customer 11 for $16.68.
+ - Customer 12 wanted to buy a CDPlayer but none were in inventory, so they left.
+ - Customer 9 wants to sell a VERY_GOOD condition used PaperScore.
+ - Ginger bought a VERY_GOOD condition used PaperScore from Customer 9 for $33.86.
+ - Customer 10 wants to sell a POOR condition used Guitar.
+ - Ginger bought a POOR condition used Guitar from Customer 10 for $0.67.
+ - Customer 11 wants to sell a VERY_GOOD condition used Flute.
+ - Ginger bought a VERY_GOOD condition used Flute from Customer 11 for $19.55.
+ - Customer 12 wants to sell a FAIR condition used PracticeAmp.
+ - Ginger bought a FAIR condition used PracticeAmp from Customer 12 for $12.78.
+Ginger opens the store.
+ - there are 8 buying and 4 selling customers today.
+ - there were 8 total sales and 4 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Ginger is cleaning the store.
+ - Oh no! 3 item(s) were damaged while cleaning.
+Ginger locks up and goes home.
+
+========================================
+================ Day 11 ================
+========================================
+Ginger arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Bandana(FjZj)
+ - added delivered item to inventory: Bandana(TcPp)
+ - added delivered item to inventory: Bandana(VhHu)
+Ginger counts the register. Current cash: $1374.71
+Ginger wanted to order 3 MP3Players because they were missing from inventory and 3 were ordered, to arrive on day 12
+Ginger wanted to order 3 Basss because they were missing from inventory and 3 were ordered, to arrive on day 14
+Ginger wanted to order 3 Hats because they were missing from inventory and 3 were ordered, to arrive on day 13
+Ginger wanted to order 3 CDs because they were missing from inventory and 3 were ordered, to arrive on day 13
+Ginger wanted to order 3 CDPlayers because they were missing from inventory and 3 were ordered, to arrive on day 13
+Ginger is doing inventory. Total purchase value of items: $794.71
+ - there were 35 items and 0 were damaged during tuning.
+ - Ginger offered a Cable to Customer 1 for $3.07, but they hesitated.
+ - Ginger sold a Cable to Customer 1 for $2.76 after a 10% discount.
+ - Ginger offered a Bandana to Customer 2 for $14.29, but they hesitated.
+ - Ginger sold a Bandana to Customer 2 for $12.86 after a 10% discount.
+ - Customer 3 wanted to buy a Hat but none were in inventory, so they left.
+ - Ginger offered a Shirt to Customer 4 for $26.33, but they hesitated.
+ - Ginger sold a Shirt to Customer 4 for $23.70 after a 10% discount.
+ - Customer 5 wanted to buy a Hat but none were in inventory, so they left.
+ - Ginger sold a Harmonica to Customer 6 for $31.12.
+ - Ginger offered a Mandolin to Customer 7 for $31.08, but they hesitated.
+ - Customer 7 would not buy the Mandolin, even with a discount, and left.
+ - Customer 8 wanted to buy a Hat but none were in inventory, so they left.
+ - Customer 9 wanted to buy a CDPlayer but none were in inventory, so they left.
+ - Customer 9 wants to sell a GOOD condition used Shirt.
+ - Ginger bought a GOOD condition used Shirt from Customer 9 for $10.25.
+Ginger opens the store.
+ - there are 8 buying and 1 selling customers today.
+ - there were 4 total sales and 1 total purchases.
+Ginger is cleaning the store.
+Ginger locks up and goes home.
+
+========================================
+================ Day 12 ================
+========================================
+Ginger arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Strings(FqMu)
+ - added delivered item to inventory: Strings(WiSb)
+ - added delivered item to inventory: Strings(YtPd)
+ - added delivered item to inventory: CD(EfOq)
+ - added delivered item to inventory: CD(UdTq)
+ - added delivered item to inventory: CD(TmUv)
+ - added delivered item to inventory: MP3Player(ApZz)
+ - added delivered item to inventory: MP3Player(HoOd)
+ - added delivered item to inventory: MP3Player(YuQi)
+Ginger counts the register. Current cash: $1012.06
+Ginger wanted to order 3 Basss because they were missing from inventory and 3 were ordered, to arrive on day 13
+Ginger wanted to order 3 Hats because they were missing from inventory and 3 were ordered, to arrive on day 13
+Ginger wanted to order 3 CDPlayers because they were missing from inventory and 3 were ordered, to arrive on day 15
+Ginger is doing inventory. Total purchase value of items: $1021.36
+ - there were 41 items and 0 were damaged during tuning.
+ - Ginger sold a Flute to Customer 1 for $39.11.
+ - Ginger offered a Vinyl to Customer 2 for $46.14, but they hesitated.
+ - Ginger sold a Vinyl to Customer 2 for $41.52 after a 10% discount.
+ - Ginger offered a Bandana to Customer 3 for $82.06, but they hesitated.
+ - Customer 3 would not buy the Bandana, even with a discount, and left.
+ - Ginger offered a PaperScore to Customer 4 for $6.88, but they hesitated.
+ - Ginger sold a PaperScore to Customer 4 for $6.19 after a 10% discount.
+ - Ginger sold a PaperScore to Customer 5 for $49.18.
+ - Ginger offered a Cable to Customer 6 for $61.91, but they hesitated.
+ - Ginger sold a Cable to Customer 6 for $55.72 after a 10% discount.
+ - Customer 5 wants to sell a VERY_GOOD condition used Strings.
+ - Ginger bought a VERY_GOOD condition used Strings from Customer 5 for $35.36.
+ - Customer 6 wants to sell a EXCELLENT condition used Shirt.
+ - Customer 6 rejected the initial offer of $51.12. Ginger offered 10% more: $56.23.
+ - Ginger bought a EXCELLENT condition used Shirt from Customer 6 for $56.23.
+Ginger opens the store.
+ - there are 4 buying and 2 selling customers today.
+ - there were 5 total sales and 2 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Ginger is cleaning the store.
+ - Oh no! 3 item(s) were damaged while cleaning.
+Ginger locks up and goes home.
+
+========================================
+================ Day 13 ================
+========================================
+Fred arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Bass(ToWr)
+ - added delivered item to inventory: Bass(NqJw)
+ - added delivered item to inventory: Bass(BnHu)
+ - added delivered item to inventory: CDPlayer(KuZq)
+ - added delivered item to inventory: CDPlayer(WfSd)
+ - added delivered item to inventory: CDPlayer(KdLk)
+ - added delivered item to inventory: Hat(WgLc)
+ - added delivered item to inventory: Hat(PiSr)
+ - added delivered item to inventory: Hat(LlWk)
+ - added delivered item to inventory: CD(IiAd)
+ - added delivered item to inventory: CD(VqOy)
+ - added delivered item to inventory: CD(EvSv)
+ - added delivered item to inventory: CDPlayer(PoIk)
+ - added delivered item to inventory: CDPlayer(QkKj)
+ - added delivered item to inventory: CDPlayer(TvSa)
+ - added delivered item to inventory: Bass(IlBn)
+ - added delivered item to inventory: Bass(FdIg)
+ - added delivered item to inventory: Bass(TbPe)
+ - added delivered item to inventory: Hat(OqId)
+ - added delivered item to inventory: Hat(DnSs)
+ - added delivered item to inventory: Hat(MuOh)
+Fred counts the register. Current cash: $892.74
+Fred wanted to order 3 Vinyls because they were missing from inventory and 3 were ordered, to arrive on day 16
+Fred wanted to order 3 Cables because they were missing from inventory and 3 were ordered, to arrive on day 15
+Fred wanted to order 3 Mandolins because they were missing from inventory and 3 were ordered, to arrive on day 14
+Fred is doing inventory. Total purchase value of items: $1373.09
+ - there were 56 items and 2 were damaged during tuning.
+ - Customer 1 wanted to buy a Mandolin but none were in inventory, so they left.
+ - Fred sold a Bandana to Customer 2 for $95.93.
+ - Fred offered a Strings to Customer 3 for $70.72, but they hesitated.
+ - Fred sold a Strings to Customer 3 for $63.65 after a 10% discount.
+ - Fred sold a Bass to Customer 4 for $17.94.
+ - Fred offered a PaperScore to Customer 5 for $53.68, but they hesitated.
+ - Fred sold a PaperScore to Customer 5 for $48.31 after a 10% discount.
+ - Fred sold a PaperScore to Customer 6 for $67.72.
+ - Fred sold a Flute to Customer 7 for $18.82.
+ - Fred offered a CD to Customer 8 for $71.38, but they hesitated.
+ - Fred sold a CD to Customer 8 for $64.25 after a 10% discount.
+ - Customer 5 wants to sell a GOOD condition used PracticeAmp.
+ - Customer 5 rejected the initial offer of $8.06. Fred offered 10% more: $8.87.
+ - Fred bought a GOOD condition used PracticeAmp from Customer 5 for $8.87.
+ - Customer 6 wants to sell a GOOD condition used Bandana.
+ - Customer 6 rejected the initial offer of $12.86. Fred offered 10% more: $14.15.
+ - Fred bought a GOOD condition used Bandana from Customer 6 for $14.15.
+ - Customer 7 wants to sell a VERY_GOOD condition used Hat.
+ - Customer 7 rejected the initial offer of $9.26. Fred offered 10% more: $10.18.
+ - Fred bought a VERY_GOOD condition used Hat from Customer 7 for $10.18.
+ - Customer 8 wants to sell a VERY_GOOD condition used RecordPlayer.
+ - Customer 8 rejected the initial offer of $6.81. Fred offered 10% more: $7.49.
+ - Fred bought a VERY_GOOD condition used RecordPlayer from Customer 8 for $7.49.
+Fred opens the store.
+ - there are 4 buying and 4 selling customers today.
+ - there were 7 total sales and 4 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Fred is cleaning the store.
+ - Oh no! 12 item(s) were damaged while cleaning.
+Fred locks up and goes home.
+
+========================================
+================ Day 14 ================
+========================================
+Store is closed on Sunday.
+Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Bass(JfKn)
+ - added delivered item to inventory: Bass(KfLa)
+ - added delivered item to inventory: Bass(YeJs)
+ - added delivered item to inventory: Mandolin(NfHt)
+ - added delivered item to inventory: Mandolin(GmDi)
+ - added delivered item to inventory: Mandolin(GrNg)
+Rita counts the register. Current cash: $980.55
+Rita wanted to order 3 PaperScores because they were missing from inventory and 3 were ordered, to arrive on day 17
+Rita wanted to order 3 Vinyls because they were missing from inventory and 3 were ordered, to arrive on day 16
+Rita wanted to order 3 Cables because they were missing from inventory and 3 were ordered, to arrive on day 16
+Rita wanted to order 3 Guitars because they were missing from inventory and 3 were ordered, to arrive on day 17
+Rita is doing inventory. Total purchase value of items: $1269.96
+ - there were 53 items and 10 were damaged during tuning.
+ - Rita offered a Bandana to Customer 1 for $93.90, but they hesitated.
+ - Rita sold a Bandana to Customer 1 for $84.51 after a 10% discount.
+ - Rita offered a MP3Player to Customer 2 for $23.37, but they hesitated.
+ - Customer 2 would not buy the MP3Player, even with a discount, and left.
+ - Rita offered a Hat to Customer 3 for $4.35, but they hesitated.
+ - Rita sold a Hat to Customer 3 for $3.92 after a 10% discount.
+ - Customer 4 wanted to buy a PaperScore but none were in inventory, so they left.
+ - Rita offered a PracticeAmp to Customer 5 for $25.57, but they hesitated.
+ - Rita sold a PracticeAmp to Customer 5 for $23.01 after a 10% discount.
+ - Rita sold a Strings to Customer 6 for $63.97.
+ - Rita offered a Hat to Customer 7 for $65.98, but they hesitated.
+ - Rita sold a Hat to Customer 7 for $59.38 after a 10% discount.
+ - Customer 8 wanted to buy a Guitar but none were in inventory, so they left.
+ - Customer 9 wanted to buy a Guitar but none were in inventory, so they left.
+ - Rita sold a Hat to Customer 10 for $47.95.
+ - Rita offered a Bass to Customer 11 for $70.61, but they hesitated.
+ - Customer 11 would not buy the Bass, even with a discount, and left.
+ - Customer 12 wanted to buy a Vinyl but none were in inventory, so they left.
+ - Customer 10 wants to sell a GOOD condition used Guitar.
+ - Customer 10 rejected the initial offer of $5.12. Rita offered 10% more: $5.63.
+ - Rita bought a GOOD condition used Guitar from Customer 10 for $5.63.
+ - Customer 11 wants to sell a POOR condition used PracticeAmp.
+ - Rita bought a POOR condition used PracticeAmp from Customer 11 for $15.74.
+ - Customer 12 wants to sell a VERY_GOOD condition used Cable.
+ - Customer 12 rejected the initial offer of $18.71. Rita offered 10% more: $20.58.
+ - Rita bought a VERY_GOOD condition used Cable from Customer 12 for $20.58.
+Rita opens the store.
+ - there are 9 buying and 3 selling customers today.
+ - there were 6 total sales and 3 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Rita is cleaning the store.
+ - Oh no! 49 item(s) were damaged while cleaning.
+Rita locks up and goes home.
+
+========================================
+================ Day 15 ================
+========================================
+Ginger arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: CDPlayer(MwQe)
+ - added delivered item to inventory: CDPlayer(SaHk)
+ - added delivered item to inventory: CDPlayer(XqCf)
+ - added delivered item to inventory: Cable(YoHf)
+ - added delivered item to inventory: Cable(NcUo)
+ - added delivered item to inventory: Cable(FgMk)
+Ginger counts the register. Current cash: $889.62
+Ginger wanted to order 3 PaperScores because they were missing from inventory and 3 were ordered, to arrive on day 18
+Ginger wanted to order 3 Vinyls because they were missing from inventory and 3 were ordered, to arrive on day 18
+Ginger is doing inventory. Total purchase value of items: $1082.42
+ - there were 47 items and 0 were damaged during tuning.
+ - Ginger sold a MP3Player to Customer 1 for $18.69.
+ - Ginger sold a Flute to Customer 2 for $32.11.
+ - Ginger sold a Shirt to Customer 3 for $6.53.
+ - Ginger sold a PracticeAmp to Customer 4 for $14.19.
+ - Ginger offered a Bandana to Customer 5 for $22.64, but they hesitated.
+ - Ginger sold a Bandana to Customer 5 for $20.37 after a 10% discount.
+ - Ginger offered a CD to Customer 6 for $74.37, but they hesitated.
+ - Ginger sold a CD to Customer 6 for $66.93 after a 10% discount.
+ - Ginger offered a Flute to Customer 7 for $3.73, but they hesitated.
+ - Ginger sold a Flute to Customer 7 for $3.36 after a 10% discount.
+ - Ginger offered a Hat to Customer 8 for $2.38, but they hesitated.
+ - Ginger sold a Hat to Customer 8 for $2.14 after a 10% discount.
+ - Ginger sold a Bass to Customer 9 for $17.38.
+- sold some Strings in a bundle!
+ - Ginger offered a CD to Customer 10 for $62.02, but they hesitated.
+ - Customer 10 would not buy the CD, even with a discount, and left.
+ - Customer 9 wants to sell a VERY_GOOD condition used PracticeAmp.
+ - Ginger bought a VERY_GOOD condition used PracticeAmp from Customer 9 for $40.91.
+ - Customer 10 wants to sell a FAIR condition used Flute.
+ - Ginger bought a FAIR condition used Flute from Customer 10 for $8.00.
+Ginger opens the store.
+ - there are 8 buying and 2 selling customers today.
+ - there were 9 total sales and 2 total purchases.
+Ginger is cleaning the store.
+Ginger locks up and goes home.
+
+========================================
+================ Day 16 ================
+========================================
+Oh no! Rita was sick and cannot work today.
+Fred arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Vinyl(UnSw)
+ - added delivered item to inventory: Vinyl(EnEa)
+ - added delivered item to inventory: Vinyl(KjVe)
+ - added delivered item to inventory: Vinyl(PcNw)
+ - added delivered item to inventory: Vinyl(LcKt)
+ - added delivered item to inventory: Vinyl(SgPu)
+ - added delivered item to inventory: Cable(DdWd)
+ - added delivered item to inventory: Cable(NxGo)
+ - added delivered item to inventory: Cable(GeQp)
+Fred counts the register. Current cash: $826.40
+Fred wanted to order 3 PaperScores because they were missing from inventory and 3 were ordered, to arrive on day 19
+Fred wanted to order 3 MP3Players because they were missing from inventory and 3 were ordered, to arrive on day 17
+Fred is doing inventory. Total purchase value of items: $1148.30
+ - there were 47 items and 3 were damaged during tuning.
+ - Fred offered a Hat to Customer 1 for $13.03, but they hesitated.
+ - Customer 1 would not buy the Hat, even with a discount, and left.
+ - Fred sold a Shirt to Customer 2 for $89.96.
+ - Customer 3 wanted to buy a MP3Player but none were in inventory, so they left.
+ - Fred offered a Flute to Customer 4 for $88.21, but they hesitated.
+ - Fred sold a Flute to Customer 4 for $79.39 after a 10% discount.
+ - Fred sold a PracticeAmp to Customer 5 for $81.83.
+ - Fred offered a Shirt to Customer 6 for $16.39, but they hesitated.
+ - Fred sold a Shirt to Customer 6 for $14.75 after a 10% discount.
+ - Fred offered a Strings to Customer 7 for $31.40, but they hesitated.
+ - Fred sold a Strings to Customer 7 for $28.26 after a 10% discount.
+ - Fred offered a Hat to Customer 8 for $13.03, but they hesitated.
+ - Fred sold a Hat to Customer 8 for $11.73 after a 10% discount.
+ - Fred offered a Flute to Customer 9 for $16.00, but they hesitated.
+ - Fred sold a Flute to Customer 9 for $14.40 after a 10% discount.
+ - Customer 6 wants to sell a FAIR condition used PaperScore.
+ - Fred bought a FAIR condition used PaperScore from Customer 6 for $18.59.
+ - Customer 7 wants to sell a POOR condition used Hat.
+ - Fred bought a POOR condition used Hat from Customer 7 for $1.51.
+ - Customer 8 wants to sell a POOR condition used CDPlayer.
+ - Fred bought a POOR condition used CDPlayer from Customer 8 for $6.00.
+ - Customer 9 wants to sell a EXCELLENT condition used Vinyl.
+ - Customer 9 rejected the initial offer of $2.57. Fred offered 10% more: $2.83.
+ - Fred bought a EXCELLENT condition used Vinyl from Customer 9 for $2.83.
+Fred opens the store.
+ - there are 5 buying and 4 selling customers today.
+ - there were 7 total sales and 4 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Fred is cleaning the store.
+ - Oh no! 14 item(s) were damaged while cleaning.
+Fred locks up and goes home.
+
+========================================
+================ Day 17 ================
+========================================
+Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: PaperScore(RnSb)
+ - added delivered item to inventory: PaperScore(XhUe)
+ - added delivered item to inventory: PaperScore(PsJj)
+ - added delivered item to inventory: Guitar(ShLr)
+ - added delivered item to inventory: Guitar(JaCo)
+ - added delivered item to inventory: Guitar(OaBz)
+ - added delivered item to inventory: MP3Player(LaCi)
+ - added delivered item to inventory: MP3Player(FtBd)
+ - added delivered item to inventory: MP3Player(NrBc)
+Rita counts the register. Current cash: $915.23
+Rita wanted to order 3 PracticeAmps because they were missing from inventory and 3 were ordered, to arrive on day 20
+Rita wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 19
+Rita wanted to order 3 Shirts because they were missing from inventory and 3 were ordered, to arrive on day 19
+Rita wanted to order 3 Flutes because they were missing from inventory and 3 were ordered, to arrive on day 19
+Rita is doing inventory. Total purchase value of items: $1055.65
+ - there were 46 items and 6 were damaged during tuning.
+ - Rita sold a CDPlayer to Customer 1 for $54.58.
+ - Rita offered a Mandolin to Customer 2 for $57.23, but they hesitated.
+ - Rita sold a Mandolin to Customer 2 for $51.51 after a 10% discount.
+ - Rita sold a Cable to Customer 3 for $45.35.
+ - Rita offered a Cable to Customer 4 for $86.83, but they hesitated.
+ - Customer 4 would not buy the Cable, even with a discount, and left.
+ - Rita offered a Bass to Customer 5 for $68.99, but they hesitated.
+ - Rita sold a Bass to Customer 5 for $62.09 after a 10% discount.
+ - Rita offered a CDPlayer to Customer 6 for $33.53, but they hesitated.
+ - Rita sold a CDPlayer to Customer 6 for $30.18 after a 10% discount.
+ - Rita offered a Strings to Customer 7 for $35.91, but they hesitated.
+ - Rita sold a Strings to Customer 7 for $32.32 after a 10% discount.
+ - Customer 6 wants to sell a FAIR condition used Flute.
+ - Customer 6 rejected the initial offer of $3.29. Rita offered 10% more: $3.62.
+ - Rita bought a FAIR condition used Flute from Customer 6 for $3.62.
+ - Customer 7 wants to sell a VERY_GOOD condition used PaperScore.
+ - Customer 7 rejected the initial offer of $17.63. Rita offered 10% more: $19.39.
+ - Customer 7 decided not to sell their PaperScore and left.
+Rita opens the store.
+ - there are 5 buying and 2 selling customers today.
+ - there were 6 total sales and 1 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Rita is cleaning the store.
+ - Oh no! 39 item(s) were damaged while cleaning.
+Rita locks up and goes home.
+
+========================================
+================ Day 18 ================
+========================================
+Fred arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: PaperScore(NpAf)
+ - added delivered item to inventory: PaperScore(KmPz)
+ - added delivered item to inventory: PaperScore(RxWa)
+ - added delivered item to inventory: Vinyl(CrFh)
+ - added delivered item to inventory: Vinyl(VbPz)
+ - added delivered item to inventory: Vinyl(UkPm)
+Fred counts the register. Current cash: $861.08
+Fred wanted to order 3 PracticeAmps because they were missing from inventory and 3 were ordered, to arrive on day 21
+Fred wanted to order 3 Stringss because they were missing from inventory and 3 were ordered, to arrive on day 21
+Fred wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 20
+Fred wanted to order 3 Shirts because they were missing from inventory and 3 were ordered, to arrive on day 20
+Fred wanted to order 3 Hats because they were missing from inventory and 3 were ordered, to arrive on day 20
+Fred wanted to order 3 Mandolins because they were missing from inventory and 3 were ordered, to arrive on day 21
+Fred is doing inventory. Total purchase value of items: $918.89
+ - there were 37 items and 1 were damaged during tuning.
+ - Customer 1 wanted to buy a Shirt but none were in inventory, so they left.
+ - Customer 2 wanted to buy a Shirt but none were in inventory, so they left.
+ - Customer 3 wanted to buy a Shirt but none were in inventory, so they left.
+ - Fred offered a CD to Customer 4 for $49.62, but they hesitated.
+ - Customer 4 would not buy the CD, even with a discount, and left.
+ - Fred offered a CDPlayer to Customer 5 for $41.98, but they hesitated.
+ - Fred sold a CDPlayer to Customer 5 for $37.78 after a 10% discount.
+ - Customer 6 wanted to buy a Harmonica but none were in inventory, so they left.
+ - Customer 5 wants to sell a FAIR condition used Flute.
+ - Fred bought a FAIR condition used Flute from Customer 5 for $6.63.
+ - Customer 6 wants to sell a VERY_GOOD condition used Bass.
+ - Customer 6 rejected the initial offer of $16.42. Fred offered 10% more: $18.06.
+ - Fred bought a VERY_GOOD condition used Bass from Customer 6 for $18.06.
+Fred opens the store.
+ - there are 4 buying and 2 selling customers today.
+ - there were 1 total sales and 2 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Fred is cleaning the store.
+ - Oh no! 7 item(s) were damaged while cleaning.
+Fred locks up and goes home.
+
+========================================
+================ Day 19 ================
+========================================
+Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: PaperScore(HtXh)
+ - added delivered item to inventory: PaperScore(LhZh)
+ - added delivered item to inventory: PaperScore(JwTu)
+ - added delivered item to inventory: Harmonica(JgXq)
+ - added delivered item to inventory: Harmonica(DvOf)
+ - added delivered item to inventory: Harmonica(WkBw)
+ - added delivered item to inventory: Shirt(LxYi)
+ - added delivered item to inventory: Shirt(ChWl)
+ - added delivered item to inventory: Shirt(JcRt)
+ - added delivered item to inventory: Flute(LjUs)
+ - added delivered item to inventory: Flute(MbYl)
+ - added delivered item to inventory: Flute(MjAs)
+Rita counts the register. Current cash: $385.30
+Rita wanted to order 3 PracticeAmps because they were missing from inventory and 3 were ordered, to arrive on day 21
+Rita wanted to order 3 Stringss because they were missing from inventory and 3 were ordered, to arrive on day 22
+Rita wanted to order 3 Hats because they were missing from inventory and 3 were ordered, to arrive on day 21
+Rita wanted to order 3 Mandolins because they were missing from inventory and 3 were ordered, to arrive on day 22
+Rita is doing inventory. Total purchase value of items: $1120.72
+ - there were 45 items and 2 were damaged during tuning.
+ - Rita offered a CD to Customer 1 for $49.62, but they hesitated.
+ - Rita sold a CD to Customer 1 for $44.66 after a 10% discount.
+ - Customer 2 wanted to buy a Strings but none were in inventory, so they left.
+ - Customer 3 wanted to buy a PracticeAmp but none were in inventory, so they left.
+ - Rita offered a MP3Player to Customer 4 for $64.91, but they hesitated.
+ - Rita sold a MP3Player to Customer 4 for $58.42 after a 10% discount.
+ - Rita sold a RecordPlayer to Customer 5 for $28.49.
+ - Rita sold a CDPlayer to Customer 6 for $1.39.
+ - Rita sold a Cable to Customer 7 for $69.46.
+ - Customer 7 wants to sell a VERY_GOOD condition used Guitar.
+ - Customer 7 rejected the initial offer of $4.89. Rita offered 10% more: $5.38.
+ - Rita bought a VERY_GOOD condition used Guitar from Customer 7 for $5.38.
+Rita opens the store.
+ - there are 6 buying and 1 selling customers today.
+ - there were 5 total sales and 1 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Rita is cleaning the store.
+ - Oh no! 39 item(s) were damaged while cleaning.
+Rita locks up and goes home.
+
+========================================
+================ Day 20 ================
+========================================
+Fred arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: PracticeAmp(UqMt)
+ - added delivered item to inventory: PracticeAmp(JeUm)
+ - added delivered item to inventory: PracticeAmp(EsCr)
+ - added delivered item to inventory: Harmonica(BdFv)
+ - added delivered item to inventory: Harmonica(RqCg)
+ - added delivered item to inventory: Harmonica(UmHw)
+ - added delivered item to inventory: Shirt(JrGy)
+ - added delivered item to inventory: Shirt(AnKt)
+ - added delivered item to inventory: Shirt(GzEd)
+ - added delivered item to inventory: Hat(VdAx)
+ - added delivered item to inventory: Hat(BvKu)
+ - added delivered item to inventory: Hat(UgZj)
+Fred counts the register. Current cash: $346.21
+Fred wanted to order 3 MP3Players because they were missing from inventory and 3 were ordered, to arrive on day 21
+Fred wanted to order 3 Stringss because they were missing from inventory and 3 were ordered, to arrive on day 22
+Fred wanted to order 3 CDs because they were missing from inventory and 3 were ordered, to arrive on day 23
+Fred wanted to order 3 CDPlayers because they were missing from inventory and 3 were ordered, to arrive on day 23
+ - failed to order 1 Mandolin(s) because there was not enough cash in the register.
+Fred wanted to order 3 Mandolins because they were missing from inventory and 2 were ordered, to arrive on day 21
+Fred is doing inventory. Total purchase value of items: $1185.72
+ - there were 42 items and 0 were damaged during tuning.
+ - Customer 1 wanted to buy a CDPlayer but none were in inventory, so they left.
+ - Customer 2 wanted to buy a MP3Player but none were in inventory, so they left.
+ - Customer 3 wanted to buy a CD but none were in inventory, so they left.
+ - Fred offered a Harmonica to Customer 4 for $55.85, but they hesitated.
+ - Fred sold a Harmonica to Customer 4 for $50.27 after a 10% discount.
+ - Fred sold a Harmonica to Customer 5 for $70.24.
+ - Fred offered a PaperScore to Customer 6 for $63.34, but they hesitated.
+ - Fred sold a PaperScore to Customer 6 for $57.00 after a 10% discount.
+ - Customer 7 wanted to buy a MP3Player but none were in inventory, so they left.
+ - Fred sold a PracticeAmp to Customer 8 for $88.84.
+ - Fred sold a Bandana to Customer 9 for $42.01.
+ - Customer 10 wanted to buy a Mandolin but none were in inventory, so they left.
+ - Customer 9 wants to sell a GOOD condition used Flute.
+ - Customer 9 rejected the initial offer of $23.97. Fred offered 10% more: $26.36.
+ - Fred bought a GOOD condition used Flute from Customer 9 for $26.36.
+ - Customer 10 wants to sell a EXCELLENT condition used MP3Player.
+ - Fred bought a EXCELLENT condition used MP3Player from Customer 10 for $51.77.
+Fred opens the store.
+ - there are 8 buying and 2 selling customers today.
+ - there were 5 total sales and 2 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Fred is cleaning the store.
+ - Oh no! 6 item(s) were damaged while cleaning.
+Fred locks up and goes home.
+
+========================================
+================ Day 21 ================
+========================================
+Store is closed on Sunday.
+Ginger arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: PracticeAmp(HvOu)
+ - added delivered item to inventory: PracticeAmp(YiQa)
+ - added delivered item to inventory: PracticeAmp(IpLl)
+ - added delivered item to inventory: Strings(YrZg)
+ - added delivered item to inventory: Strings(UsQu)
+ - added delivered item to inventory: Strings(RrJy)
+ - added delivered item to inventory: Mandolin(ThOd)
+ - added delivered item to inventory: Mandolin(HwGn)
+ - added delivered item to inventory: Mandolin(DoRm)
+ - added delivered item to inventory: PracticeAmp(DdUp)
+ - added delivered item to inventory: PracticeAmp(OmXv)
+ - added delivered item to inventory: PracticeAmp(JgMf)
+ - added delivered item to inventory: Hat(UxFe)
+ - added delivered item to inventory: Hat(VxJy)
+ - added delivered item to inventory: Hat(VrIb)
+ - added delivered item to inventory: MP3Player(FtHz)
+ - added delivered item to inventory: MP3Player(YcYf)
+ - added delivered item to inventory: MP3Player(PdHo)
+ - added delivered item to inventory: Mandolin(QdJy)
+ - added delivered item to inventory: Mandolin(DoOj)
+Ginger counts the register. Current cash: $231.07
+Ginger wanted to order 3 CDs because they were missing from inventory and 3 were ordered, to arrive on day 22
+Ginger wanted to order 3 CDPlayers because they were missing from inventory and 3 were ordered, to arrive on day 23
+Ginger is doing inventory. Total purchase value of items: $1421.25
+ - there were 54 items and 0 were damaged during tuning.
+ - Ginger offered a Cable to Customer 1 for $51.61, but they hesitated.
+ - Ginger sold a Cable to Customer 1 for $46.45 after a 10% discount.
+ - Ginger offered a Shirt to Customer 2 for $24.09, but they hesitated.
+ - Customer 2 would not buy the Shirt, even with a discount, and left.
+ - Ginger offered a Guitar to Customer 3 for $17.09, but they hesitated.
+ - Ginger sold a Guitar to Customer 3 for $15.38 after a 10% discount.
+- sold some Strings in a bundle!
+ - Ginger sold a Strings to Customer 4 for $26.49.
+ - Ginger offered a Hat to Customer 5 for $69.76, but they hesitated.
+ - Ginger sold a Hat to Customer 5 for $62.79 after a 10% discount.
+ - Ginger offered a Bandana to Customer 6 for $14.47, but they hesitated.
+ - Ginger sold a Bandana to Customer 6 for $13.02 after a 10% discount.
+ - Ginger sold a PaperScore to Customer 7 for $62.58.
+ - Ginger offered a Strings to Customer 8 for $16.60, but they hesitated.
+ - Customer 8 would not buy the Strings, even with a discount, and left.
+ - Customer 9 wanted to buy a CDPlayer but none were in inventory, so they left.
+ - Ginger offered a PaperScore to Customer 10 for $79.37, but they hesitated.
+ - Customer 10 would not buy the PaperScore, even with a discount, and left.
+ - Ginger offered a PracticeAmp to Customer 11 for $5.78, but they hesitated.
+ - Ginger sold a PracticeAmp to Customer 11 for $5.21 after a 10% discount.
+ - Ginger offered a Vinyl to Customer 12 for $56.28, but they hesitated.
+ - Ginger sold a Vinyl to Customer 12 for $50.66 after a 10% discount.
+ - Customer 10 wants to sell a EXCELLENT condition used CDPlayer.
+ - Customer 10 rejected the initial offer of $18.95. Ginger offered 10% more: $20.85.
+ - Ginger bought a EXCELLENT condition used CDPlayer from Customer 10 for $20.85.
+ - Customer 11 wants to sell a POOR condition used PaperScore.
+ - Customer 11 rejected the initial offer of $15.33. Ginger offered 10% more: $16.86.
+ - Customer 11 decided not to sell their PaperScore and left.
+ - Customer 12 wants to sell a VERY_GOOD condition used Flute.
+ - Customer 12 rejected the initial offer of $14.04. Ginger offered 10% more: $15.45.
+ - Customer 12 decided not to sell their Flute and left.
+Ginger opens the store.
+ - there are 9 buying and 3 selling customers today.
+ - there were 8 total sales and 1 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+Ginger is cleaning the store.
+ - Oh no! 2 item(s) were damaged while cleaning.
+Ginger locks up and goes home.
+
+========================================
+================ Day 22 ================
+========================================
+Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Strings(IoXo)
+ - added delivered item to inventory: Strings(ByDt)
+ - added delivered item to inventory: Strings(LyDg)
+ - added delivered item to inventory: Mandolin(XmRq)
+ - added delivered item to inventory: Mandolin(KcDf)
+ - added delivered item to inventory: Mandolin(SaMl)
+ - added delivered item to inventory: Strings(NySy)
+ - added delivered item to inventory: Strings(JbMf)
+ - added delivered item to inventory: Strings(LsNk)
+ - added delivered item to inventory: CD(ZcUx)
+ - added delivered item to inventory: CD(MqXo)
+ - added delivered item to inventory: CD(SmEj)
+Rita counts the register. Current cash: $434.58
+Rita wanted to order 3 Bandanas because they were missing from inventory and 3 were ordered, to arrive on day 23
+Rita is doing inventory. Total purchase value of items: $1393.93
+ - there were 55 items and 7 were damaged during tuning.
+ - Customer 1 wanted to buy a RecordPlayer but none were in inventory, so they left.
+ - Rita offered a Shirt to Customer 2 for $24.09, but they hesitated.
+ - Rita sold a Shirt to Customer 2 for $21.68 after a 10% discount.
+ - Rita offered a Harmonica to Customer 3 for $59.13, but they hesitated.
+ - Rita sold a Harmonica to Customer 3 for $53.22 after a 10% discount.
+ - Rita sold a Harmonica to Customer 4 for $16.60.
+ - Rita offered a PaperScore to Customer 5 for $52.49, but they hesitated.
+ - Rita sold a PaperScore to Customer 5 for $47.24 after a 10% discount.
+ - Rita offered a PracticeAmp to Customer 6 for $92.16, but they hesitated.
+ - Customer 6 would not buy the PracticeAmp, even with a discount, and left.
+ - Rita offered a CDPlayer to Customer 7 for $41.69, but they hesitated.
+ - Rita sold a CDPlayer to Customer 7 for $37.52 after a 10% discount.
+ - Rita sold a Mandolin to Customer 8 for $4.79.
+ - Rita sold a Cable to Customer 9 for $9.06.
+ - Rita offered a Hat to Customer 10 for $47.72, but they hesitated.
+ - Rita sold a Hat to Customer 10 for $42.95 after a 10% discount.
+ - Customer 11 wanted to buy a CDPlayer but none were in inventory, so they left.
+ - Rita sold a Strings to Customer 12 for $16.60.
+ - Customer 13 wanted to buy a Cable but none were in inventory, so they left.
+ - Customer 11 wants to sell a GOOD condition used PaperScore.
+ - Customer 11 rejected the initial offer of $6.65. Rita offered 10% more: $7.32.
+ - Customer 11 decided not to sell their PaperScore and left.
+ - Customer 12 wants to sell a VERY_GOOD condition used Guitar.
+ - Customer 12 rejected the initial offer of $23.56. Rita offered 10% more: $25.92.
+ - Rita bought a VERY_GOOD condition used Guitar from Customer 12 for $25.92.
+ - Customer 13 wants to sell a GOOD condition used Guitar.
+ - Rita bought a GOOD condition used Guitar from Customer 13 for $2.93.
+Rita opens the store.
+ - there are 10 buying and 3 selling customers today.
+ - there were 9 total sales and 2 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Rita is cleaning the store.
+ - Oh no! 46 item(s) were damaged while cleaning.
+Rita locks up and goes home.
+
+========================================
+================ Day 23 ================
+========================================
+Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: CD(GhQn)
+ - added delivered item to inventory: CD(TyXc)
+ - added delivered item to inventory: CD(VlNy)
+ - added delivered item to inventory: CDPlayer(IbWv)
+ - added delivered item to inventory: CDPlayer(UhFa)
+ - added delivered item to inventory: CDPlayer(OeHc)
+ - added delivered item to inventory: CDPlayer(YbLc)
+ - added delivered item to inventory: CDPlayer(TzTb)
+ - added delivered item to inventory: CDPlayer(RvAi)
+ - added delivered item to inventory: Bandana(TtEp)
+ - added delivered item to inventory: Bandana(VlPo)
+ - added delivered item to inventory: Bandana(KaOw)
+Rita counts the register. Current cash: $573.98
+Rita wanted to order 3 RecordPlayers because they were missing from inventory and 3 were ordered, to arrive on day 25
+Rita wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 26
+Rita wanted to order 3 Cables because they were missing from inventory and 3 were ordered, to arrive on day 25
+Rita is doing inventory. Total purchase value of items: $1317.77
+ - there were 51 items and 1 were damaged during tuning.
+ - Rita offered a PracticeAmp to Customer 1 for $46.63, but they hesitated.
+ - Rita sold a PracticeAmp to Customer 1 for $41.97 after a 10% discount.
+ - Rita sold a Vinyl to Customer 2 for $47.75.
+ - Customer 3 wanted to buy a Harmonica but none were in inventory, so they left.
+ - Rita offered a MP3Player to Customer 4 for $6.81, but they hesitated.
+ - Rita sold a MP3Player to Customer 4 for $6.13 after a 10% discount.
+ - Rita sold a Vinyl to Customer 5 for $51.68.
+ - Customer 6 wanted to buy a Bass but none were in inventory, so they left.
+ - Rita offered a CD to Customer 7 for $95.29, but they hesitated.
+ - Rita sold a CD to Customer 7 for $85.76 after a 10% discount.
+ - Rita sold a Bandana to Customer 8 for $11.96.
+ - Rita sold a Bandana to Customer 9 for $80.91.
+ - Rita offered a Flute to Customer 10 for $33.75, but they hesitated.
+ - Rita sold a Flute to Customer 10 for $30.37 after a 10% discount.
+ - Customer 11 wanted to buy a Cable but none were in inventory, so they left.
+ - Customer 12 wanted to buy a Harmonica but none were in inventory, so they left.
+ - Customer 11 wants to sell a VERY_GOOD condition used CD.
+ - Customer 11 rejected the initial offer of $22.94. Rita offered 10% more: $25.23.
+ - Rita bought a VERY_GOOD condition used CD from Customer 11 for $25.23.
+ - Customer 12 wants to sell a VERY_GOOD condition used Mandolin.
+ - Rita bought a VERY_GOOD condition used Mandolin from Customer 12 for $4.82.
+Rita opens the store.
+ - there are 10 buying and 2 selling customers today.
+ - there were 8 total sales and 2 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Rita is cleaning the store.
+ - Oh no! 41 item(s) were damaged while cleaning.
+Rita locks up and goes home.
+
+========================================
+================ Day 24 ================
+========================================
+Fred arrives at the store.
+Fred counts the register. Current cash: $635.49
+Fred wanted to order 3 Basss because they were missing from inventory and 3 were ordered, to arrive on day 27
+Fred wanted to order 3 RecordPlayers because they were missing from inventory and 3 were ordered, to arrive on day 25
+Fred wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 27
+Fred wanted to order 3 Cables because they were missing from inventory and 3 were ordered, to arrive on day 25
+Fred wanted to order 3 Bandanas because they were missing from inventory and 3 were ordered, to arrive on day 27
+Fred is doing inventory. Total purchase value of items: $816.07
+ - there were 35 items and 0 were damaged during tuning.
+ - Fred offered a PracticeAmp to Customer 1 for $58.98, but they hesitated.
+ - Fred sold a PracticeAmp to Customer 1 for $53.09 after a 10% discount.
+ - Customer 2 wanted to buy a Bandana but none were in inventory, so they left.
+ - Fred sold a Flute to Customer 3 for $23.47.
+ - Fred offered a PaperScore to Customer 4 for $38.39, but they hesitated.
+ - Fred sold a PaperScore to Customer 4 for $34.55 after a 10% discount.
+ - Fred offered a CD to Customer 5 for $22.83, but they hesitated.
+ - Fred sold a CD to Customer 5 for $20.55 after a 10% discount.
+ - Fred offered a MP3Player to Customer 6 for $30.91, but they hesitated.
+ - Fred sold a MP3Player to Customer 6 for $27.82 after a 10% discount.
+ - Customer 7 wanted to buy a RecordPlayer but none were in inventory, so they left.
+ - Fred sold a Mandolin to Customer 8 for $13.03.
+- sold a PracticeAmp in a bundle!
+ - Customer 9 wanted to buy a Flute but none were in inventory, so they left.
+ - Fred offered a CD to Customer 10 for $40.37, but they hesitated.
+ - Customer 10 would not buy the CD, even with a discount, and left.
+ - Fred sold a PaperScore to Customer 11 for $44.04.
+ - Fred sold a Hat to Customer 12 for $14.59.
+ - Customer 9 wants to sell a FAIR condition used Bass.
+ - Fred bought a FAIR condition used Bass from Customer 9 for $9.99.
+ - Customer 10 wants to sell a EXCELLENT condition used Flute.
+ - Customer 10 rejected the initial offer of $42.49. Fred offered 10% more: $46.74.
+ - Customer 10 decided not to sell their Flute and left.
+ - Customer 11 wants to sell a GOOD condition used Vinyl.
+ - Fred bought a GOOD condition used Vinyl from Customer 11 for $2.51.
+ - Customer 12 wants to sell a FAIR condition used Bass.
+ - Fred bought a FAIR condition used Bass from Customer 12 for $14.82.
+Fred opens the store.
+ - there are 8 buying and 4 selling customers today.
+ - there were 8 total sales and 3 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Fred is cleaning the store.
+ - Oh no! 7 item(s) were damaged while cleaning.
+Fred locks up and goes home.
+
+========================================
+================ Day 25 ================
+========================================
+Fred arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: RecordPlayer(MxDo)
+ - added delivered item to inventory: RecordPlayer(HkRk)
+ - added delivered item to inventory: RecordPlayer(FvFp)
+ - added delivered item to inventory: Cable(ZnTv)
+ - added delivered item to inventory: Cable(ThDj)
+ - added delivered item to inventory: Cable(DmTd)
+ - added delivered item to inventory: RecordPlayer(IfJp)
+ - added delivered item to inventory: RecordPlayer(LgTj)
+ - added delivered item to inventory: RecordPlayer(GsQm)
+ - added delivered item to inventory: Cable(HwPs)
+ - added delivered item to inventory: Cable(SiFu)
+ - added delivered item to inventory: Cable(IqJa)
+Fred counts the register. Current cash: $467.82
+Fred wanted to order 3 PaperScores because they were missing from inventory and 3 were ordered, to arrive on day 28
+Fred wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 28
+Fred wanted to order 3 Flutes because they were missing from inventory and 3 were ordered, to arrive on day 28
+Fred wanted to order 3 Bandanas because they were missing from inventory and 3 were ordered, to arrive on day 26
+Fred is doing inventory. Total purchase value of items: $800.20
+ - there were 36 items and 4 were damaged during tuning.
+ - Customer 1 wanted to buy a PaperScore but none were in inventory, so they left.
+ - Customer 2 wanted to buy a Bandana but none were in inventory, so they left.
+ - Customer 3 wanted to buy a Harmonica but none were in inventory, so they left.
+ - Fred sold a CDPlayer to Customer 4 for $18.03.
+ - Fred sold a PracticeAmp to Customer 5 for $41.43.
+ - Fred sold a CD to Customer 6 for $31.51.
+ - Fred sold a Vinyl to Customer 7 for $2.32.
+ - Customer 6 wants to sell a VERY_GOOD condition used CD.
+ - Fred bought a VERY_GOOD condition used CD from Customer 6 for $21.58.
+ - Customer 7 wants to sell a GOOD condition used Harmonica.
+ - Customer 7 rejected the initial offer of $21.30. Fred offered 10% more: $23.44.
+ - Fred bought a GOOD condition used Harmonica from Customer 7 for $23.44.
+Fred opens the store.
+ - there are 5 buying and 2 selling customers today.
+ - there were 4 total sales and 2 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Fred is cleaning the store.
+ - Oh no! 10 item(s) were damaged while cleaning.
+Fred locks up and goes home.
+
+========================================
+================ Day 26 ================
+========================================
+Fred arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Harmonica(BcGn)
+ - added delivered item to inventory: Harmonica(ByCl)
+ - added delivered item to inventory: Harmonica(TaIf)
+ - added delivered item to inventory: Bandana(OrXz)
+ - added delivered item to inventory: Bandana(AtWu)
+ - added delivered item to inventory: Bandana(OcQg)
+Fred counts the register. Current cash: $233.49
+Fred wanted to order 3 PaperScores because they were missing from inventory and 3 were ordered, to arrive on day 29
+Fred wanted to order 3 PracticeAmps because they were missing from inventory and 3 were ordered, to arrive on day 27
+ - failed to order 3 Flute(s) because there was not enough cash in the register.
+Fred wanted to order some items but we're broke!
+ - failed to order 3 CDPlayer(s) because there was not enough cash in the register.
+Fred wanted to order some items but we're broke!
+Fred is doing inventory. Total purchase value of items: $894.56
+ - there were 38 items and 0 were damaged during tuning.
+ - Fred sold a Bandana to Customer 1 for $67.88.
+ - Fred offered a Hat to Customer 2 for $28.42, but they hesitated.
+ - Fred sold a Hat to Customer 2 for $25.58 after a 10% discount.
+ - Customer 3 wanted to buy a PracticeAmp but none were in inventory, so they left.
+ - Fred offered a RecordPlayer to Customer 4 for $75.52, but they hesitated.
+ - Customer 4 would not buy the RecordPlayer, even with a discount, and left.
+ - Fred offered a CD to Customer 5 for $6.55, but they hesitated.
+ - Fred sold a CD to Customer 5 for $5.89 after a 10% discount.
+ - Customer 6 wanted to buy a CDPlayer but none were in inventory, so they left.
+ - Fred offered a Hat to Customer 7 for $8.82, but they hesitated.
+ - Customer 7 would not buy the Hat, even with a discount, and left.
+ - Customer 8 wanted to buy a Flute but none were in inventory, so they left.
+ - Fred sold a CD to Customer 9 for $43.15.
+ - Customer 10 wanted to buy a PracticeAmp but none were in inventory, so they left.
+ - Fred offered a MP3Player to Customer 11 for $66.27, but they hesitated.
+ - Fred sold a MP3Player to Customer 11 for $59.64 after a 10% discount.
+ - Fred sold a RecordPlayer to Customer 12 for $38.15.
+ - Customer 11 wants to sell a EXCELLENT condition used Cable.
+ - Customer 11 rejected the initial offer of $28.08. Fred offered 10% more: $30.89.
+ - Fred bought a EXCELLENT condition used Cable from Customer 11 for $30.89.
+ - Customer 12 wants to sell a POOR condition used Flute.
+ - Customer 12 rejected the initial offer of $16.15. Fred offered 10% more: $17.76.
+ - Customer 12 decided not to sell their Flute and left.
+Fred opens the store.
+ - there are 10 buying and 2 selling customers today.
+ - there were 6 total sales and 1 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Fred is cleaning the store.
+ - Oh no! 6 item(s) were damaged while cleaning.
+Fred locks up and goes home.
+
+========================================
+================ Day 27 ================
+========================================
+Oh no! Fred was sick and cannot work today.
+Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Bass(ZyCk)
+ - added delivered item to inventory: Bass(OmKj)
+ - added delivered item to inventory: Bass(OxXb)
+ - added delivered item to inventory: Harmonica(UxYg)
+ - added delivered item to inventory: Harmonica(UyFl)
+ - added delivered item to inventory: Harmonica(FuFx)
+ - added delivered item to inventory: Bandana(AeKc)
+ - added delivered item to inventory: Bandana(TtRa)
+ - added delivered item to inventory: Bandana(EbRf)
+ - added delivered item to inventory: PracticeAmp(AzEy)
+ - added delivered item to inventory: PracticeAmp(TmCw)
+ - added delivered item to inventory: PracticeAmp(HmTy)
+Rita counts the register. Current cash: $214.16
+Rita wanted to order 3 PaperScores because they were missing from inventory and 3 were ordered, to arrive on day 29
+Rita wanted to order 3 MP3Players because they were missing from inventory and 3 were ordered, to arrive on day 29
+ - failed to order 2 Flute(s) because there was not enough cash in the register.
+Rita wanted to order 3 Flutes because they were missing from inventory and 1 were ordered, to arrive on day 28
+ - failed to order 3 CDPlayer(s) because there was not enough cash in the register.
+Rita wanted to order some items but we're broke!
+Rita is doing inventory. Total purchase value of items: $1078.26
+ - there were 41 items and 3 were damaged during tuning.
+ - Rita offered a Cable to Customer 1 for $50.02, but they hesitated.
+ - Rita sold a Cable to Customer 1 for $45.01 after a 10% discount.
+ - Rita offered a RecordPlayer to Customer 2 for $31.44, but they hesitated.
+ - Rita sold a RecordPlayer to Customer 2 for $28.30 after a 10% discount.
+ - Rita offered a Strings to Customer 3 for $20.95, but they hesitated.
+ - Customer 3 would not buy the Strings, even with a discount, and left.
+ - Rita sold a Cable to Customer 4 for $26.01.
+ - Customer 5 wanted to buy a MP3Player but none were in inventory, so they left.
+ - Rita offered a Strings to Customer 6 for $20.95, but they hesitated.
+ - Rita sold a Strings to Customer 6 for $18.85 after a 10% discount.
+ - Rita sold a Bandana to Customer 7 for $87.53.
+ - Rita sold a Vinyl to Customer 8 for $10.62.
+ - Rita offered a Bandana to Customer 9 for $53.52, but they hesitated.
+ - Rita sold a Bandana to Customer 9 for $48.17 after a 10% discount.
+ - Rita sold a CD to Customer 10 for $32.29.
+ - Customer 7 wants to sell a FAIR condition used Bass.
+ - Rita bought a FAIR condition used Bass from Customer 7 for $5.40.
+ - Customer 8 wants to sell a VERY_GOOD condition used PracticeAmp.
+ - Customer 8 rejected the initial offer of $2.61. Rita offered 10% more: $2.87.
+ - Rita bought a VERY_GOOD condition used PracticeAmp from Customer 8 for $2.87.
+ - Customer 9 wants to sell a GOOD condition used Mandolin.
+ - Rita bought a GOOD condition used Mandolin from Customer 9 for $16.42.
+ - Customer 10 wants to sell a EXCELLENT condition used Vinyl.
+ - Customer 10 rejected the initial offer of $52.28. Rita offered 10% more: $57.51.
+ - Customer 10 decided not to sell their Vinyl and left.
+Rita opens the store.
+ - there are 6 buying and 4 selling customers today.
+ - there were 8 total sales and 3 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Rita is cleaning the store.
+ - Oh no! 36 item(s) were damaged while cleaning.
+Rita locks up and goes home.
+
+========================================
+================ Day 28 ================
+========================================
+Store is closed on Sunday.
+Ginger arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: PaperScore(WmNe)
+ - added delivered item to inventory: PaperScore(RzMn)
+ - added delivered item to inventory: PaperScore(EsYv)
+ - added delivered item to inventory: Harmonica(OoMc)
+ - added delivered item to inventory: Harmonica(PnEw)
+ - added delivered item to inventory: Harmonica(DkVs)
+ - added delivered item to inventory: Flute(RjFq)
+ - added delivered item to inventory: Flute(DuHp)
+ - added delivered item to inventory: Flute(OnVm)
+ - added delivered item to inventory: Flute(QnXt)
+Ginger counts the register. Current cash: $295.71
+Ginger wanted to order 3 MP3Players because they were missing from inventory and 3 were ordered, to arrive on day 31
+Ginger wanted to order 3 Shirts because they were missing from inventory and 3 were ordered, to arrive on day 31
+Ginger wanted to order 3 CDs because they were missing from inventory and 3 were ordered, to arrive on day 29
+Ginger wanted to order 3 Guitars because they were missing from inventory and 3 were ordered, to arrive on day 31
+ - failed to order 3 CDPlayer(s) because there was not enough cash in the register.
+Ginger wanted to order some items but we're broke!
+Ginger is doing inventory. Total purchase value of items: $949.23
+ - there were 39 items and 0 were damaged during tuning.
+ - Ginger offered a Cable to Customer 1 for $53.34, but they hesitated.
+ - Customer 1 would not buy the Cable, even with a discount, and left.
+ - Customer 2 wanted to buy a Shirt but none were in inventory, so they left.
+ - Ginger sold a Flute to Customer 3 for $19.94.
+ - Ginger offered a Flute to Customer 4 for $42.06, but they hesitated.
+ - Customer 4 would not buy the Flute, even with a discount, and left.
+ - Customer 5 wanted to buy a Shirt but none were in inventory, so they left.
+ - Ginger offered a Cable to Customer 6 for $43.68, but they hesitated.
+ - Customer 6 would not buy the Cable, even with a discount, and left.
+ - Ginger sold a Bass to Customer 7 for $53.01.
+- sold a PracticeAmp in a bundle!
+ - Customer 8 wanted to buy a CD but none were in inventory, so they left.
+ - Customer 9 wanted to buy a CDPlayer but none were in inventory, so they left.
+ - Customer 10 wanted to buy a Guitar but none were in inventory, so they left.
+ - Customer 11 wanted to buy a MP3Player but none were in inventory, so they left.
+ - Customer 8 wants to sell a GOOD condition used Mandolin.
+ - Customer 8 rejected the initial offer of $24.60. Ginger offered 10% more: $27.06.
+ - Ginger bought a GOOD condition used Mandolin from Customer 8 for $27.06.
+ - Customer 9 wants to sell a VERY_GOOD condition used Strings.
+ - Ginger bought a VERY_GOOD condition used Strings from Customer 9 for $13.36.
+ - Customer 10 wants to sell a FAIR condition used PaperScore.
+ - Ginger bought a FAIR condition used PaperScore from Customer 10 for $11.37.
+ - Customer 11 wants to sell a GOOD condition used CD.
+ - Ginger bought a GOOD condition used CD from Customer 11 for $25.60.
+Ginger opens the store.
+ - there are 7 buying and 4 selling customers today.
+ - there were 2 total sales and 4 total purchases.
+Ginger is cleaning the store.
+ - Oh no! 1 item(s) were damaged while cleaning.
+Ginger locks up and goes home.
+
+========================================
+================ Day 29 ================
+========================================
+Ginger arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: PaperScore(PuDl)
+ - added delivered item to inventory: PaperScore(CrIn)
+ - added delivered item to inventory: PaperScore(MbHp)
+ - added delivered item to inventory: PaperScore(CbTj)
+ - added delivered item to inventory: PaperScore(JmWp)
+ - added delivered item to inventory: PaperScore(RqCk)
+ - added delivered item to inventory: MP3Player(BbZo)
+ - added delivered item to inventory: MP3Player(BeVz)
+ - added delivered item to inventory: MP3Player(KsNw)
+ - added delivered item to inventory: CD(PtXk)
+ - added delivered item to inventory: CD(JlAn)
+ - added delivered item to inventory: CD(HdOn)
+Ginger counts the register. Current cash: $61.44
+Cash is low. Ginger is going to the bank.
+ - withdrew from the bank. New register total: $1061.44
+Ginger wanted to order 3 Shirts because they were missing from inventory and 3 were ordered, to arrive on day 32
+Ginger wanted to order 3 Guitars because they were missing from inventory and 3 were ordered, to arrive on day 31
+Ginger wanted to order 3 CDPlayers because they were missing from inventory and 3 were ordered, to arrive on day 31
+Ginger is doing inventory. Total purchase value of items: $1257.94
+ - there were 52 items and 0 were damaged during tuning.
+ - Ginger offered a Bass to Customer 1 for $72.02, but they hesitated.
+ - Ginger sold a Bass to Customer 1 for $64.82 after a 10% discount.
+ - Customer 2 wanted to buy a Guitar but none were in inventory, so they left.
+ - Ginger sold a RecordPlayer to Customer 3 for $4.69.
+ - Ginger sold a Cable to Customer 4 for $53.34.
+ - Ginger sold a CD to Customer 5 for $51.19.
+ - Ginger sold a Mandolin to Customer 6 for $40.86.
+ - Ginger sold a Mandolin to Customer 7 for $54.11.
+ - Customer 8 wanted to buy a Shirt but none were in inventory, so they left.
+ - Ginger sold a Bass to Customer 9 for $46.47.
+ - Ginger sold a Bass to Customer 10 for $8.64.
+ - Ginger sold a Harmonica to Customer 11 for $15.94.
+ - Customer 11 wants to sell a POOR condition used CDPlayer.
+ - Customer 11 rejected the initial offer of $2.36. Ginger offered 10% more: $2.60.
+ - Ginger bought a POOR condition used CDPlayer from Customer 11 for $2.60.
+Ginger opens the store.
+ - there are 10 buying and 1 selling customers today.
+ - there were 9 total sales and 1 total purchases.
+Ginger is cleaning the store.
+ - Oh no! 4 item(s) were damaged while cleaning.
+Ginger locks up and goes home.
+
+========================================
+================ Day 30 ================
+========================================
+Oh no! Ginger was sick and cannot work today.
+Fred arrives at the store.
+ - new deliveries!
+Fred counts the register. Current cash: $1224.34
+Fred wanted to order 3 Basss because they were missing from inventory and 3 were ordered, to arrive on day 32
+Fred wanted to order 3 Shirts because they were missing from inventory and 3 were ordered, to arrive on day 31
+Fred wanted to order 3 Guitars because they were missing from inventory and 3 were ordered, to arrive on day 31
+Fred is doing inventory. Total purchase value of items: $1019.59
+ - there were 43 items and 5 were damaged during tuning.
+ - Fred sold a MP3Player to Customer 1 for $76.71.
+ - Fred offered a Cable to Customer 2 for $65.39, but they hesitated.
+ - Customer 2 would not buy the Cable, even with a discount, and left.
+ - Fred offered a Hat to Customer 3 for $7.06, but they hesitated.
+ - Customer 3 would not buy the Hat, even with a discount, and left.
+ - Fred sold a RecordPlayer to Customer 4 for $42.86.
+ - Fred offered a Vinyl to Customer 5 for $3.21, but they hesitated.
+ - Fred sold a Vinyl to Customer 5 for $2.89 after a 10% discount.
+ - Customer 6 wanted to buy a Guitar but none were in inventory, so they left.
+ - Customer 7 wanted to buy a Bass but none were in inventory, so they left.
+ - Customer 6 wants to sell a FAIR condition used RecordPlayer.
+ - Fred bought a FAIR condition used RecordPlayer from Customer 6 for $15.30.
+ - Customer 7 wants to sell a EXCELLENT condition used CDPlayer.
+ - Fred bought a EXCELLENT condition used CDPlayer from Customer 7 for $40.79.
+Fred opens the store.
+ - there are 5 buying and 2 selling customers today.
+ - there were 3 total sales and 2 total purchases.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+ - the item was already in POOR condition and has now been destroyed.
+Fred is cleaning the store.
+ - Oh no! 10 item(s) were damaged while cleaning.
+Fred locks up and goes home.
+
+########################################
+###### 30-DAY SIMULATION COMPLETE ######
+########################################
+
+--- Final Inventory ---
+Hat(VdAx)                 | Condition: POOR       | Purchase Price: $6.89
+Mandolin(XmRq)            | Condition: FAIR       | Purchase Price: $36.34
+Mandolin(IuQm)            | Condition: POOR       | Purchase Price: $4.82
+Cable(SiFu)               | Condition: GOOD       | Purchase Price: $40.87
+Bandana(OrXz)             | Condition: POOR       | Purchase Price: $25.52
+Cable(YfKx)               | Condition: VERY_GOOD  | Purchase Price: $30.89
+Harmonica(UyFl)           | Condition: VERY_GOOD  | Purchase Price: $33.29
+Harmonica(FuFx)           | Condition: GOOD       | Purchase Price: $14.32
+Bandana(AeKc)             | Condition: FAIR       | Purchase Price: $38.91
+PracticeAmp(AzEy)         | Condition: VERY_GOOD  | Purchase Price: $31.64
+PracticeAmp(TmCw)         | Condition: GOOD       | Purchase Price: $45.60
+PracticeAmp(KpSr)         | Condition: GOOD       | Purchase Price: $2.87
+Mandolin(IeGm)            | Condition: POOR       | Purchase Price: $16.42
+PaperScore(WmNe)          | Condition: VERY_GOOD  | Purchase Price: $41.18
+PaperScore(RzMn)          | Condition: FAIR       | Purchase Price: $7.76
+PaperScore(EsYv)          | Condition: POOR       | Purchase Price: $8.80
+Harmonica(OoMc)           | Condition: POOR       | Purchase Price: $10.92
+Harmonica(PnEw)           | Condition: VERY_GOOD  | Purchase Price: $27.89
+Harmonica(DkVs)           | Condition: VERY_GOOD  | Purchase Price: $48.81
+Flute(DuHp)               | Condition: FAIR       | Purchase Price: $37.25
+Flute(QnXt)               | Condition: FAIR       | Purchase Price: $21.03
+Strings(IlSa)             | Condition: GOOD       | Purchase Price: $13.36
+PaperScore(ImGv)          | Condition: FAIR       | Purchase Price: $11.37
+PaperScore(PuDl)          | Condition: POOR       | Purchase Price: $39.44
+PaperScore(CrIn)          | Condition: EXCELLENT  | Purchase Price: $40.99
+PaperScore(MbHp)          | Condition: GOOD       | Purchase Price: $23.96
+PaperScore(JmWp)          | Condition: GOOD       | Purchase Price: $35.60
+PaperScore(RqCk)          | Condition: GOOD       | Purchase Price: $32.01
+MP3Player(KsNw)           | Condition: VERY_GOOD  | Purchase Price: $13.47
+CD(PtXk)                  | Condition: POOR       | Purchase Price: $1.39
+CD(JlAn)                  | Condition: VERY_GOOD  | Purchase Price: $8.75
+CD(HdOn)                  | Condition: VERY_GOOD  | Purchase Price: $37.50
+CDPlayer(SzQr)            | Condition: POOR       | Purchase Price: $2.60
+RecordPlayer(QzBi)        | Condition: FAIR       | Purchase Price: $15.30
+CDPlayer(JjYa)            | Condition: EXCELLENT  | Purchase Price: $40.79
+
+Total value of remaining inventory (by purchase price): $848.53
+
+--- Items Sold ---
+Mandolin(EfUy) sold on day 1 for $9.8
+PracticeAmp(MuPb) sold on day 1 for $21.2
+CD(RlBa) sold on day 1 for $16.0
+Guitar(LvRi) sold on day 1 for $9.4
+Mandolin(KcAt) sold on day 1 for $77.4
+Strings(IfBf) sold on day 1 for $45.3
+Mandolin(LpTt) sold on day 1 for $49.6
+PracticeAmp(XmRp) sold on day 1 for $48.4
+Strings(YwTf) sold on day 1 for $43.5
+Bass(DsYl) sold on day 1 for $29.8
+Shirt(LpTa) sold on day 1 for $90.2
+Shirt(WlEp) sold on day 2 for $26.6
+Harmonica(FyDt) sold on day 2 for $82.7
+Flute(ZrEn) sold on day 2 for $50.1
+Vinyl(TlSd) sold on day 2 for $89.7
+Guitar(ItBh) sold on day 2 for $82.8
+Guitar(LjCc) sold on day 2 for $60.2
+PaperScore(OpMb) sold on day 2 for $74.4
+Shirt(YbTv) sold on day 2 for $19.5
+CDPlayer(IcZz) sold on day 3 for $16.6
+Bass(YbLv) sold on day 3 for $23.6
+Vinyl(JhWw) sold on day 3 for $5.7
+Bandana(TcRa) sold on day 3 for $53.3
+Vinyl(ZfFv) sold on day 3 for $75.0
+PaperScore(LqCj) sold on day 4 for $25.5
+PracticeAmp(QnKu) sold on day 4 for $34.8
+Flute(FgPw) sold on day 4 for $37.3
+Harmonica(PwLk) sold on day 4 for $44.0
+MP3Player(HkBs) sold on day 4 for $48.5
+CDPlayer(SmUw) sold on day 4 for $67.8
+Cable(NyJw) sold on day 4 for $16.6
+Harmonica(SvQh) sold on day 5 for $55.5
+MP3Player(MoKg) sold on day 5 for $28.4
+RecordPlayer(RsEe) sold on day 5 for $23.9
+PracticeAmp(SuSz) sold on day 5 for $17.3
+Mandolin(MiFb) sold on day 5 for $30.1
+Shirt(HaUl) sold on day 5 for $81.2
+Strings(TpFu) sold on day 6 for $33.6
+Bandana(TfYi) sold on day 6 for $40.2
+Cable(OvOf) sold on day 6 for $31.3
+Guitar(LhEu) sold on day 7 for $77.8
+PracticeAmp(JvTi) sold on day 7 for $19.4
+Strings(HoGu) sold on day 7 for $46.9
+Bandana(TgFv) sold on day 7 for $46.5
+Guitar(FrCk) sold on day 7 for $19.6
+Cable(HaTe) sold on day 7 for $20.8
+Hat(WfRw) sold on day 7 for $39.4
+Vinyl(ZxXg) sold on day 7 for $21.3
+PaperScore(VaQr) sold on day 7 for $95.8
+Vinyl(FhAu) sold on day 8 for $43.7
+MP3Player(JmSl) sold on day 8 for $47.7
+Bass(EnWo) sold on day 8 for $67.4
+Harmonica(HyQz) sold on day 8 for $72.1
+Bass(AfLj) sold on day 8 for $58.6
+Guitar(HaVb) sold on day 8 for $72.1
+CDPlayer(RvOt) sold on day 8 for $6.9
+Flute(DlDa) sold on day 9 for $33.4
+MP3Player(AnPr) sold on day 9 for $96.5
+RecordPlayer(JdUt) sold on day 9 for $29.9
+Bass(VfWc) sold on day 9 for $54.1
+PracticeAmp(SpCi) sold on day 9 for $24.7
+PaperScore(UtUu) sold on day 9 for $22.6
+Guitar(QwHa) sold on day 9 for $38.1
+CDPlayer(OcDi) sold on day 9 for $38.4
+Hat(QpNr) sold on day 10 for $13.2
+Shirt(KoLx) sold on day 10 for $16.0
+RecordPlayer(AuJu) sold on day 10 for $86.2
+Flute(QeEy) sold on day 10 for $22.5
+MP3Player(IdRl) sold on day 10 for $59.7
+Guitar(VuAu) sold on day 10 for $32.2
+PracticeAmp(IfSl) sold on day 10 for $40.7
+PaperScore(KeVh) sold on day 10 for $16.7
+Cable(KmZw) sold on day 11 for $2.8
+Bandana(QxSr) sold on day 11 for $12.9
+Shirt(GxTd) sold on day 11 for $23.7
+Harmonica(ZlBy) sold on day 11 for $31.1
+Flute(XhJq) sold on day 12 for $39.1
+Vinyl(SgYi) sold on day 12 for $41.5
+PaperScore(DfJz) sold on day 12 for $6.2
+PaperScore(WhLn) sold on day 12 for $49.2
+Cable(WcWw) sold on day 12 for $55.7
+Bandana(WcKs) sold on day 13 for $95.9
+Strings(OjZs) sold on day 13 for $63.6
+Bass(FdIg) sold on day 13 for $17.9
+PaperScore(XsMb) sold on day 13 for $48.3
+PaperScore(DyFd) sold on day 13 for $67.7
+Flute(TsJh) sold on day 13 for $18.8
+CD(VqOy) sold on day 13 for $64.2
+Bandana(FjZj) sold on day 14 for $84.5
+Hat(OqId) sold on day 14 for $3.9
+PracticeAmp(CwPd) sold on day 14 for $23.0
+Strings(YtPd) sold on day 14 for $64.0
+Hat(MuOh) sold on day 14 for $59.4
+Hat(DnSs) sold on day 14 for $48.0
+MP3Player(HoOd) sold on day 15 for $18.7
+Flute(FsEm) sold on day 15 for $32.1
+Shirt(YrVg) sold on day 15 for $6.5
+PracticeAmp(EqAu) sold on day 15 for $14.2
+Bandana(RpRf) sold on day 15 for $20.4
+CD(TmUv) sold on day 15 for $66.9
+Flute(BwTh) sold on day 15 for $3.4
+Hat(PiSr) sold on day 15 for $2.1
+Bass(BnHu) sold on day 15 for $17.4
+Strings(RqPj) sold on day 15 for $12.7
+Shirt(EkCd) sold on day 16 for $90.0
+Flute(SfXm) sold on day 16 for $79.4
+PracticeAmp(ThHp) sold on day 16 for $81.8
+Shirt(FzTs) sold on day 16 for $14.8
+Strings(YtHa) sold on day 16 for $28.3
+Hat(ApJl) sold on day 16 for $11.7
+Flute(EfDg) sold on day 16 for $14.4
+CDPlayer(KuZq) sold on day 17 for $54.6
+Mandolin(GrNg) sold on day 17 for $51.5
+Cable(NxGo) sold on day 17 for $45.4
+Bass(KfLa) sold on day 17 for $62.1
+CDPlayer(MwQe) sold on day 17 for $30.2
+Strings(WiSb) sold on day 17 for $32.3
+CDPlayer(XqCf) sold on day 18 for $37.8
+CD(IiAd) sold on day 19 for $44.7
+MP3Player(LaCi) sold on day 19 for $58.4
+RecordPlayer(FpGm) sold on day 19 for $28.5
+CDPlayer(KdLk) sold on day 19 for $1.4
+Cable(NcUo) sold on day 19 for $69.5
+Harmonica(UmHw) sold on day 20 for $50.3
+Harmonica(RqCg) sold on day 20 for $70.2
+PaperScore(NpAf) sold on day 20 for $57.0
+PracticeAmp(EsCr) sold on day 20 for $88.8
+Bandana(VhHu) sold on day 20 for $42.0
+Cable(GeQp) sold on day 21 for $46.4
+Guitar(OaBz) sold on day 21 for $15.4
+Strings(UsQu) sold on day 21 for $43.9
+Strings(YrZg) sold on day 21 for $26.5
+Hat(VxJy) sold on day 21 for $62.8
+Bandana(TcPp) sold on day 21 for $13.0
+PaperScore(HtXh) sold on day 21 for $62.6
+PracticeAmp(OmXv) sold on day 21 for $5.2
+Vinyl(VbPz) sold on day 21 for $50.7
+Shirt(LxYi) sold on day 22 for $21.7
+Harmonica(BdFv) sold on day 22 for $53.2
+Harmonica(JgXq) sold on day 22 for $16.6
+PaperScore(JwTu) sold on day 22 for $47.2
+CDPlayer(UzTv) sold on day 22 for $37.5
+Mandolin(KcDf) sold on day 22 for $4.8
+Cable(FgMk) sold on day 22 for $9.1
+Hat(UxFe) sold on day 22 for $42.9
+Strings(RrJy) sold on day 22 for $16.6
+PracticeAmp(YiQa) sold on day 23 for $42.0
+Vinyl(SgPu) sold on day 23 for $47.7
+MP3Player(FtHz) sold on day 23 for $6.1
+Vinyl(CrFh) sold on day 23 for $51.7
+CD(VlNy) sold on day 23 for $85.8
+Bandana(TtEp) sold on day 23 for $12.0
+Bandana(VlPo) sold on day 23 for $80.9
+Flute(PmTi) sold on day 23 for $30.4
+PracticeAmp(IpLl) sold on day 24 for $53.1
+Flute(LjUs) sold on day 24 for $23.5
+PaperScore(XhUe) sold on day 24 for $34.5
+CD(GhQn) sold on day 24 for $20.6
+MP3Player(PdHo) sold on day 24 for $27.8
+Mandolin(ThOd) sold on day 24 for $13.0
+PracticeAmp(JeUm) sold on day 24 for $47.7
+PaperScore(KmPz) sold on day 24 for $44.0
+Hat(UgZj) sold on day 24 for $14.6
+CDPlayer(UhFa) sold on day 25 for $18.0
+PracticeAmp(DdUp) sold on day 25 for $41.4
+CD(SmEj) sold on day 25 for $31.5
+Vinyl(DuGz) sold on day 25 for $2.3
+Bandana(OcQg) sold on day 26 for $67.9
+Hat(VrIb) sold on day 26 for $25.6
+CD(MqXo) sold on day 26 for $5.9
+CD(AjAd) sold on day 26 for $43.2
+MP3Player(MaAa) sold on day 26 for $59.6
+RecordPlayer(GsQm) sold on day 26 for $38.2
+Cable(DmTd) sold on day 27 for $45.0
+RecordPlayer(IfJp) sold on day 27 for $28.3
+Cable(ThDj) sold on day 27 for $26.0
+Strings(NySy) sold on day 27 for $18.9
+Bandana(TtRa) sold on day 27 for $87.5
+Vinyl(UnSw) sold on day 27 for $10.6
+Bandana(EbRf) sold on day 27 for $48.2
+CD(EuWu) sold on day 27 for $32.3
+Flute(OnVm) sold on day 28 for $19.9
+Bass(OxXb) sold on day 28 for $53.0
+PracticeAmp(HmTy) sold on day 28 for $47.1
+Bass(OmKj) sold on day 29 for $64.8
+RecordPlayer(LgTj) sold on day 29 for $4.7
+Cable(IqJa) sold on day 29 for $53.3
+CD(SeLy) sold on day 29 for $51.2
+Mandolin(SaMl) sold on day 29 for $40.9
+Mandolin(EoAi) sold on day 29 for $54.1
+Bass(ZyCk) sold on day 29 for $46.5
+Bass(QbEg) sold on day 29 for $8.6
+Harmonica(UxYg) sold on day 29 for $15.9
+MP3Player(BeVz) sold on day 30 for $76.7
+RecordPlayer(MxDo) sold on day 30 for $42.9
+Vinyl(RcYo) sold on day 30 for $2.9
+
+Total of all sales: $7782.91
+
+--- Financial Summary ---
+Final money in Cash Register: $1078.87
+Total money withdrawn from the Bank: $2000.00

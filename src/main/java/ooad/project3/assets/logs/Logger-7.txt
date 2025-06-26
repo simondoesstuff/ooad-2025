@@ -1,0 +1,30 @@
+Ginger arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Shirt(GxTd)
+ - added delivered item to inventory: Shirt(KoLx)
+ - added delivered item to inventory: Shirt(YrVg)
+ - added delivered item to inventory: PaperScore(XsMb)
+ - added delivered item to inventory: PaperScore(BpSu)
+ - added delivered item to inventory: PaperScore(UtUu)
+ - added delivered item to inventory: PaperScore(DfJz)
+ - added delivered item to inventory: PaperScore(WhLn)
+ - added delivered item to inventory: PaperScore(VaQr)
+ - added delivered item to inventory: PracticeAmp(JvTi)
+ - added delivered item to inventory: PracticeAmp(SpCi)
+ - added delivered item to inventory: PracticeAmp(IfSl)
+ - added delivered item to inventory: CDPlayer(RvOt)
+ - added delivered item to inventory: CDPlayer(WmKj)
+ - added delivered item to inventory: CDPlayer(OcDi)
+Ginger counts the register. Current cash: $1196.21
+Ginger wanted to order 3 Basss because they were missing from inventory and 3 were ordered, to arrive on day 8
+Ginger wanted to order 3 RecordPlayers because they were missing from inventory and 3 were ordered, to arrive on day 10
+Ginger wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 9
+Ginger wanted to order 3 Flutes because they were missing from inventory and 3 were ordered, to arrive on day 10
+Ginger is doing inventory. Total purchase value of items: $943.26
+ - there were 36 items and 0 were damaged during tuning.
+Ginger opens the store.
+ - there are 10 buying and 3 selling customers today.
+ - there were 7 total sales and 2 total purchases.
+Ginger is cleaning the store.
+ - Oh no! 1 item(s) were damaged while cleaning.
+Ginger locks up and goes home.

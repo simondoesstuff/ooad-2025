@@ -1,0 +1,17 @@
+Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Mandolin(MiFb)
+ - added delivered item to inventory: Mandolin(ZlMa)
+ - added delivered item to inventory: Mandolin(ZlJn)
+Rita counts the register. Current cash: $1684.77
+Rita wanted to order 3 Vinyls because they were missing from inventory and 3 were ordered, to arrive on day 6
+Rita wanted to order 3 Shirts because they were missing from inventory and 3 were ordered, to arrive on day 7
+Rita wanted to order 3 Guitars because they were missing from inventory and 3 were ordered, to arrive on day 6
+Rita is doing inventory. Total purchase value of items: $835.11
+ - there were 31 items and 6 were damaged during tuning.
+Rita opens the store.
+ - there are 8 buying and 3 selling customers today.
+ - there were 7 total sales and 3 total purchases.
+Rita is cleaning the store.
+ - Oh no! 27 item(s) were damaged while cleaning.
+Rita locks up and goes home.

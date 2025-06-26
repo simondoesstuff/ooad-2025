@@ -121,16 +121,21 @@ public class Clerk {
      */
     public void doInventory() {
         var types = store.getAvailableItemTypes();
-        Inventory itemsDamaged = (Inventory) new ArrayList<Item>();
+        Inventory itemsDamaged = new Inventory();
+        Inventory itemsDestroyed = new Inventory();
 
         for (var item : store.getInventory()) {
             if (tuner.tryTune(item)) { // if damaged
                 itemsDamaged.add(item);
 
                 if (item.damage()) { // if destroyed
-                    store.getInventory().remove(item); // destroy
+                    itemsDestroyed.add(item);
                 }
             }
+        }
+
+        for (var item : itemsDestroyed) {
+            store.getInventory().remove(item);
         }
 
         // Check for out-of-stock
@@ -281,15 +286,26 @@ public class Clerk {
 
         var rand = ThreadLocalRandom.current();
 
-        if (rand.nextDouble(1) <= .2 + offset) trySell(GigBag.class);
-        if (rand.nextDouble(1) <= .25 + offset) trySell(PracticeAmp.class);
+        if (rand.nextDouble(1) <= .2 + offset) {
+            System.out.printf("- sold a GigBag in a bundle!\n");
+            trySell(GigBag.class);
+        }
+
+        if (rand.nextDouble(1) <= .25 + offset) {
+            System.out.printf("- sold a PracticeAmp in a bundle!\n");
+            trySell(PracticeAmp.class);
+        }
+
         if (rand.nextDouble(1) <= .3 + offset) {
             for (int i = 0; i < rand.nextInt(2); i++) {
+                System.out.printf("- sold some Cable in a bundle!\n");
                 trySell(Cable.class);
             }
         }
+
         if (rand.nextDouble(1) <= .4 + offset) {
             for (int i = 0; i < rand.nextInt(1, 4); i++) {
+                System.out.printf("- sold some Strings in a bundle!\n");
                 trySell(Strings.class);
             }
         }
@@ -384,21 +400,26 @@ public class Clerk {
     }
 
     public void cleanTheStore() {
-        Inventory damaged = (Inventory) new ArrayList<Item>();
+        Inventory damaged = new Inventory();
+        Inventory destroyed = new Inventory();
 
-        for (var itemToDamage : store.getInventory()) {
+        for (var item : store.getInventory()) {
             if (store.getInventory().isEmpty()) {
                 break;
             }
 
             if (rand.nextDouble() < getCleaningDamageChance()) {
-                damaged.add(itemToDamage);
+                damaged.add(item);
 
-                if (itemToDamage.damage()) {
-                    store.getInventory().remove(itemToDamage);
-                    System.out.printf(" - the item was already in POOR condition and has now been destroyed.\n");
+                if (item.damage()) {
+                    destroyed.add(item);
                 }
             }
+        }
+
+        for (var item : destroyed) {
+            store.getInventory().remove(item);
+            System.out.printf(" - the item was already in POOR condition and has now been destroyed.\n");
         }
 
         bus.post(new CleanTheStoreEvent(this, damaged));

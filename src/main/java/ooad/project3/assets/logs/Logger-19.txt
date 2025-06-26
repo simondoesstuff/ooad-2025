@@ -1,0 +1,27 @@
+Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: PaperScore(HtXh)
+ - added delivered item to inventory: PaperScore(LhZh)
+ - added delivered item to inventory: PaperScore(JwTu)
+ - added delivered item to inventory: Harmonica(JgXq)
+ - added delivered item to inventory: Harmonica(DvOf)
+ - added delivered item to inventory: Harmonica(WkBw)
+ - added delivered item to inventory: Shirt(LxYi)
+ - added delivered item to inventory: Shirt(ChWl)
+ - added delivered item to inventory: Shirt(JcRt)
+ - added delivered item to inventory: Flute(LjUs)
+ - added delivered item to inventory: Flute(MbYl)
+ - added delivered item to inventory: Flute(MjAs)
+Rita counts the register. Current cash: $385.30
+Rita wanted to order 3 PracticeAmps because they were missing from inventory and 3 were ordered, to arrive on day 21
+Rita wanted to order 3 Stringss because they were missing from inventory and 3 were ordered, to arrive on day 22
+Rita wanted to order 3 Hats because they were missing from inventory and 3 were ordered, to arrive on day 21
+Rita wanted to order 3 Mandolins because they were missing from inventory and 3 were ordered, to arrive on day 22
+Rita is doing inventory. Total purchase value of items: $1120.72
+ - there were 45 items and 2 were damaged during tuning.
+Rita opens the store.
+ - there are 6 buying and 1 selling customers today.
+ - there were 5 total sales and 1 total purchases.
+Rita is cleaning the store.
+ - Oh no! 39 item(s) were damaged while cleaning.
+Rita locks up and goes home.

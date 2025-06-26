@@ -30,7 +30,7 @@ public class MusicLandSimulator {
     private Clerk activeClerk;
     private int today = 0;
     private DayLogger log;
-    private String logDir = "./logs";
+    private String logDir = "./src/main/java/ooad/project3/assets/logs";
 
     public MusicLandSimulator(Store store) {
         this.store = store;
@@ -63,18 +63,20 @@ public class MusicLandSimulator {
      */
     public void run() {
         marchDay(null); // day zero is sunday, but we want the simulation
-                                // to start on a monday.
+                        // to start on a monday.
 
         for (today = 1; today <= 30; today++) {
             System.out.println("\n========================================");
             System.out.printf("================ Day %-2d ================\n", today);
             System.out.println("========================================");
 
+            if (log != null) log.close();
+            log = new DayLogger(logDir, today);
+
             // is it sunday?
             if (today % 7 == 0) {
                 System.out.println("Store is closed on Sunday.");
                 marchDay(null); // null: no active clerk today
-                continue;
             }
 
             var clerk = selectClerk();
@@ -93,16 +95,14 @@ public class MusicLandSimulator {
      * Inactive Clerk's days worked streaks are reset.
      */
     private void marchDay(Clerk todaysClerk) {
-        today++;
         activeClerk = todaysClerk;
-
-        if (log != null) log.close();
-        log = new DayLogger(logDir, today);
 
         for (var clerk : staff) {
             if (clerk != activeClerk) {
                 clerk.resetWorkStreak();
             }
+
+            clerk.setToday(today);
         }
     }
 
@@ -126,7 +126,7 @@ public class MusicLandSimulator {
         var clerk = clerks.get(rand.nextInt(clerks.size()));
 
         if (rand.nextDouble(0, 1) <= .1) {
-            System.err.println("Oh no! %s was sick and cannot work today.");
+            System.err.printf("Oh no! %s was sick and cannot work today.\n", clerk.getName());
             clerk.resetWorkStreak();
             clerk = selectClerk();  // reselect
         }

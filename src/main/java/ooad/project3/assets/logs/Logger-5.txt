@@ -1,0 +1,18 @@
+Fred arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Shirt(HaUl)
+ - added delivered item to inventory: Shirt(BjOw)
+ - added delivered item to inventory: Shirt(VyXw)
+Fred counts the register. Current cash: $1771.10
+Fred wanted to order 3 PaperScores because they were missing from inventory and 3 were ordered, to arrive on day 7
+Fred wanted to order 3 Vinyls because they were missing from inventory and 3 were ordered, to arrive on day 8
+Fred wanted to order 3 Guitars because they were missing from inventory and 3 were ordered, to arrive on day 8
+Fred wanted to order 3 Flutes because they were missing from inventory and 3 were ordered, to arrive on day 8
+Fred is doing inventory. Total purchase value of items: $628.73
+ - there were 22 items and 2 were damaged during tuning.
+Fred opens the store.
+ - there are 5 buying and 3 selling customers today.
+ - there were 6 total sales and 2 total purchases.
+Fred is cleaning the store.
+ - Oh no! 3 item(s) were damaged while cleaning.
+Fred locks up and goes home.

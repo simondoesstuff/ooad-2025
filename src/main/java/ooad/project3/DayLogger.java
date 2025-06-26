@@ -7,8 +7,9 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import com.google.common.eventbus.Subscribe;
 
+import com.google.common.eventbus.Subscribe;
+import com.google.common.eventbus.EventBus;
 import lombok.Getter;
 import ooad.project3.events.TheEventBus;
 import ooad.project3.events.store.ArriveAtStoreEvent;
@@ -83,8 +84,6 @@ class DayLogger {
     @Subscribe
     private void onGoToBank(GoToBankEvent event) {
         logf("Cash is low. %s is going to the bank.\n", event.getClerkName());
-        logf("%s counts the register. Current cash: $%.2f\n",
-                event.getClerkName(), event.getOldAmntInRegister());
         logf(" - withdrew from the bank. New register total: $%.2f\n",
                 event.getNewAmntInRegister());
     }
@@ -102,11 +101,17 @@ class DayLogger {
     @Subscribe
     public void onPlaceAnOrder(PlaceAnOrderEvent event) {
         var order = event.getOrder();
-        var orderType = order.getItems().get(0).getClass().getSimpleName();
         var orderSize = order.getItems().size();
         var arrival = order.getArrivalDay();
-        logf("%s wanted to order 3 %ss because they were missing from inventory and %d were ordered, to arrive on day %d\n",
-        event.getClerkName(), orderType, orderSize, arrival);
+
+        if (orderSize != 0) {
+            var orderType = order.getItems().get(0).getClass().getSimpleName();
+            logf("%s wanted to order 3 %ss because they were missing from inventory and %d were ordered, to arrive on day %d\n",
+                    event.getClerkName(), orderType, orderSize, arrival);
+        } else {
+            logf("%s wanted to order some items but we're broke!\n", event.getClerkName());
+        }
+
     }
 
     @Subscribe

@@ -1,0 +1,18 @@
+Ginger arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: CDPlayer(MwQe)
+ - added delivered item to inventory: CDPlayer(SaHk)
+ - added delivered item to inventory: CDPlayer(XqCf)
+ - added delivered item to inventory: Cable(YoHf)
+ - added delivered item to inventory: Cable(NcUo)
+ - added delivered item to inventory: Cable(FgMk)
+Ginger counts the register. Current cash: $889.62
+Ginger wanted to order 3 PaperScores because they were missing from inventory and 3 were ordered, to arrive on day 18
+Ginger wanted to order 3 Vinyls because they were missing from inventory and 3 were ordered, to arrive on day 18
+Ginger is doing inventory. Total purchase value of items: $1082.42
+ - there were 47 items and 0 were damaged during tuning.
+Ginger opens the store.
+ - there are 8 buying and 2 selling customers today.
+ - there were 9 total sales and 2 total purchases.
+Ginger is cleaning the store.
+Ginger locks up and goes home.

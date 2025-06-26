@@ -1,0 +1,12 @@
+Fred arrives at the store.
+Fred counts the register. Current cash: $0.00
+Cash is low. Fred is going to the bank.
+ - withdrew from the bank. New register total: $1000.00
+Fred is doing inventory. Total purchase value of items: $1387.49
+ - there were 51 items and 0 were damaged during tuning.
+Fred opens the store.
+ - there are 9 buying and 1 selling customers today.
+ - there were 8 total sales and 0 total purchases.
+Fred is cleaning the store.
+ - Oh no! 7 item(s) were damaged while cleaning.
+Fred locks up and goes home.

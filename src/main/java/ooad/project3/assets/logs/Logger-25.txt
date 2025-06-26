@@ -1,0 +1,27 @@
+Fred arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: RecordPlayer(MxDo)
+ - added delivered item to inventory: RecordPlayer(HkRk)
+ - added delivered item to inventory: RecordPlayer(FvFp)
+ - added delivered item to inventory: Cable(ZnTv)
+ - added delivered item to inventory: Cable(ThDj)
+ - added delivered item to inventory: Cable(DmTd)
+ - added delivered item to inventory: RecordPlayer(IfJp)
+ - added delivered item to inventory: RecordPlayer(LgTj)
+ - added delivered item to inventory: RecordPlayer(GsQm)
+ - added delivered item to inventory: Cable(HwPs)
+ - added delivered item to inventory: Cable(SiFu)
+ - added delivered item to inventory: Cable(IqJa)
+Fred counts the register. Current cash: $467.82
+Fred wanted to order 3 PaperScores because they were missing from inventory and 3 were ordered, to arrive on day 28
+Fred wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 28
+Fred wanted to order 3 Flutes because they were missing from inventory and 3 were ordered, to arrive on day 28
+Fred wanted to order 3 Bandanas because they were missing from inventory and 3 were ordered, to arrive on day 26
+Fred is doing inventory. Total purchase value of items: $800.20
+ - there were 36 items and 4 were damaged during tuning.
+Fred opens the store.
+ - there are 5 buying and 2 selling customers today.
+ - there were 4 total sales and 2 total purchases.
+Fred is cleaning the store.
+ - Oh no! 10 item(s) were damaged while cleaning.
+Fred locks up and goes home.

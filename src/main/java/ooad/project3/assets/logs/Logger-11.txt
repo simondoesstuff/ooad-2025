@@ -1,0 +1,18 @@
+Ginger arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Bandana(FjZj)
+ - added delivered item to inventory: Bandana(TcPp)
+ - added delivered item to inventory: Bandana(VhHu)
+Ginger counts the register. Current cash: $1374.71
+Ginger wanted to order 3 MP3Players because they were missing from inventory and 3 were ordered, to arrive on day 12
+Ginger wanted to order 3 Basss because they were missing from inventory and 3 were ordered, to arrive on day 14
+Ginger wanted to order 3 Hats because they were missing from inventory and 3 were ordered, to arrive on day 13
+Ginger wanted to order 3 CDs because they were missing from inventory and 3 were ordered, to arrive on day 13
+Ginger wanted to order 3 CDPlayers because they were missing from inventory and 3 were ordered, to arrive on day 13
+Ginger is doing inventory. Total purchase value of items: $794.71
+ - there were 35 items and 0 were damaged during tuning.
+Ginger opens the store.
+ - there are 8 buying and 1 selling customers today.
+ - there were 4 total sales and 1 total purchases.
+Ginger is cleaning the store.
+Ginger locks up and goes home.

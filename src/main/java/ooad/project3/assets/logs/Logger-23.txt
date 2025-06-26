@@ -1,0 +1,26 @@
+Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: CD(GhQn)
+ - added delivered item to inventory: CD(TyXc)
+ - added delivered item to inventory: CD(VlNy)
+ - added delivered item to inventory: CDPlayer(IbWv)
+ - added delivered item to inventory: CDPlayer(UhFa)
+ - added delivered item to inventory: CDPlayer(OeHc)
+ - added delivered item to inventory: CDPlayer(YbLc)
+ - added delivered item to inventory: CDPlayer(TzTb)
+ - added delivered item to inventory: CDPlayer(RvAi)
+ - added delivered item to inventory: Bandana(TtEp)
+ - added delivered item to inventory: Bandana(VlPo)
+ - added delivered item to inventory: Bandana(KaOw)
+Rita counts the register. Current cash: $573.98
+Rita wanted to order 3 RecordPlayers because they were missing from inventory and 3 were ordered, to arrive on day 25
+Rita wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 26
+Rita wanted to order 3 Cables because they were missing from inventory and 3 were ordered, to arrive on day 25
+Rita is doing inventory. Total purchase value of items: $1317.77
+ - there were 51 items and 1 were damaged during tuning.
+Rita opens the store.
+ - there are 10 buying and 2 selling customers today.
+ - there were 8 total sales and 2 total purchases.
+Rita is cleaning the store.
+ - Oh no! 41 item(s) were damaged while cleaning.
+Rita locks up and goes home.

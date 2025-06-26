@@ -1,0 +1,23 @@
+Fred arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Harmonica(BcGn)
+ - added delivered item to inventory: Harmonica(ByCl)
+ - added delivered item to inventory: Harmonica(TaIf)
+ - added delivered item to inventory: Bandana(OrXz)
+ - added delivered item to inventory: Bandana(AtWu)
+ - added delivered item to inventory: Bandana(OcQg)
+Fred counts the register. Current cash: $233.49
+Fred wanted to order 3 PaperScores because they were missing from inventory and 3 were ordered, to arrive on day 29
+Fred wanted to order 3 PracticeAmps because they were missing from inventory and 3 were ordered, to arrive on day 27
+ - failed to order 3 Flute(s) because there was not enough cash in the register.
+Fred wanted to order some items but we're broke!
+ - failed to order 3 CDPlayer(s) because there was not enough cash in the register.
+Fred wanted to order some items but we're broke!
+Fred is doing inventory. Total purchase value of items: $894.56
+ - there were 38 items and 0 were damaged during tuning.
+Fred opens the store.
+ - there are 10 buying and 2 selling customers today.
+ - there were 6 total sales and 1 total purchases.
+Fred is cleaning the store.
+ - Oh no! 6 item(s) were damaged while cleaning.
+Fred locks up and goes home.

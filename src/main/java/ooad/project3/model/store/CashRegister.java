@@ -28,8 +28,4 @@ public class CashRegister {
 
         return false;
     }
-
-    public double getCash() {
-        return cash;
-    }
 }
