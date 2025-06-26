@@ -32,7 +32,7 @@ package "model" {
     /'    source code.'/
     /'  end note'/
 
-    class SoldItem <<decorator>> extends BuildableItem {
+    class SoldItem <<decorator>> extends Item {
       - Item base
       double salePrice
       int daySold
