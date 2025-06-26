@@ -1,8 +1,8 @@
 package ooad.project3.model.item.music.accessories;
 
-import ooad.project3.model.item.Item;
+import ooad.project3.model.item.BuildableItem;
 
-public class Cable extends Item {
+public class Cable extends BuildableItem {
     private double length;
 
     public Cable(Builder builder) {
@@ -10,7 +10,7 @@ public class Cable extends Item {
         this.length = builder.length;
     }
 
-    public static class Builder extends Item.Builder<Builder> {
+    public static class Builder extends BuildableItem.Builder<Builder> {
         private double length;
 
         public Builder length(double length) {

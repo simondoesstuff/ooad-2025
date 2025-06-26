@@ -1,9 +1,11 @@
 package ooad.project3.model.store;
 
 import ooad.project3.ItemFactory;
-import ooad.project3.model.item.Item;
+import ooad.project3.model.item.BuildableItem;
 import ooad.project3.model.Inventory;
-
+import ooad.project3.model.item.BuildableItem;
+import ooad.project3.model.item.Item;
+import ooad.project3.model.item.SoldItem;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,7 +23,7 @@ public class Store {
     @Getter
     private final Inventory inventory = new Inventory();
     @Getter
-    private final ArrayList<Item> soldItems = new ArrayList<>();
+    private final ArrayList<SoldItem> soldItems = new ArrayList<>();
     @Getter
     private final CashRegister cashRegister = new CashRegister();
     @Getter
@@ -42,9 +44,9 @@ public class Store {
      * and adds the item's salePrice to the register.
      */
     public void sellItem(Item item, double salePrice, int daySold) {
-        item.markSold(salePrice, daySold);
+        var soldItem = new SoldItem(item, salePrice, daySold);
         inventory.remove(item);
-        soldItems.add(item);
+        soldItems.add(soldItem);
         cashRegister.add(salePrice);
     }
 
@@ -74,7 +76,7 @@ public class Store {
      * If the register cannot sustain the cost, the already purchased items are returned
      * and the process finishes with a failure announcement.
      */
-    public Item.Builder<?> makeRandomItem(Class<? extends Item> itemType, int arrivalDay) {
+    public BuildableItem.Builder<?> makeRandomItem(Class<? extends BuildableItem> itemType, int arrivalDay) {
         var price = ThreadLocalRandom.current().nextDouble(1, 50);
         return ItemFactory.buildRandom(itemType)
                 .purchasePrice(price)  // TODO: more intelligent prices

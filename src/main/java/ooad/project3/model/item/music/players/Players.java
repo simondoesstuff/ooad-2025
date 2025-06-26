@@ -1,10 +1,11 @@
 package ooad.project3.model.item.music.players;
 
 import lombok.Getter;
-import ooad.project3.model.item.Item;
+import lombok.Setter;
+import ooad.project3.model.item.BuildableItem;
 
-public abstract class Players extends Item {
-    @Getter
+public abstract class Players extends BuildableItem {
+    @Getter @Setter
     private boolean isEqualized;
 
     public Players(Builder<?> builder) {
@@ -12,7 +13,7 @@ public abstract class Players extends Item {
         this.isEqualized = builder.isEqualized;
     }
 
-    public static abstract class Builder<T extends Builder<T>> extends Item.Builder<T> {
+    public static abstract class Builder<T extends Builder<T>> extends BuildableItem.Builder<T> {
         private boolean isEqualized = false;
 
         public T isEqualized(boolean isEqualized) {

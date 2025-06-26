@@ -13,6 +13,9 @@ dependencies {
 
     testCompileOnly("org.projectlombok:lombok:1.18.38")
     testAnnotationProcessor("org.projectlombok:lombok:1.18.38")
+
+    // guava provides a wonderful event bus
+    implementation("com.google.guava:guava:33.1.0-jre")
 }
 
 repositories {

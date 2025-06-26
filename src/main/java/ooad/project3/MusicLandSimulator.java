@@ -7,8 +7,13 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import ooad.project3.model.store.tuning.HaphazardTuning;
+import ooad.project3.model.store.tuning.ManualTuning;
+import ooad.project3.model.store.tuning.ElectronicTuning;
 import ooad.project3.model.Bank;
-import ooad.project3.model.item.Item;
+import ooad.project3.model.item.BuildableItem;
+import ooad.project3.model.item.BuildableItem;
+import ooad.project3.model.item.SoldItem;
 import ooad.project3.model.store.Clerk;
 import ooad.project3.model.store.Store;
 
@@ -24,6 +29,8 @@ public class MusicLandSimulator {
     private ArrayList<Clerk> staff = new ArrayList<>();
     private Clerk activeClerk;
     private int today = 0;
+    private DayLogger log;
+    private String logDir = "./logs";
 
     public MusicLandSimulator(Store store) {
         this.store = store;
@@ -36,11 +43,12 @@ public class MusicLandSimulator {
      */
     private void setupStore(Store store) {
         // Add staff
-        staff.add(new Clerk("Fred", 0.20, store));
-        staff.add(new Clerk("Ginger", 0.05, store));
+        staff.add(new Clerk(store, "Fred", 0.20, new ManualTuning()));
+        staff.add(new Clerk(store, "Ginger", 0.05, new ElectronicTuning()));
+        staff.add(new Clerk(store, "Rita", 0.95, new HaphazardTuning()));
 
         // Initialize inventory with 3 of each item type
-        for (Class<? extends Item> itemType : ItemFactory.getAllItemTypes()) {
+        for (Class<? extends BuildableItem> itemType : ItemFactory.getAllItemTypes()) {
             var batch = Stream.generate(() -> store.makeRandomItem(itemType, 0).build())
                     .limit(3)
                     .collect(Collectors.toList());
@@ -88,6 +96,9 @@ public class MusicLandSimulator {
         today++;
         activeClerk = todaysClerk;
 
+        if (log != null) log.close();
+        log = new DayLogger(logDir, today);
+
         for (var clerk : staff) {
             if (clerk != activeClerk) {
                 clerk.resetWorkStreak();
@@ -112,7 +123,15 @@ public class MusicLandSimulator {
             return null;
         }
 
-        return clerks.get(rand.nextInt(clerks.size()));
+        var clerk = clerks.get(rand.nextInt(clerks.size()));
+
+        if (rand.nextDouble(0, 1) <= .1) {
+            System.err.println("Oh no! %s was sick and cannot work today.");
+            clerk.resetWorkStreak();
+            clerk = selectClerk();  // reselect
+        }
+
+        return clerk;
     }
 
     private void runDailyActions(Clerk clerk) {
@@ -150,7 +169,7 @@ public class MusicLandSimulator {
         if (store.getSoldItems().isEmpty()) {
             System.out.println("No items were sold during the simulation.");
         } else {
-            for (Item item : store.getSoldItems()) {
+            for (SoldItem item : store.getSoldItems()) {
                 System.out.printf("%s sold on day %d for $%.1f\n",
                         item.getName(), item.getDaySold(), item.getSalePrice());
                 totalSales += item.getSalePrice();

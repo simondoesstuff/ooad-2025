@@ -1,11 +1,12 @@
 package ooad.project3.model.item.music.instruments.wind;
 
 import lombok.Getter;
+import lombok.Setter;
 import ooad.project3.model.item.music.instruments.Instruments;
 
 public abstract class Wind extends Instruments {
-    @Getter
-    protected final boolean isAdjusted;
+    @Getter @Setter
+    protected boolean isAdjusted;
 
     public Wind(Builder<?> builder) {
         super(builder);

@@ -1,8 +1,8 @@
 package ooad.project3.model.item.music;
 
-import ooad.project3.model.item.Item;
+import ooad.project3.model.item.BuildableItem;
 
-public abstract class Music extends Item {
+public abstract class Music extends BuildableItem {
     protected String band;
     protected String album;
 
@@ -12,7 +12,7 @@ public abstract class Music extends Item {
         this.album = builder.album;
     }
 
-    public abstract static class Builder<T extends Builder<T>> extends Item.Builder<T> {
+    public abstract static class Builder<T extends Builder<T>> extends BuildableItem.Builder<T> {
         private String band;
         private String album;
 

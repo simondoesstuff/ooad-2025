@@ -1,8 +1,8 @@
 package ooad.project3.model.item.music.accessories;
 
-import ooad.project3.model.item.Item;
+import ooad.project3.model.item.BuildableItem;
 
-public class Strings extends Item {
+public class Strings extends BuildableItem {
     private StringType type;
 
     public Strings(Builder builder) {
@@ -18,7 +18,7 @@ public class Strings extends Item {
         GUITAR, BASS, MANDOLIN
     }
 
-    public static class Builder extends Item.Builder<Builder> {
+    public static class Builder extends BuildableItem.Builder<Builder> {
         private StringType type;
 
         public Builder type(StringType type) {

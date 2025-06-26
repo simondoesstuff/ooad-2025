@@ -32,7 +32,7 @@ package "model" {
       source code.
     end note
 
-    class SoldItem <<decorator>> extends Item {
+    class SoldItem <<decorator>> extends BuildableItem {
       - Item base
       double salePrice
       int daySold
@@ -47,7 +47,7 @@ package "model" {
     }
 
     ' --- Music Media ---
-    abstract class Music <<Builder>> extends Item {
+    abstract class Music <<Builder>> extends BuildableItem {
       String band
       String album
     }
@@ -57,7 +57,7 @@ package "model" {
     class Cassette <<Builder>> extends Music {}
 
     ' --- Media Players ---
-    abstract class Players <<Builder>> extends Item {
+    abstract class Players <<Builder>> extends BuildableItem {
       boolean isEqualized
     }
     class CDPlayer <<Builder>> extends Players {}
@@ -66,7 +66,7 @@ package "model" {
     class CassettePlayer <<Builder>> extends Music {}
 
     ' --- Instruments ---
-    abstract class Instruments <<Builder>> extends Item {}
+    abstract class Instruments <<Builder>> extends BuildableItem {}
 
     abstract class Stringed <<Builder>> extends Instruments {
       boolean isElectric
@@ -99,7 +99,7 @@ package "model" {
     class Saxophone <<Builder>> extends Wind {}
 
     ' --- Clothing ---
-    abstract class Clothing <<Builder>> extends Item {}
+    abstract class Clothing <<Builder>> extends BuildableItem {}
     class Hat <<Builder>> extends Clothing {
       String hatSize
     }
@@ -116,7 +116,7 @@ package "model" {
     class Bandana <<Builder>> extends Clothing {}
 
     ' --- Accessories ---
-    abstract class Accessories <<Builder>> extends Item {}
+    abstract class Accessories <<Builder>> extends BuildableItem {}
     class PracticeAmp <<Builder>> extends Accessories {
       int wattage
     }
@@ -157,7 +157,7 @@ package "model" {
       getInventoryValue()
       getReadyOrders()
       getAvailableItemTypes()
-      makeRandomItem(Class<? extends Item> type, int day)
+      makeRandomItem(Class<? extends BuildableItem> type, int day)
     }
 
     class Inventory {

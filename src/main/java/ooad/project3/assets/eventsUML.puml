@@ -28,6 +28,7 @@ package "events" {
   'Publish which clerk has arrived at the store.
   'Publish number of items added to inventory (if any).
   class ArriveAtStoreEvent extends StoreEvent {
+    List<Order> recentlyDelivered;
   }
 
   'Publish the amount of money in the register.
@@ -36,6 +37,7 @@ package "events" {
 
   'Publish the amount of money in the register.
   class GoToBankEvent extends StoreEvent {
+    int oldAmntInRegister
     int newAmntInRegister
   }
 
@@ -47,13 +49,21 @@ package "events" {
 
   'Publish the total number of items ordered.
   class PlaceAnOrderEvent extends StoreEvent {
-    Inventory recentlyOrdered
+    Order recentlyOrdered
+  }
+
+  'Orders can fail if the register is out of cash.
+  class OrderFailureEvent extends StoreEvent {
+    itemType
+    int failQuantity
   }
 
   'Publish the total number of items sold.
   class OpenTheStoreEvent extends StoreEvent {
-    Inventory recentlySold
-    Inventory recentlyPurchased
+    int buyingCustomers
+    int sellingCustomers
+    int totalSold
+    int totalBought
   }
 
   'Publish the total number of items damaged in cleaning.
@@ -69,7 +79,6 @@ package "events" {
   Clerk ..> TheEventBus : publishes
   DoInventoryEvent *-- Inventory
   PlaceAnOrderEvent *-- Inventory
-  OpenTheStoreEvent *-- Inventory
   CleanTheStoreEvent *-- Inventory
 
 }

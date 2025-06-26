@@ -1,13 +1,14 @@
 package ooad.project3.model.item.music.instruments.stringed;
 
 import lombok.Getter;
+import lombok.Setter;
 import ooad.project3.model.item.music.instruments.Instruments;
 
 public abstract class Stringed extends Instruments {
     @Getter
     protected final boolean isElectric;
-    @Getter
-    protected final boolean isTuned;
+    @Getter @Setter
+    protected boolean isTuned;
 
     protected Stringed(Builder<?> builder) {
         super(builder);

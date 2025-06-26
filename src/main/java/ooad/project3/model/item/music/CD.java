@@ -1,6 +1,6 @@
 package ooad.project3.model.item.music;
 
-import ooad.project3.model.item.Item;
+import ooad.project3.model.item.BuildableItem;
 
 public class CD extends Music {
     public CD(Builder builder) {
@@ -10,7 +10,7 @@ public class CD extends Music {
     public static class Builder extends Music.Builder<Builder> {
 
 		@Override
-		public Item build() {
+		public BuildableItem build() {
             return new CD(this);
 		}
 

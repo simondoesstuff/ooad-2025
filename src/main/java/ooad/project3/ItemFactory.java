@@ -1,7 +1,8 @@
 package ooad.project3;
 
+import ooad.project3.model.item.BuildableItem;
 import ooad.project3.model.item.Condition;
-import ooad.project3.model.item.Item;
+import ooad.project3.model.item.BuildableItem;
 import ooad.project3.model.item.clothing.Bandana;
 import ooad.project3.model.item.clothing.Hat;
 import ooad.project3.model.item.clothing.Shirt;
@@ -42,8 +43,8 @@ public class ItemFactory {
     private static final Random rand = ThreadLocalRandom.current();
 
     // A map of item classes to a function that creates a new builder for that class.
-    private static final Map<Class<? extends Item>, Supplier<Item.Builder<?>>> builders = new HashMap<>();
-    private static final List<Class<? extends Item>> itemTypes;
+    private static final Map<Class<? extends BuildableItem>, Supplier<BuildableItem.Builder<?>>> builders = new HashMap<>();
+    private static final List<Class<? extends BuildableItem>> itemTypes;
     private static final Set<String> knownNames = new HashSet<>();
 
     static {
@@ -67,18 +68,18 @@ public class ItemFactory {
         itemTypes = new ArrayList<>(builders.keySet());
     }
 
-    public static List<Class<? extends Item>> getAllItemTypes() {
+    public static List<Class<? extends BuildableItem>> getAllItemTypes() {
         return itemTypes;
     }
 
-    public static Class<? extends Item> getRandomItemType() {
+    public static Class<? extends BuildableItem> getRandomItemType() {
         return itemTypes.get(rand.nextInt(itemTypes.size()));
     }
 
     /**
      * Picks a random Item type
      */
-    public static Item.Builder<?> buildRandom() {
+    public static BuildableItem.Builder<?> buildRandom() {
         return buildRandom(getRandomItemType());
     }
 
@@ -89,8 +90,8 @@ public class ItemFactory {
      * @param itemClass The concrete class of the item to build.
      * @return A fully constructed, randomized Item.
      */
-    public static Item.Builder<?> buildRandom(Class<? extends Item> itemClass) {
-        Supplier<Item.Builder<?>> builderSupplier = builders.get(itemClass);
+    public static BuildableItem.Builder<?> buildRandom(Class<? extends BuildableItem> itemClass) {
+        Supplier<BuildableItem.Builder<?>> builderSupplier = builders.get(itemClass);
 
         if (builderSupplier == null) {
             // should never throw

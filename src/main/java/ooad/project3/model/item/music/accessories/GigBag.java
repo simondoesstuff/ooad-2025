@@ -1,13 +1,13 @@
 package ooad.project3.model.item.music.accessories;
 
-import ooad.project3.model.item.Item;
+import ooad.project3.model.item.BuildableItem;
 
-public class GigBag extends Item {
+public class GigBag extends BuildableItem {
     public GigBag(Builder builder) {
         super(builder);
     }
 
-    public static class Builder extends Item.Builder<Builder> {
+    public static class Builder extends BuildableItem.Builder<Builder> {
         @Override
         public GigBag build() {
             return new GigBag(this);
