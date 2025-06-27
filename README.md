@@ -44,6 +44,7 @@ This project contains tests. See above for details.
    - 
 **Results:**
 - [Output.txt](src/main/java/ooad/project3/assets/logs/Output.txt)
+- [Test Results](src/main/java/ooad/project3/assets/logs/Tests.txt)
 - [logs](src/main/java/ooad/project3/assets/logs)
 - The primary UML diagram was strongly simplified. It has two large sections that were omitted,
 related to the item hierarchy and the event types.
