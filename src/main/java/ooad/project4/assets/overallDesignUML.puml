@@ -1,0 +1,344 @@
+@startuml
+
+!theme crt-amber
+
+<style>
+header {
+  HorizontalAlignment left
+}
+</style>
+
+package "model" {
+
+  '================================================================
+  ' Item Package: Defines all sellable items and their properties.
+  '================================================================
+  package "item" {
+
+    ' --- Base Item Definition ---
+    abstract class Item <<Builder>> {
+      String name
+      double purchasePrice
+      double listPrice
+      boolean newOrUsed
+      int dayArrived
+      Condition condition
+      boolean damage()
+    }
+
+    /'  note top'/
+    /'    All subclasses of 'Item' follow a hierarchical'/
+    /'    builder pattern. See baeldung.com link in the'/
+    /'    source code.'/
+    /'  end note'/
+
+    class SoldItem <<decorator>> extends Item {
+      - Item base
+      double salePrice
+      int daySold
+    }
+
+  /''/
+  /'  enum Condition {'/
+  /'    POOR'/
+  /'    FAIR'/
+  /'    GOOD'/
+  /'    VERY_GOOD'/
+  /'    EXCELLENT'/
+  /'  }'/
+  /''/
+  /'  ' --- Music Media ---'/
+  /'  abstract class Music <<Builder>> extends BuildableItem {'/
+  /'    String band'/
+  /'    String album'/
+  /'  }'/
+  /'  class PaperScore <<Builder>> extends Music {}'/
+  /'  class CD <<Builder>> extends Music {}'/
+  /'  class Vinyl <<Builder>> extends Music {}'/
+  /'  class Cassette <<Builder>> extends Music {}'/
+  /''/
+  /'  ' --- Media Players ---'/
+  /'  abstract class Players <<Builder>> extends BuildableItem {'/
+  /'    boolean isEqualized'/
+  /'  }'/
+  /'  class CDPlayer <<Builder>> extends Players {}'/
+  /'  class RecordPlayer <<Builder>> extends Players {}'/
+  /'  class MP3Player <<Builder>> extends Players {}'/
+  /'  class CassettePlayer <<Builder>> extends Music {}'/
+  /''/
+  /'  ' --- Instruments ---'/
+  /'  abstract class Instruments <<Builder>> extends BuildableItem {}'/
+  /''/
+  /'  abstract class Stringed <<Builder>> extends Instruments {'/
+  /'    boolean isElectric'/
+  /'    boolean isTuned'/
+  /'  }'/
+  /'  class Guitar <<Builder>> extends Stringed {}'/
+  /'  class Bass <<Builder>> extends Stringed {}'/
+  /'  class Mandolin <<Builder>> extends Stringed {}'/
+  /''/
+  /'  abstract class Wind <<Builder>> extends Instruments {'/
+  /'    boolean isAdjusted'/
+  /'  }'/
+  /'  class Flute <<Builder>> extends Wind {'/
+  /'    FluteMaterial type'/
+  /'  }'/
+  /'  enum FluteMaterial {'/
+  /'    SILVER'/
+  /'    WOOD'/
+  /'    GOLD'/
+  /'  }'/
+  /'  class Harmonica <<Builder>> extends Wind {'/
+  /'    HarmonicaKey key'/
+  /'  }'/
+  /'  enum HarmonicaKey {'/
+  /'    A'/
+  /'    C'/
+  /'    F'/
+  /'    G'/
+  /'  }'/
+  /'  class Saxophone <<Builder>> extends Wind {}'/
+  /''/
+  /'  ' --- Clothing ---'/
+  /'  abstract class Clothing <<Builder>> extends BuildableItem {}'/
+  /'  class Hat <<Builder>> extends Clothing {'/
+  /'    String hatSize'/
+  /'  }'/
+  /'  class Shirt <<Builder>> extends Clothing {'/
+  /'    ShirtSize shirtSize'/
+  /'  }'/
+  /'  enum ShirtSize {'/
+  /'    XS'/
+  /'    S'/
+  /'    M'/
+  /'    LG'/
+  /'    XL'/
+  /'  }'/
+  /'  class Bandana <<Builder>> extends Clothing {}'/
+  /''/
+  /'  ' --- Accessories ---'/
+  /'  abstract class Accessories <<Builder>> extends BuildableItem {}'/
+  /'  class PracticeAmp <<Builder>> extends Accessories {'/
+  /'    int wattage'/
+  /'  }'/
+  /'  class Cable <<Builder>> extends Accessories {'/
+  /'    int length'/
+  /'  }'/
+  /'  class Strings <<Builder>> extends Accessories {'/
+  /'    StringType type'/
+  /'  }'/
+  /'  enum StringType {'/
+  /'    GUITAR'/
+  /'    BASS'/
+  /'    MANDOLIN'/
+  /'  }'/
+  /'  class GigBag <<Builder>> extends Accessories {}'/
+  /''/
+  /'  ' --- Relationships within Item Package ---'/
+  /'  Item --> Condition : has a'/
+  /'  Flute --> FluteMaterial : has a'/
+  /'  Harmonica --> HarmonicaKey : has a'/
+  /'  Shirt --> ShirtSize : has a'/
+  /'  Strings --> StringType : has a'/
+  SoldItem o-- Item
+
+  }
+
+  '================================================================
+  ' Store Package: Defines the store, staff, and customer logic.
+  '================================================================
+  package "store" {
+    class Store {
+      Inventory inventory
+      Inventory soldItems
+      CashRegister register
+      List<Order> orders
+      int day
+      sellItem(Item item, double salePrice, int daySold)
+      getInventoryValue()
+      getReadyOrders()
+      getAvailableItemTypes()
+      makeRandomItem(Class<? extends BuildableItem> type, int day)
+    }
+
+    class Inventory {
+      List<Item>
+      double getTotalPurchaseValue()
+    }
+
+    class Order {
+      int arrivalDay;
+      List<Item> items;
+    }
+
+    class CashRegister {
+      double cash
+      add(double)
+      withdraw(double)
+      getCash()
+    }
+
+    class Clerk {
+      double cleaningDamageChance
+      int daysWorkedInARow
+      Store
+      Tuner
+      arriveAtStore()
+      checkRegister()
+      goToBank()
+      doInventory()
+      placeAnOrder()
+      openTheStore()
+      -handleBuyingCustomer()
+      -handleSellingCustomer()
+      cleanTheStore()
+      leaveTheStore()
+    }
+
+    package "tuning" {
+      interface Tuner {
+        void tune(Item)
+      }
+
+      class HaphazardTuning implements Tuner {
+        void tune(Item)
+      }
+
+      class ElectronicTuning implements Tuner {
+        void tune(Item)
+      }
+
+      class ManualTuning implements Tuner {
+        void tune(Item)
+      }
+
+    }
+
+    ' --- Relationships within Store Package ---
+    Store o-- Order
+    Store o-- CashRegister
+    Store *-- Inventory
+    Store ..> SoldItem : sells items
+    Inventory *-- Item
+    Clerk o-- Store
+    Clerk *-- Tuner : strategy pattern
+  }
+
+  '================================================================
+  ' Singleton and Factory Definitions
+  '================================================================
+  class Bank <<singleton>> {
+    provideFunds(double)
+  }
+
+  Bank <.. Clerk : withdraws
+
+}
+
+package "events" {
+  class TheEventBus <<singleton>> {
+    EventBus bus // provided by Guava
+  }
+
+  abstract class StoreEvent {
+    Clerk // stores caller
+    // indirectly: this.clerk.store.inventory
+  }
+
+  /''Publish which clerk has arrived at the store.'/
+  /''Publish number of items added to inventory (if any).'/
+  /'class ArriveAtStoreEvent extends StoreEvent {'/
+  /'  Clerk'/
+  /'  Store'/
+  /'}'/
+  /''/
+  /''Publish the amount of money in the register.'/
+  /'class CheckRegisterEvent extends StoreEvent {'/
+  /'  Clerk'/
+  /'  Store'/
+  /'}'/
+  /''/
+  /''Publish the amount of money in the register.'/
+  /'class GoToBankEvent extends StoreEvent {'/
+  /'  Clerk'/
+  /'  Store'/
+  /'  int newAmntInRegister'/
+  /'}'/
+  /''/
+  /''Publish the total number of items.'/
+  /''DoInventory: Publish the total purchase price value of inventory items.'/
+  /'class DoInventoryEvent extends StoreEvent {'/
+  /'  Clerk'/
+  /'  Store'/
+  /'  Inventory recentlyDamaged'/
+  /'}'/
+  /''/
+  /''Publish the total number of items ordered.'/
+  /'class PlaceAnOrderEvent extends StoreEvent {'/
+  /'  Clerk'/
+  /'  Store'/
+  /'  Inventory recentlyOrdered'/
+  /'}'/
+  /''/
+  /''Publish the total number of items sold.'/
+  /'class OpenTheStoreEvent extends StoreEvent {'/
+  /'  Clerk'/
+  /'  Store'/
+  /'  Inventory recentlySold'/
+  /'  Inventory recentlyPurchased'/
+  /'}'/
+  /''/
+  /''Publish the total number of items damaged in cleaning.'/
+  /'class CleanTheStoreEvent extends StoreEvent {'/
+  /'  Clerk'/
+  /'  Store'/
+  /'  Inventory recentlyDamaged'/
+  /'}'/
+  /''/
+  /''Publish which clerk has left the store'/
+  /'class LeaveTheStoreEvent extends StoreEvent {'/
+  /'  Clerk'/
+  /'  Store'/
+  /'}'/
+
+  ' --- Relationships within Package ---
+  Clerk ..> TheEventBus : publishes
+  Clerk ..> StoreEvent : creates
+  /'DoInventoryEvent o-- Inventory'/
+  /'PlaceAnOrderEvent o-- Inventory'/
+  /'OpenTheStoreEvent o-- Inventory'/
+  /'CleanTheStoreEvent o-- Inventory'/
+
+}
+
+'================================================================
+' Top-Level Simulation Components
+'================================================================
+class Logger {
+}
+
+class ItemFactory <<factory>> {
+  buildRandomItem(Class<? extends BuildableItem>)
+}
+
+class MusicLandSimulator {
+  Store
+  List<Clerk>
+  int today
+  run()
+  -setupStore(Store actions)
+  -getAvailableClerks()
+  -marchDay()
+  -selectClerk()
+  -runDailyActions()
+  -printFinalSummary()
+}
+
+' --- Top-Level Relationships ---
+MusicLandSimulator *-- Store
+MusicLandSimulator *-- Clerk
+Store ..> ItemFactory
+ItemFactory ..> item : creates
+Logger <.. TheEventBus : notifies
+
+@enduml
