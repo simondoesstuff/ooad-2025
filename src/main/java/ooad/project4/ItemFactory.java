@@ -7,10 +7,12 @@ import ooad.project4.model.item.clothing.Bandana;
 import ooad.project4.model.item.clothing.Hat;
 import ooad.project4.model.item.clothing.Shirt;
 import ooad.project4.model.item.music.CD;
+import ooad.project4.model.item.music.Cassette;
 import ooad.project4.model.item.music.Music;
 import ooad.project4.model.item.music.PaperScore;
 import ooad.project4.model.item.music.Vinyl;
 import ooad.project4.model.item.music.accessories.Cable;
+import ooad.project4.model.item.music.accessories.GigBag;
 import ooad.project4.model.item.music.accessories.PracticeAmp;
 import ooad.project4.model.item.music.accessories.Strings;
 import ooad.project4.model.item.music.instruments.stringed.Bass;
@@ -19,7 +21,9 @@ import ooad.project4.model.item.music.instruments.stringed.Mandolin;
 import ooad.project4.model.item.music.instruments.stringed.Stringed;
 import ooad.project4.model.item.music.instruments.wind.Flute;
 import ooad.project4.model.item.music.instruments.wind.Harmonica;
+import ooad.project4.model.item.music.instruments.wind.Saxophone;
 import ooad.project4.model.item.music.players.CDPlayer;
+import ooad.project4.model.item.music.players.CassettePlayer;
 import ooad.project4.model.item.music.players.MP3Player;
 import ooad.project4.model.item.music.players.RecordPlayer;
 
@@ -49,9 +53,11 @@ public class ItemFactory {
 
     static {
         builders.put(CD.class, CD.Builder::new);
+        builders.put(Cassette.class, Cassette.Builder::new);
         builders.put(Vinyl.class, Vinyl.Builder::new);
         builders.put(PaperScore.class, PaperScore.Builder::new);
         builders.put(CDPlayer.class, CDPlayer.Builder::new);
+        builders.put(CassettePlayer.class, CassettePlayer.Builder::new);
         builders.put(RecordPlayer.class, RecordPlayer.Builder::new);
         builders.put(MP3Player.class, MP3Player.Builder::new);
         builders.put(Guitar.class, Guitar.Builder::new);
@@ -59,12 +65,14 @@ public class ItemFactory {
         builders.put(Mandolin.class, Mandolin.Builder::new);
         builders.put(Flute.class, Flute.Builder::new);
         builders.put(Harmonica.class, Harmonica.Builder::new);
+        builders.put(Saxophone.class, Saxophone.Builder::new);
         builders.put(Hat.class, Hat.Builder::new);
         builders.put(Shirt.class, Shirt.Builder::new);
         builders.put(Bandana.class, Bandana.Builder::new);
         builders.put(PracticeAmp.class, PracticeAmp.Builder::new);
         builders.put(Cable.class, Cable.Builder::new);
         builders.put(Strings.class, Strings.Builder::new);
+        builders.put(GigBag.class, GigBag.Builder::new);
         itemTypes = new ArrayList<>(builders.keySet());
     }
 
