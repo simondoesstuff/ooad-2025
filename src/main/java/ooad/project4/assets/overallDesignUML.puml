@@ -149,6 +149,7 @@ package "model" {
   '================================================================
   package "store" {
     class Store {
+      String storeName
       Inventory inventory
       Inventory soldItems
       CashRegister register
@@ -178,6 +179,22 @@ package "model" {
       getCash()
     }
 
+    package "customers" {
+      interface Customer {
+        Item getPurchase(List<Item> options)
+        Item getSaleOffer()
+        boolean acceptSale(Item item, double amount)
+      }
+
+      class RandomCustomer implements Customer {
+        // buys & sells random items with basic bartering logic
+      }
+
+      class CommandLineCustomer implements Customer {
+        // requests user input to make decisions
+      }
+    }
+
     class Clerk {
       double cleaningDamageChance
       int daysWorkedInARow
@@ -189,8 +206,8 @@ package "model" {
       doInventory()
       placeAnOrder()
       openTheStore()
-      -handleBuyingCustomer()
-      -handleSellingCustomer()
+      handleBuyingCustomer(Customer)
+      handleSellingCustomer(Customer)
       cleanTheStore()
       leaveTheStore()
     }
@@ -222,13 +239,14 @@ package "model" {
     Inventory *-- Item
     Clerk o-- Store
     Clerk *-- Tuner : strategy pattern
+    Customer <.. Clerk
   }
 
   '================================================================
   ' Singleton and Factory Definitions
   '================================================================
   class Bank <<singleton>> {
-    provideFunds(double)
+    provideFunds(String accountHolder, double amnt)  // (zero security)
   }
 
   Bank <.. Clerk : withdraws
@@ -237,77 +255,21 @@ package "model" {
 
 package "events" {
   class TheEventBus <<singleton>> {
-    EventBus bus // provided by Guava
+    EventBus getBus(String channel) // Guava::EventBus
   }
+
+  note top
+    EventBus is now by (String) channel
+  end note
 
   abstract class StoreEvent {
     Clerk // stores caller
     // indirectly: this.clerk.store.inventory
   }
 
-  /''Publish which clerk has arrived at the store.'/
-  /''Publish number of items added to inventory (if any).'/
-  /'class ArriveAtStoreEvent extends StoreEvent {'/
-  /'  Clerk'/
-  /'  Store'/
-  /'}'/
-  /''/
-  /''Publish the amount of money in the register.'/
-  /'class CheckRegisterEvent extends StoreEvent {'/
-  /'  Clerk'/
-  /'  Store'/
-  /'}'/
-  /''/
-  /''Publish the amount of money in the register.'/
-  /'class GoToBankEvent extends StoreEvent {'/
-  /'  Clerk'/
-  /'  Store'/
-  /'  int newAmntInRegister'/
-  /'}'/
-  /''/
-  /''Publish the total number of items.'/
-  /''DoInventory: Publish the total purchase price value of inventory items.'/
-  /'class DoInventoryEvent extends StoreEvent {'/
-  /'  Clerk'/
-  /'  Store'/
-  /'  Inventory recentlyDamaged'/
-  /'}'/
-  /''/
-  /''Publish the total number of items ordered.'/
-  /'class PlaceAnOrderEvent extends StoreEvent {'/
-  /'  Clerk'/
-  /'  Store'/
-  /'  Inventory recentlyOrdered'/
-  /'}'/
-  /''/
-  /''Publish the total number of items sold.'/
-  /'class OpenTheStoreEvent extends StoreEvent {'/
-  /'  Clerk'/
-  /'  Store'/
-  /'  Inventory recentlySold'/
-  /'  Inventory recentlyPurchased'/
-  /'}'/
-  /''/
-  /''Publish the total number of items damaged in cleaning.'/
-  /'class CleanTheStoreEvent extends StoreEvent {'/
-  /'  Clerk'/
-  /'  Store'/
-  /'  Inventory recentlyDamaged'/
-  /'}'/
-  /''/
-  /''Publish which clerk has left the store'/
-  /'class LeaveTheStoreEvent extends StoreEvent {'/
-  /'  Clerk'/
-  /'  Store'/
-  /'}'/
-
   ' --- Relationships within Package ---
   Clerk ..> TheEventBus : publishes
   Clerk ..> StoreEvent : creates
-  /'DoInventoryEvent o-- Inventory'/
-  /'PlaceAnOrderEvent o-- Inventory'/
-  /'OpenTheStoreEvent o-- Inventory'/
-  /'CleanTheStoreEvent o-- Inventory'/
 
 }
 
@@ -321,22 +283,36 @@ class ItemFactory <<factory>> {
   buildRandomItem(Class<? extends BuildableItem>)
 }
 
+class CommandHandler {
+  List<Clerk> availableClerks
+  handleInput(String)
+}
+
+class ClerkPool <<object pool>> {
+  addClerk(Clerk)
+  Clerk assign()
+  relenquish(Clerk)
+  rest()  // reset unassigned clerk's work streaks
+}
+
 class MusicLandSimulator {
-  Store
-  List<Clerk>
+  List<Store> stores
+  ClerkPool
+  CommandHandler
   int today
   run()
-  -setupStore(Store actions)
-  -getAvailableClerks()
+  -setupStore(Store)
+  -assignClerks()
   -marchDay()
-  -selectClerk()
-  -runDailyActions()
+  -runDailyActions(Clerk)
   -printFinalSummary()
 }
 
 ' --- Top-Level Relationships ---
-MusicLandSimulator *-- Store
-MusicLandSimulator *-- Clerk
+MusicLandSimulator *-- Store : operates
+MusicLandSimulator *-- ClerkPool : pulls from
+MusicLandSimulator *-- CommandHandler : defers to
+CommandHandler --> Clerk
 Store ..> ItemFactory
 ItemFactory ..> item : creates
 Logger <.. TheEventBus : notifies
