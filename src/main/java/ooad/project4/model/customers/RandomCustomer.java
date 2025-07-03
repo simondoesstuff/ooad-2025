@@ -39,6 +39,8 @@ public class RandomCustomer implements Customer {
             return null;
         }
 
+        if (options.size() == 0) return null;
+
         return options.get(ThreadLocalRandom.current().nextInt(0, options.size()));
 	}
 

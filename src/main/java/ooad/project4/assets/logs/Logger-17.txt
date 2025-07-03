@@ -2,65 +2,42 @@
 ========================================
 ================ Day 17 ================
 ========================================
-North: Rita arrives at the store.
+Oh no! Ginger was sick and cannot work today.
+North: Fred arrives at the store.
  - new deliveries!
- - added delivered item to inventory: Cassette(ScOm)
- - added delivered item to inventory: Harmonica(FvDj)
- - added delivered item to inventory: Guitar(AbAq)
- - added delivered item to inventory: Guitar(TdRv)
- - added delivered item to inventory: Guitar(YqXz)
- - added delivered item to inventory: PracticeAmp(CeHd)
- - added delivered item to inventory: PracticeAmp(PwNx)
- - added delivered item to inventory: PracticeAmp(DrSd)
- - added delivered item to inventory: RecordPlayer(NkAu)
- - added delivered item to inventory: RecordPlayer(LxTg)
- - added delivered item to inventory: RecordPlayer(TcIq)
-North: Rita counts the register. Current cash: $489.25
-North: Rita wanted to order 3 CDPlayers because they were missing from inventory and 3 were ordered, to arrive on day 20
-North: Rita wanted to order 3 Saxophones because they were missing from inventory and 3 were ordered, to arrive on day 19
-North: Rita wanted to order 3 GigBags because they were missing from inventory and 3 were ordered, to arrive on day 20
-North: Rita wanted to order 3 PaperScores because they were missing from inventory and 3 were ordered, to arrive on day 18
-North: Rita wanted to order 3 Basss because they were missing from inventory and 3 were ordered, to arrive on day 19
-North: Rita wanted to order 3 Mandolins because they were missing from inventory and 3 were ordered, to arrive on day 20
- - failed to order 1 Strings(s) because there was not enough cash in the register.
-North: Rita wanted to order 3 Stringss because they were missing from inventory and 2 were ordered, to arrive on day 19
- - failed to order 3 Flute(s) because there was not enough cash in the register.
-North: Rita wanted to order some items but we're broke!
-North: Rita is doing inventory. Total purchase value of items: $381.82
- - there were 20 items and 0 were damaged during tuning.
-North: Rita opens the store.
- - there are 9 buying and 2 selling customers today.
- - there were 5 total sales and 1 total purchases.
-North: Rita is cleaning the store.
- - Oh no! 16 item(s) were damaged while cleaning.
-North: Rita locks up and goes home.
+ - added delivered item to inventory: Strings(NzZc)
+ - added delivered item to inventory: Strings(WuZn)
+ - added delivered item to inventory: Strings(GuNn)
+ - added delivered item to inventory: Saxophone(NxDw)
+ - added delivered item to inventory: Saxophone(IlGb)
+ - added delivered item to inventory: Saxophone(RiNr)
+ - added delivered item to inventory: PracticeAmp(IyYh)
+ - added delivered item to inventory: PracticeAmp(UwIp)
+ - added delivered item to inventory: PracticeAmp(AbWw)
+North: Fred counts the register. Current cash: $3255.58
+North: Fred wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 18
+North: Fred is doing inventory. Total purchase value of items: $1379.10
+ - there were 51 items and 2 were damaged during tuning.
+North: Fred finished opening the store.
+ - there are 7 buying and 3 selling customers today.
+ - there were 8 total sales and 3 total purchases.
+North: Fred is cleaning the store.
+ - Oh no! 7 item(s) were damaged while cleaning.
+North: Fred locks up and goes home.
 South: DOM-I arrives at the store.
  - new deliveries!
- - added delivered item to inventory: Bandana(WzCp)
- - added delivered item to inventory: Bandana(TcTl)
- - added delivered item to inventory: CDPlayer(FjAg)
- - added delivered item to inventory: CDPlayer(KqEw)
- - added delivered item to inventory: CDPlayer(OnWj)
- - added delivered item to inventory: Saxophone(FuAq)
- - added delivered item to inventory: Saxophone(CrCu)
- - added delivered item to inventory: Saxophone(YiFm)
- - added delivered item to inventory: GigBag(FgSi)
- - added delivered item to inventory: GigBag(MaMf)
- - added delivered item to inventory: GigBag(JeMe)
-South: DOM-I counts the register. Current cash: $147.33
-South: DOM-I wanted to order 3 CassettePlayers because they were missing from inventory and 3 were ordered, to arrive on day 18
-South: DOM-I wanted to order 3 Guitars because they were missing from inventory and 3 were ordered, to arrive on day 20
- - failed to order 3 Shirt(s) because there was not enough cash in the register.
-South: DOM-I wanted to order some items but we're broke!
- - failed to order 3 PracticeAmp(s) because there was not enough cash in the register.
-South: DOM-I wanted to order some items but we're broke!
- - failed to order 2 Cassette(s) because there was not enough cash in the register.
-South: DOM-I wanted to order 3 Cassettes because they were missing from inventory and 1 were ordered, to arrive on day 20
-South: DOM-I is doing inventory. Total purchase value of items: $869.04
- - there were 35 items and 0 were damaged during tuning.
-South: DOM-I opens the store.
- - there are 10 buying and 4 selling customers today.
- - there were 8 total sales and 4 total purchases.
+ - added delivered item to inventory: Cable(QyMp)
+ - added delivered item to inventory: Cable(ZcBl)
+ - added delivered item to inventory: Cable(ClCx)
+South: DOM-I counts the register. Current cash: $1552.41
+South: DOM-I wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 19
+South: DOM-I wanted to order 3 CDPlayers because they were missing from inventory and 3 were ordered, to arrive on day 18
+South: DOM-I wanted to order 3 Cassettes because they were missing from inventory and 3 were ordered, to arrive on day 20
+South: DOM-I is doing inventory. Total purchase value of items: $777.50
+ - there were 32 items and 0 were damaged during tuning.
+South: DOM-I finished opening the store.
+ - there are 7 buying and 1 selling customers today.
+ - there were 7 total sales and 0 total purchases.
 South: DOM-I is cleaning the store.
- - Oh no! 28 item(s) were damaged while cleaning.
+ - Oh no! 23 item(s) were damaged while cleaning.
 South: DOM-I locks up and goes home.

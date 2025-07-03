@@ -7,6 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import lombok.Getter;
 import ooad.project4.model.Bank;
 import ooad.project4.model.item.BuildableItem;
 import ooad.project4.model.item.SoldItem;
@@ -22,8 +23,9 @@ public class StoreManager {
 
     private final Store store;
     private final ClerkPool pool;
-    private Clerk activeClerk;
     private int today = 0;
+    @Getter
+    private Clerk activeClerk;
 
     public StoreManager(Store store, ClerkPool pool) {
         this.store = store;

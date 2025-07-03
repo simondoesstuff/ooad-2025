@@ -302,6 +302,13 @@ public class Clerk {
         verifyStoreExists();
 
         var item = customer.getSaleOffer();
+
+        if (item == null) {
+            System.out.printf(" - %s seemed like they wanted to cut a deal but got cold feet and left.\n",
+                customer);
+            return false;
+        }
+
         var condition = item.getCondition();
 
         // Determine purchase price based on condition
@@ -327,8 +334,10 @@ public class Clerk {
 
         if (!customer.acceptSale(item.purchasePrice(offer).build())) {
             offer *= 1.1;
+            System.out.printf(" - %s didn't take the deal so a 10%% increase was offered.\n", customer);
 
             if (!customer.acceptSale(item.purchasePrice(offer).build())) {
+                System.out.printf(" - %s still didn't take the deal and left insulted.\n", customer);
                 return false;
             }
         }

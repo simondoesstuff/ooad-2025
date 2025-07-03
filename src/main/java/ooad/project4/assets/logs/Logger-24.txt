@@ -2,63 +2,55 @@
 ========================================
 ================ Day 24 ================
 ========================================
-North: Rita arrives at the store.
+North: Fred arrives at the store.
  - new deliveries!
- - added delivered item to inventory: Guitar(PgPw)
- - added delivered item to inventory: Guitar(RlSb)
- - added delivered item to inventory: Guitar(TdKl)
- - added delivered item to inventory: RecordPlayer(CyUa)
- - added delivered item to inventory: RecordPlayer(YeXx)
- - added delivered item to inventory: RecordPlayer(VdNg)
- - added delivered item to inventory: Guitar(RkOr)
- - added delivered item to inventory: Guitar(ExWj)
- - added delivered item to inventory: Guitar(OcOo)
-North: Rita counts the register. Current cash: $403.23
-North: Rita wanted to order 3 CassettePlayers because they were missing from inventory and 3 were ordered, to arrive on day 26
-North: Rita wanted to order 3 Cables because they were missing from inventory and 3 were ordered, to arrive on day 26
-North: Rita wanted to order 3 Basss because they were missing from inventory and 3 were ordered, to arrive on day 26
-North: Rita wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 26
-North: Rita is doing inventory. Total purchase value of items: $686.57
- - there were 30 items and 1 were damaged during tuning.
-North: Rita opens the store.
- - there are 10 buying and 4 selling customers today.
- - there were 6 total sales and 2 total purchases.
-North: Rita is cleaning the store.
- - Oh no! 24 item(s) were damaged while cleaning.
-North: Rita locks up and goes home.
+ - added delivered item to inventory: Flute(ExUo)
+ - added delivered item to inventory: Flute(DaAy)
+ - added delivered item to inventory: Flute(NnPm)
+ - added delivered item to inventory: Flute(AvLj)
+ - added delivered item to inventory: Flute(XmCu)
+ - added delivered item to inventory: Flute(DdEo)
+North: Fred counts the register. Current cash: $4412.58
+North: Fred wanted to order 3 CDs because they were missing from inventory and 3 were ordered, to arrive on day 27
+North: Fred wanted to order 3 CDPlayers because they were missing from inventory and 3 were ordered, to arrive on day 26
+North: Fred wanted to order 3 Bandanas because they were missing from inventory and 3 were ordered, to arrive on day 25
+North: Fred wanted to order 3 PaperScores because they were missing from inventory and 3 were ordered, to arrive on day 25
+North: Fred wanted to order 3 Basss because they were missing from inventory and 3 were ordered, to arrive on day 25
+North: Fred is doing inventory. Total purchase value of items: $1114.68
+ - there were 40 items and 4 were damaged during tuning.
+North: Fred finished opening the store.
+ - there are 8 buying and 3 selling customers today.
+ - there were 10 total sales and 3 total purchases.
+North: Fred is cleaning the store.
+ - Oh no! 10 item(s) were damaged while cleaning.
+North: Fred locks up and goes home.
 South: DOM-I arrives at the store.
  - new deliveries!
- - added delivered item to inventory: Harmonica(OsMt)
- - added delivered item to inventory: Harmonica(FgVf)
- - added delivered item to inventory: Harmonica(EhYs)
- - added delivered item to inventory: Hat(PxJe)
- - added delivered item to inventory: Hat(VvEl)
- - added delivered item to inventory: Hat(PiXa)
- - added delivered item to inventory: Bandana(TaYg)
- - added delivered item to inventory: Bandana(EjCm)
- - added delivered item to inventory: Bandana(HyQv)
- - added delivered item to inventory: Cassette(WmZh)
- - added delivered item to inventory: Cassette(XtJe)
- - added delivered item to inventory: Cassette(OhNh)
- - added delivered item to inventory: Strings(WaDm)
- - added delivered item to inventory: Strings(SgLg)
-South: DOM-I counts the register. Current cash: $109.10
-South: DOM-I wanted to order 3 CassettePlayers because they were missing from inventory and 3 were ordered, to arrive on day 26
- - failed to order 3 Cable(s) because there was not enough cash in the register.
-South: DOM-I wanted to order some items but we're broke!
- - failed to order 2 MP3Player(s) because there was not enough cash in the register.
-South: DOM-I wanted to order 3 MP3Players because they were missing from inventory and 1 were ordered, to arrive on day 27
- - failed to order 3 GigBag(s) because there was not enough cash in the register.
-South: DOM-I wanted to order some items but we're broke!
- - failed to order 3 PracticeAmp(s) because there was not enough cash in the register.
-South: DOM-I wanted to order some items but we're broke!
- - failed to order 3 RecordPlayer(s) because there was not enough cash in the register.
-South: DOM-I wanted to order some items but we're broke!
-South: DOM-I is doing inventory. Total purchase value of items: $974.29
- - there were 38 items and 0 were damaged during tuning.
-South: DOM-I opens the store.
- - there are 4 buying and 2 selling customers today.
- - there were 5 total sales and 2 total purchases.
+ - added delivered item to inventory: CDPlayer(UmNy)
+ - added delivered item to inventory: CDPlayer(EwLd)
+ - added delivered item to inventory: CDPlayer(QaPt)
+ - added delivered item to inventory: Guitar(HxEm)
+ - added delivered item to inventory: Guitar(IuBw)
+ - added delivered item to inventory: Guitar(LuSz)
+ - added delivered item to inventory: Vinyl(OtGk)
+ - added delivered item to inventory: Vinyl(PeVb)
+ - added delivered item to inventory: Vinyl(RcFm)
+ - added delivered item to inventory: Harmonica(IqQu)
+ - added delivered item to inventory: Harmonica(GwBj)
+ - added delivered item to inventory: Harmonica(ElNw)
+ - added delivered item to inventory: CassettePlayer(QoRl)
+ - added delivered item to inventory: CassettePlayer(LbMj)
+ - added delivered item to inventory: CassettePlayer(QuKv)
+ - added delivered item to inventory: PaperScore(UvRs)
+ - added delivered item to inventory: PaperScore(CdAu)
+ - added delivered item to inventory: PaperScore(ZtQl)
+South: DOM-I counts the register. Current cash: $1185.45
+South: DOM-I wanted to order 3 Saxophones because they were missing from inventory and 3 were ordered, to arrive on day 27
+South: DOM-I is doing inventory. Total purchase value of items: $1128.32
+ - there were 42 items and 0 were damaged during tuning.
+South: DOM-I finished opening the store.
+ - there are 5 buying and 1 selling customers today.
+ - there were 4 total sales and 1 total purchases.
 South: DOM-I is cleaning the store.
- - Oh no! 32 item(s) were damaged while cleaning.
+ - Oh no! 36 item(s) were damaged while cleaning.
 South: DOM-I locks up and goes home.

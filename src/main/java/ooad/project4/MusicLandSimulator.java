@@ -8,6 +8,7 @@ import java.util.stream.Stream;
 import ooad.project4.model.store.tuning.HaphazardTuning;
 import ooad.project4.model.store.tuning.ManualTuning;
 import ooad.project4.model.store.tuning.ElectronicTuning;
+import ooad.project4.model.customers.CommandLineCustomer;
 import ooad.project4.model.item.BuildableItem;
 import ooad.project4.model.store.Clerk;
 import ooad.project4.model.store.Store;
@@ -104,11 +105,15 @@ public class MusicLandSimulator {
         // be dedicated to the summary and the CLI for manual customer interaction
         log.close();
         log = new DayLogger(logDir, 31);
-        printSummary(log);
 
         // Customer CLI...
         log.logf("\n");
-        // TODO: impl
+        var activeClerks = new ArrayList<Clerk>();
+        activeClerks.add(northern.getActiveClerk());
+        activeClerks.add(southern.getActiveClerk());
+        new CommandHandler(activeClerks).run();
+
+        printSummary(log);
     }
 
     public void printSummary(DayLogger log) {

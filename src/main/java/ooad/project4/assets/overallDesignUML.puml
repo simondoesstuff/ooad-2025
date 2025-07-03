@@ -180,7 +180,7 @@ class ItemFactory <<factory>> {
 
 class CommandHandler {
   List<Clerk> availableClerks
-  handleInput(String)
+  run()
 }
 
 class ClerkPool <<object pool>> {

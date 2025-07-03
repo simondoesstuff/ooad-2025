@@ -2,27 +2,27 @@
 ========================================
 ================ Day 1  ================
 ========================================
-North: Rita arrives at the store.
-North: Rita counts the register. Current cash: $0.00
-North: Cash is low. Rita is going to the bank.
+North: Fred arrives at the store.
+North: Fred counts the register. Current cash: $0.00
+North: Cash is low. Fred is going to the bank.
  - withdrew from the bank. New register total: $1000.00
-North: Rita is doing inventory. Total purchase value of items: $1408.18
+North: Fred is doing inventory. Total purchase value of items: $1493.14
  - there were 63 items and 0 were damaged during tuning.
-North: Rita opens the store.
- - there are 8 buying and 2 selling customers today.
- - there were 8 total sales and 2 total purchases.
-North: Rita is cleaning the store.
- - Oh no! 54 item(s) were damaged while cleaning.
-North: Rita locks up and goes home.
+North: Fred finished opening the store.
+ - there are 6 buying and 3 selling customers today.
+ - there were 7 total sales and 3 total purchases.
+North: Fred is cleaning the store.
+ - Oh no! 8 item(s) were damaged while cleaning.
+North: Fred locks up and goes home.
 South: DOM-I arrives at the store.
 South: DOM-I counts the register. Current cash: $0.00
 South: Cash is low. DOM-I is going to the bank.
  - withdrew from the bank. New register total: $1000.00
-South: DOM-I is doing inventory. Total purchase value of items: $1523.75
+South: DOM-I is doing inventory. Total purchase value of items: $1581.65
  - there were 63 items and 0 were damaged during tuning.
-South: DOM-I opens the store.
- - there are 8 buying and 2 selling customers today.
- - there were 9 total sales and 1 total purchases.
+South: DOM-I finished opening the store.
+ - there are 5 buying and 1 selling customers today.
+ - there were 5 total sales and 1 total purchases.
 South: DOM-I is cleaning the store.
- - Oh no! 48 item(s) were damaged while cleaning.
+ - Oh no! 57 item(s) were damaged while cleaning.
 South: DOM-I locks up and goes home.

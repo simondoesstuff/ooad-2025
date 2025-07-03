@@ -2,29 +2,26 @@
 ========================================
 ================ Day 3  ================
 ========================================
-North: Rita arrives at the store.
-North: Rita counts the register. Current cash: $1666.12
-North: Rita wanted to order 3 Cables because they were missing from inventory and 3 were ordered, to arrive on day 5
-North: Rita wanted to order 3 Guitars because they were missing from inventory and 3 were ordered, to arrive on day 4
-North: Rita wanted to order 3 MP3Players because they were missing from inventory and 3 were ordered, to arrive on day 5
-North: Rita wanted to order 3 Basss because they were missing from inventory and 3 were ordered, to arrive on day 4
-North: Rita is doing inventory. Total purchase value of items: $538.24
- - there were 28 items and 5 were damaged during tuning.
-North: Rita opens the store.
- - there are 10 buying and 3 selling customers today.
- - there were 8 total sales and 3 total purchases.
-North: Rita is cleaning the store.
- - Oh no! 21 item(s) were damaged while cleaning.
-North: Rita locks up and goes home.
+North: Fred arrives at the store.
+North: Fred counts the register. Current cash: $1784.95
+North: Fred wanted to order 3 PracticeAmps because they were missing from inventory and 3 were ordered, to arrive on day 5
+North: Fred is doing inventory. Total purchase value of items: $1040.51
+ - there were 46 items and 3 were damaged during tuning.
+North: Fred finished opening the store.
+ - there are 4 buying and 1 selling customers today.
+ - there were 3 total sales and 1 total purchases.
+North: Fred is cleaning the store.
+ - Oh no! 13 item(s) were damaged while cleaning.
+North: Fred locks up and goes home.
 South: DOM-I arrives at the store.
-South: DOM-I counts the register. Current cash: $1502.40
-South: DOM-I wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 6
-South: DOM-I wanted to order 3 CDs because they were missing from inventory and 3 were ordered, to arrive on day 4
-South: DOM-I is doing inventory. Total purchase value of items: $876.60
- - there were 34 items and 0 were damaged during tuning.
-South: DOM-I opens the store.
- - there are 8 buying and 4 selling customers today.
- - there were 6 total sales and 4 total purchases.
+South: DOM-I counts the register. Current cash: $1669.25
+South: DOM-I wanted to order 3 Flutes because they were missing from inventory and 3 were ordered, to arrive on day 4
+South: DOM-I wanted to order 3 Cables because they were missing from inventory and 3 were ordered, to arrive on day 5
+South: DOM-I is doing inventory. Total purchase value of items: $778.32
+ - there were 31 items and 0 were damaged during tuning.
+South: DOM-I finished opening the store.
+ - there are 8 buying and 2 selling customers today.
+ - there were 10 total sales and 2 total purchases.
 South: DOM-I is cleaning the store.
- - Oh no! 30 item(s) were damaged while cleaning.
+ - Oh no! 22 item(s) were damaged while cleaning.
 South: DOM-I locks up and goes home.
