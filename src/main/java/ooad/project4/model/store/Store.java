@@ -21,6 +21,8 @@ import java.util.stream.Collectors;
  */
 public class Store {
     @Getter
+    private final String name;
+    @Getter
     private final Inventory inventory = new Inventory();
     @Getter
     private final ArrayList<SoldItem> soldItems = new ArrayList<>();
@@ -29,7 +31,9 @@ public class Store {
     @Getter
     private final ArrayList<Order> orders = new ArrayList<>();
 
-    public Store() {}
+    public Store(String name) {
+        this.name = name;
+    }
 
     public void addItem(Item item) {
         inventory.add(item);

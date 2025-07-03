@@ -30,7 +30,11 @@ class DayLogger {
     @Getter
     private Path logPath;
     private PrintWriter writer;
+    private EventBus bus;
 
+    /**
+     * @arg channel: corresponds to the EventBus channel to listen on
+     */
     public DayLogger(String dir, int day) {
         this.day = day;
         var dirPath = Paths.get(dir);
@@ -48,22 +52,27 @@ class DayLogger {
         }
 
         // INFO: register
-        TheEventBus.getInstance().getBus().register(this);
+        this.bus = TheEventBus.getInstance().getBus();
+        this.bus.register(this);
     }
 
     public void close() {
-        TheEventBus.getInstance().getBus().unregister(this);
+        this.bus.unregister(this);
         this.writer.close();
+        this.writer = null;
     }
 
+    synchronized
     public void logf(String s, Object... args) {
+        if (this.writer == null) return;
+
         this.writer.printf(s, args);
         System.out.printf(s, args);
     }
 
     @Subscribe
     private void onArriveAtStore(ArriveAtStoreEvent event) {
-        logf("%s arrives at the store.\n", event.getClerkName());
+        logf("%s: %s arrives at the store.\n", event.getStore().getName(), event.getClerkName());
         var orders = event.getRecentlyDelivered();
 
         if (orders.size() != 0) logf(" - new deliveries!\n");
@@ -78,20 +87,26 @@ class DayLogger {
     @Subscribe
     private void onCheckRegister(CheckRegisterEvent event) {
         var cash = event.getStore().getCashRegister().getCash();
-        logf("%s counts the register. Current cash: $%.2f\n", event.getClerkName(), cash);
+        logf("%s: %s counts the register. Current cash: $%.2f\n", event.getStore().getName(), event.getClerkName(), cash);
     }
 
     @Subscribe
     private void onGoToBank(GoToBankEvent event) {
-        logf("Cash is low. %s is going to the bank.\n", event.getClerkName());
+        logf("%s: Cash is low. %s is going to the bank.\n", event.getStore().getName(), event.getClerkName());
         logf(" - withdrew from the bank. New register total: $%.2f\n",
                 event.getNewAmntInRegister());
     }
 
     @Subscribe
     public void onDoInventory(DoInventoryEvent event) {
-        logf("%s is doing inventory. Total purchase value of items: $%.2f\n",
-                event.getClerkName(), event.getStore().getInventory().getTotalPurchasePrice());
+        logf("%s: %s is doing inventory. Total purchase value of items: $%.2f\n",
+               event.getStore().getName(), event.getClerkName(), event.getStore().getInventory().getTotalPurchasePrice());
+
+        if (event.isStartedClothingBan()) {
+            logf("%s: The last clothing item has been sold -- buy no more.\n",
+                    event.getStore().getName());
+        }
+
         var items = event.getInventory().size();
         var damaged = event.getRecentlyDamaged().size();
         logf(" - there were %d items and %d were damaged during tuning.\n",
@@ -106,23 +121,23 @@ class DayLogger {
 
         if (orderSize != 0) {
             var orderType = order.getItems().get(0).getClass().getSimpleName();
-            logf("%s wanted to order 3 %ss because they were missing from inventory and %d were ordered, to arrive on day %d\n",
-                    event.getClerkName(), orderType, orderSize, arrival);
+            logf("%s: %s wanted to order 3 %ss because they were missing from inventory and %d were ordered, to arrive on day %d\n",
+                   event.getStore().getName(), event.getClerkName(), orderType, orderSize, arrival);
         } else {
-            logf("%s wanted to order some items but we're broke!\n", event.getClerkName());
+            logf("%s: %s wanted to order some items but we're broke!\n", event.getStore().getName(), event.getClerkName());
         }
 
     }
 
     @Subscribe
-    public void onOrderFailur(OrderFailureEvent event) {
+    public void onOrderFailure(OrderFailureEvent event) {
         logf(" - failed to order %d %s(s) because there was not enough cash in the register.\n",
                 event.getFailQuantity(), event.getType().getSimpleName());
     }
 
     @Subscribe
     public void onOpenTheStore(OpenTheStoreEvent event) {
-        logf("%s opens the store.\n", event.getClerkName());
+        logf("%s: %s opens the store.\n", event.getStore().getName(), event.getClerkName());
         logf(" - there are %d buying and %d selling customers today.\n",
             event.getBuyingCustomers(), event.getSellingCustomers());
         logf(" - there were %d total sales and %d total purchases.\n",
@@ -131,7 +146,7 @@ class DayLogger {
 
     @Subscribe
     public void onCleanTheStore(CleanTheStoreEvent event) {
-        logf("%s is cleaning the store.\n", event.getClerkName());
+        logf("%s: %s is cleaning the store.\n", event.getStore().getName(), event.getClerkName());
         var damages = event.getRecentlyDamaged().size();
 
         if (damages > 0) {
@@ -141,6 +156,6 @@ class DayLogger {
 
     @Subscribe
     public void onLeaveTheStore(LeaveTheStoreEvent event) {
-        logf("%s locks up and goes home.\n", event.getClerkName());
+        logf("%s: %s locks up and goes home.\n", event.getStore().getName(), event.getClerkName());
     }
 }
