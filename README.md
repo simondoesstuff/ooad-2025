@@ -31,7 +31,17 @@ PlantUML is included in the nix flake to render UML diagrams from .puml files.
 - To enable multiple `Store`s, the `Bank` singleton was given multiple `Account`s
 accessible by name. Thus, `Store` also had to be given a name.
 - What was previously `MusicLandSimulator` is now composed of `StoreManager` which associates
-a `Clerk` with a `Store` and manages the logic regarding sickness/exhaustion of staff.
+a `Clerk` with a `Store` and manages the order of actions.
+`MusicLandSimulator` is now dedicated to the day cycle, log management, and `Clerk` sickness.
+It manages sickness because `Clerk` sickness affects both `Store`s at once which this object
+manages.
+- Buy/sell logic was partially extracted from `Clerk` into `RandomCustomer` to enable
+`CommandLineCustomer` to extend behavior.
+- The "clothing ban" feature's logic was moved from `Clerk` into `Store`.
+- `ClerkPool` is an object pool without automatic object instantiation. Regulates a single list of
+`Clerk`s among both `Store`s.
+- OVERALL:   `Clerk`'s logic has been simplified and moved into other components + latest
+assignment requirements.
 
 **Results:**
 - [Proj5 Proposal.md](md/proj5 proposal.md)

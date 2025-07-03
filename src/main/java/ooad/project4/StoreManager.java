@@ -15,8 +15,7 @@ import ooad.project4.model.store.Clerk;
 import ooad.project4.model.store.Store;
 
 /**
- * Associates Clerks with Stores and manages the logic associated
- * with them overworking or getting sick.
+ * Associates Clerks with Stores
  */
 public class StoreManager {
     private static final Random rand = ThreadLocalRandom.current();
