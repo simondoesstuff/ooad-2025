@@ -1,0 +1,102 @@
+
+========================================
+================ Day 29 ================
+========================================
+North: Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Saxophone(FhKh)
+ - added delivered item to inventory: Saxophone(LmWx)
+ - added delivered item to inventory: Saxophone(KmMy)
+ - added delivered item to inventory: MP3Player(QtEn)
+ - added delivered item to inventory: MP3Player(JlCu)
+ - added delivered item to inventory: MP3Player(ShAj)
+ - added delivered item to inventory: GigBag(FyZf)
+ - added delivered item to inventory: GigBag(HgAw)
+ - added delivered item to inventory: GigBag(EcFo)
+ - added delivered item to inventory: Mandolin(FpNg)
+ - added delivered item to inventory: Mandolin(DbNi)
+ - added delivered item to inventory: Mandolin(GfHf)
+ - added delivered item to inventory: Cassette(RqXy)
+ - added delivered item to inventory: Cassette(UoUz)
+ - added delivered item to inventory: Cassette(DiLy)
+ - added delivered item to inventory: Strings(SoQd)
+ - added delivered item to inventory: Strings(CdXj)
+ - added delivered item to inventory: Strings(KhFu)
+ - added delivered item to inventory: Vinyl(DnUe)
+ - added delivered item to inventory: Vinyl(LoIk)
+ - added delivered item to inventory: Vinyl(OhVu)
+ - added delivered item to inventory: Flute(ZqKb)
+ - added delivered item to inventory: Flute(JzYl)
+ - added delivered item to inventory: Flute(OzLc)
+ - added delivered item to inventory: Guitar(RjJj)
+ - added delivered item to inventory: Guitar(KvDf)
+ - added delivered item to inventory: Guitar(NqWw)
+ - added delivered item to inventory: MP3Player(XfMj)
+ - added delivered item to inventory: MP3Player(VbGu)
+ - added delivered item to inventory: MP3Player(TaSz)
+ - added delivered item to inventory: GigBag(NfRs)
+ - added delivered item to inventory: GigBag(FqOj)
+ - added delivered item to inventory: GigBag(EtYl)
+ - added delivered item to inventory: Strings(ZoXi)
+ - added delivered item to inventory: Strings(ZpAy)
+ - added delivered item to inventory: Strings(ScAb)
+ - added delivered item to inventory: Flute(TmUn)
+North: Rita counts the register. Current cash: $12.67
+North: Cash is low. Rita is going to the bank.
+ - withdrew from the bank. New register total: $1012.67
+North: Rita wanted to order 3 CDs because they were missing from inventory and 3 were ordered, to arrive on day 31
+North: Rita wanted to order 3 RecordPlayers because they were missing from inventory and 3 were ordered, to arrive on day 32
+North: Rita is doing inventory. Total purchase value of items: $1425.06
+ - there were 57 items and 4 were damaged during tuning.
+North: Rita opens the store.
+ - there are 8 buying and 4 selling customers today.
+ - there were 8 total sales and 1 total purchases.
+North: Rita is cleaning the store.
+ - Oh no! 45 item(s) were damaged while cleaning.
+North: Rita locks up and goes home.
+South: DOM-I arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: CDPlayer(DbZw)
+ - added delivered item to inventory: CDPlayer(UrGm)
+ - added delivered item to inventory: CDPlayer(SgUs)
+ - added delivered item to inventory: MP3Player(ToKl)
+ - added delivered item to inventory: MP3Player(MbIp)
+ - added delivered item to inventory: MP3Player(IeRi)
+ - added delivered item to inventory: PracticeAmp(MlLd)
+ - added delivered item to inventory: Harmonica(AsJa)
+ - added delivered item to inventory: Harmonica(IdKc)
+ - added delivered item to inventory: CDPlayer(BvZo)
+ - added delivered item to inventory: CDPlayer(ZiYn)
+ - added delivered item to inventory: CDPlayer(KqNt)
+ - added delivered item to inventory: MP3Player(QhGv)
+ - added delivered item to inventory: MP3Player(KuOz)
+ - added delivered item to inventory: MP3Player(IbQm)
+ - added delivered item to inventory: PaperScore(KjFl)
+ - added delivered item to inventory: PaperScore(IyGo)
+ - added delivered item to inventory: PaperScore(ThEh)
+ - added delivered item to inventory: Harmonica(XtTd)
+ - added delivered item to inventory: Harmonica(AbNw)
+ - added delivered item to inventory: CDPlayer(AfDi)
+ - added delivered item to inventory: CDPlayer(RrXv)
+ - added delivered item to inventory: CDPlayer(PjNt)
+ - added delivered item to inventory: Guitar(JaVe)
+ - added delivered item to inventory: Guitar(CwIn)
+ - added delivered item to inventory: GigBag(VmBq)
+South: DOM-I counts the register. Current cash: $162.80
+South: DOM-I wanted to order 3 Mandolins because they were missing from inventory and 3 were ordered, to arrive on day 32
+South: DOM-I wanted to order 3 Cassettes because they were missing from inventory and 3 were ordered, to arrive on day 31
+ - failed to order 2 Strings(s) because there was not enough cash in the register.
+South: DOM-I wanted to order 3 Stringss because they were missing from inventory and 1 were ordered, to arrive on day 32
+ - failed to order 3 Flute(s) because there was not enough cash in the register.
+South: DOM-I wanted to order some items but we're broke!
+ - failed to order 3 RecordPlayer(s) because there was not enough cash in the register.
+South: DOM-I wanted to order some items but we're broke!
+South: DOM-I is doing inventory. Total purchase value of items: $930.19
+South: The last clothing item has been sold -- buy no more.
+ - there were 42 items and 0 were damaged during tuning.
+South: DOM-I opens the store.
+ - there are 8 buying and 2 selling customers today.
+ - there were 4 total sales and 2 total purchases.
+South: DOM-I is cleaning the store.
+ - Oh no! 39 item(s) were damaged while cleaning.
+South: DOM-I locks up and goes home.

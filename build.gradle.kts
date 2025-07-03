@@ -63,6 +63,7 @@ val entrypointNames = listOf(
     "project1b",
     "project2",
     "project3",
+    "project4"
 )
 
 // This loop registers a custom ShadowJar task for each entrypoint.

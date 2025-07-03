@@ -1,0 +1,51 @@
+
+========================================
+================ Day 30 ================
+========================================
+North: Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Cassette(ZzUv)
+ - added delivered item to inventory: Cassette(JsLi)
+ - added delivered item to inventory: Cassette(WrAj)
+ - added delivered item to inventory: CD(YhLj)
+ - added delivered item to inventory: CD(SiSq)
+ - added delivered item to inventory: CD(OvQy)
+ - added delivered item to inventory: Vinyl(ZoNi)
+ - added delivered item to inventory: Vinyl(PjHw)
+North: Rita counts the register. Current cash: $1243.51
+North: Rita wanted to order 3 Mandolins because they were missing from inventory and 3 were ordered, to arrive on day 31
+North: Rita wanted to order 3 PracticeAmps because they were missing from inventory and 3 were ordered, to arrive on day 31
+North: Rita wanted to order 3 RecordPlayers because they were missing from inventory and 3 were ordered, to arrive on day 32
+North: Rita is doing inventory. Total purchase value of items: $1116.81
+ - there were 47 items and 6 were damaged during tuning.
+North: Rita opens the store.
+ - there are 10 buying and 2 selling customers today.
+ - there were 4 total sales and 1 total purchases.
+North: Rita is cleaning the store.
+ - Oh no! 44 item(s) were damaged while cleaning.
+North: Rita locks up and goes home.
+South: DOM-I arrives at the store.
+ - new deliveries!
+South: DOM-I counts the register. Current cash: $228.44
+South: DOM-I wanted to order 3 Basss because they were missing from inventory and 3 were ordered, to arrive on day 32
+South: DOM-I wanted to order 3 Mandolins because they were missing from inventory and 3 were ordered, to arrive on day 32
+ - failed to order 2 PracticeAmp(s) because there was not enough cash in the register.
+South: DOM-I wanted to order 3 PracticeAmps because they were missing from inventory and 1 were ordered, to arrive on day 31
+ - failed to order 2 Cassette(s) because there was not enough cash in the register.
+South: DOM-I wanted to order 3 Cassettes because they were missing from inventory and 1 were ordered, to arrive on day 32
+ - failed to order 2 Strings(s) because there was not enough cash in the register.
+South: DOM-I wanted to order 3 Stringss because they were missing from inventory and 1 were ordered, to arrive on day 33
+ - failed to order 3 CD(s) because there was not enough cash in the register.
+South: DOM-I wanted to order some items but we're broke!
+ - failed to order 3 Vinyl(s) because there was not enough cash in the register.
+South: DOM-I wanted to order some items but we're broke!
+ - failed to order 3 RecordPlayer(s) because there was not enough cash in the register.
+South: DOM-I wanted to order some items but we're broke!
+South: DOM-I is doing inventory. Total purchase value of items: $557.98
+ - there were 30 items and 0 were damaged during tuning.
+South: DOM-I opens the store.
+ - there are 7 buying and 2 selling customers today.
+ - there were 1 total sales and 1 total purchases.
+South: DOM-I is cleaning the store.
+ - Oh no! 28 item(s) were damaged while cleaning.
+South: DOM-I locks up and goes home.

@@ -1,0 +1,85 @@
+
+========================================
+================ Day 22 ================
+========================================
+Oh no! Gigatron-XV was sick and cannot work today.
+North: Rita arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Saxophone(KpAs)
+ - added delivered item to inventory: Saxophone(GiRu)
+ - added delivered item to inventory: Saxophone(LiVs)
+ - added delivered item to inventory: Cassette(IcJd)
+ - added delivered item to inventory: Cassette(OwBu)
+ - added delivered item to inventory: Cassette(EjXj)
+ - added delivered item to inventory: CDPlayer(LuDe)
+ - added delivered item to inventory: CDPlayer(CcHz)
+ - added delivered item to inventory: CDPlayer(HxIs)
+ - added delivered item to inventory: CD(PqAn)
+ - added delivered item to inventory: CD(QaYi)
+ - added delivered item to inventory: CD(XqSp)
+ - added delivered item to inventory: PracticeAmp(EsZl)
+ - added delivered item to inventory: PracticeAmp(ViOs)
+ - added delivered item to inventory: PracticeAmp(SfNk)
+ - added delivered item to inventory: Strings(NgPi)
+ - added delivered item to inventory: Strings(YuXj)
+ - added delivered item to inventory: Strings(NkLc)
+North: Rita counts the register. Current cash: $748.26
+North: Rita wanted to order 3 Guitars because they were missing from inventory and 3 were ordered, to arrive on day 24
+North: Rita wanted to order 3 Vinyls because they were missing from inventory and 3 were ordered, to arrive on day 23
+North: Rita wanted to order 3 RecordPlayers because they were missing from inventory and 3 were ordered, to arrive on day 24
+North: Rita is doing inventory. Total purchase value of items: $1159.78
+ - there were 48 items and 5 were damaged during tuning.
+North: Rita opens the store.
+ - there are 6 buying and 2 selling customers today.
+ - there were 4 total sales and 2 total purchases.
+North: Rita is cleaning the store.
+ - Oh no! 44 item(s) were damaged while cleaning.
+North: Rita locks up and goes home.
+South: DOM-I arrives at the store.
+ - new deliveries!
+ - added delivered item to inventory: Mandolin(KlRh)
+ - added delivered item to inventory: Mandolin(QxLz)
+ - added delivered item to inventory: Mandolin(DyHz)
+ - added delivered item to inventory: Cassette(WcWe)
+ - added delivered item to inventory: Cassette(JvXo)
+ - added delivered item to inventory: Cassette(JnWs)
+ - added delivered item to inventory: Saxophone(DgUr)
+ - added delivered item to inventory: Saxophone(VgNj)
+ - added delivered item to inventory: Saxophone(ZfWz)
+ - added delivered item to inventory: PaperScore(LvGl)
+ - added delivered item to inventory: PaperScore(HjRr)
+ - added delivered item to inventory: PaperScore(WpSb)
+ - added delivered item to inventory: Shirt(YiTs)
+ - added delivered item to inventory: Shirt(JjUe)
+ - added delivered item to inventory: Saxophone(UeJh)
+ - added delivered item to inventory: Saxophone(MwWe)
+ - added delivered item to inventory: Saxophone(FeEe)
+ - added delivered item to inventory: Cable(KlKo)
+ - added delivered item to inventory: Cable(AbYm)
+ - added delivered item to inventory: Cable(RcHg)
+ - added delivered item to inventory: PaperScore(OpSe)
+ - added delivered item to inventory: PaperScore(DwBc)
+ - added delivered item to inventory: PaperScore(SqAu)
+ - added delivered item to inventory: CD(JkZi)
+ - added delivered item to inventory: CD(UtSp)
+ - added delivered item to inventory: CD(JxAm)
+ - added delivered item to inventory: Vinyl(XmWd)
+ - added delivered item to inventory: Vinyl(GwSs)
+ - added delivered item to inventory: Vinyl(MzBy)
+ - added delivered item to inventory: Flute(XgIw)
+ - added delivered item to inventory: Flute(CcSu)
+ - added delivered item to inventory: Flute(EzVy)
+South: DOM-I counts the register. Current cash: $373.45
+South: DOM-I wanted to order 3 Basss because they were missing from inventory and 3 were ordered, to arrive on day 25
+South: DOM-I wanted to order 3 Harmonicas because they were missing from inventory and 3 were ordered, to arrive on day 24
+South: DOM-I wanted to order 3 Hats because they were missing from inventory and 3 were ordered, to arrive on day 24
+South: DOM-I wanted to order 3 Bandanas because they were missing from inventory and 3 were ordered, to arrive on day 24
+South: DOM-I wanted to order 3 RecordPlayers because they were missing from inventory and 3 were ordered, to arrive on day 25
+South: DOM-I is doing inventory. Total purchase value of items: $1254.67
+ - there were 50 items and 0 were damaged during tuning.
+South: DOM-I opens the store.
+ - there are 8 buying and 4 selling customers today.
+ - there were 6 total sales and 3 total purchases.
+South: DOM-I is cleaning the store.
+ - Oh no! 43 item(s) were damaged while cleaning.
+South: DOM-I locks up and goes home.

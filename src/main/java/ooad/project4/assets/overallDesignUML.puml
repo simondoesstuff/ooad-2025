@@ -26,121 +26,13 @@ package "model" {
       boolean damage()
     }
 
-    /'  note top'/
-    /'    All subclasses of 'Item' follow a hierarchical'/
-    /'    builder pattern. See baeldung.com link in the'/
-    /'    source code.'/
-    /'  end note'/
-
     class SoldItem <<decorator>> extends Item {
       - Item base
       double salePrice
       int daySold
     }
 
-  /''/
-  /'  enum Condition {'/
-  /'    POOR'/
-  /'    FAIR'/
-  /'    GOOD'/
-  /'    VERY_GOOD'/
-  /'    EXCELLENT'/
-  /'  }'/
-  /''/
-  /'  ' --- Music Media ---'/
-  /'  abstract class Music <<Builder>> extends BuildableItem {'/
-  /'    String band'/
-  /'    String album'/
-  /'  }'/
-  /'  class PaperScore <<Builder>> extends Music {}'/
-  /'  class CD <<Builder>> extends Music {}'/
-  /'  class Vinyl <<Builder>> extends Music {}'/
-  /'  class Cassette <<Builder>> extends Music {}'/
-  /''/
-  /'  ' --- Media Players ---'/
-  /'  abstract class Players <<Builder>> extends BuildableItem {'/
-  /'    boolean isEqualized'/
-  /'  }'/
-  /'  class CDPlayer <<Builder>> extends Players {}'/
-  /'  class RecordPlayer <<Builder>> extends Players {}'/
-  /'  class MP3Player <<Builder>> extends Players {}'/
-  /'  class CassettePlayer <<Builder>> extends Music {}'/
-  /''/
-  /'  ' --- Instruments ---'/
-  /'  abstract class Instruments <<Builder>> extends BuildableItem {}'/
-  /''/
-  /'  abstract class Stringed <<Builder>> extends Instruments {'/
-  /'    boolean isElectric'/
-  /'    boolean isTuned'/
-  /'  }'/
-  /'  class Guitar <<Builder>> extends Stringed {}'/
-  /'  class Bass <<Builder>> extends Stringed {}'/
-  /'  class Mandolin <<Builder>> extends Stringed {}'/
-  /''/
-  /'  abstract class Wind <<Builder>> extends Instruments {'/
-  /'    boolean isAdjusted'/
-  /'  }'/
-  /'  class Flute <<Builder>> extends Wind {'/
-  /'    FluteMaterial type'/
-  /'  }'/
-  /'  enum FluteMaterial {'/
-  /'    SILVER'/
-  /'    WOOD'/
-  /'    GOLD'/
-  /'  }'/
-  /'  class Harmonica <<Builder>> extends Wind {'/
-  /'    HarmonicaKey key'/
-  /'  }'/
-  /'  enum HarmonicaKey {'/
-  /'    A'/
-  /'    C'/
-  /'    F'/
-  /'    G'/
-  /'  }'/
-  /'  class Saxophone <<Builder>> extends Wind {}'/
-  /''/
-  /'  ' --- Clothing ---'/
-  /'  abstract class Clothing <<Builder>> extends BuildableItem {}'/
-  /'  class Hat <<Builder>> extends Clothing {'/
-  /'    String hatSize'/
-  /'  }'/
-  /'  class Shirt <<Builder>> extends Clothing {'/
-  /'    ShirtSize shirtSize'/
-  /'  }'/
-  /'  enum ShirtSize {'/
-  /'    XS'/
-  /'    S'/
-  /'    M'/
-  /'    LG'/
-  /'    XL'/
-  /'  }'/
-  /'  class Bandana <<Builder>> extends Clothing {}'/
-  /''/
-  /'  ' --- Accessories ---'/
-  /'  abstract class Accessories <<Builder>> extends BuildableItem {}'/
-  /'  class PracticeAmp <<Builder>> extends Accessories {'/
-  /'    int wattage'/
-  /'  }'/
-  /'  class Cable <<Builder>> extends Accessories {'/
-  /'    int length'/
-  /'  }'/
-  /'  class Strings <<Builder>> extends Accessories {'/
-  /'    StringType type'/
-  /'  }'/
-  /'  enum StringType {'/
-  /'    GUITAR'/
-  /'    BASS'/
-  /'    MANDOLIN'/
-  /'  }'/
-  /'  class GigBag <<Builder>> extends Accessories {}'/
-  /''/
-  /'  ' --- Relationships within Item Package ---'/
-  /'  Item --> Condition : has a'/
-  /'  Flute --> FluteMaterial : has a'/
-  /'  Harmonica --> HarmonicaKey : has a'/
-  /'  Shirt --> ShirtSize : has a'/
-  /'  Strings --> StringType : has a'/
-  SoldItem o-- Item
+    SoldItem o-- Item
 
   }
 
@@ -155,6 +47,8 @@ package "model" {
       CashRegister register
       List<Order> orders
       int day
+      boolean clothingBan
+
       sellItem(Item item, double salePrice, int daySold)
       getInventoryValue()
       getReadyOrders()
@@ -255,7 +149,7 @@ package "model" {
 
 package "events" {
   class TheEventBus <<singleton>> {
-    EventBus getBus(String channel) // Guava::EventBus
+    EventBus  // provided by Guava
   }
 
   note top
@@ -290,28 +184,35 @@ class CommandHandler {
 
 class ClerkPool <<object pool>> {
   addClerk(Clerk)
-  Clerk assign()
-  relenquish(Clerk)
+  Clerk assign()  // that Clerk is now unassignable
+  makeAssignable(Clerk)
   rest()  // reset unassigned clerk's work streaks
 }
 
 class MusicLandSimulator {
-  List<Store> stores
+  StoreManager northern
+  StoreManager southern
   ClerkPool
-  CommandHandler
-  int today
-  run()
   -setupStore(Store)
-  -assignClerks()
-  -marchDay()
-  -runDailyActions(Clerk)
-  -printFinalSummary()
+  run() // run sim
+  printSummary()
+}
+
+class StoreManager {
+  Store store
+  CommandHandler
+  ClerkPool
+  run()
+  runDailyActions(int day)
+  printSummary()
 }
 
 ' --- Top-Level Relationships ---
-MusicLandSimulator *-- Store : operates
-MusicLandSimulator *-- ClerkPool : pulls from
-MusicLandSimulator *-- CommandHandler : defers to
+StoreManager --> Clerk : commands
+StoreManager *-- CommandHandler : defers to
+StoreManager --> ClerkPool
+MusicLandSimulator *-- StoreManager
+MusicLandSimulator *-- ClerkPool
 CommandHandler --> Clerk
 Store ..> ItemFactory
 ItemFactory ..> item : creates
