@@ -1,5 +1,7 @@
 package ooad.project4.model.item;
 
+import lombok.Getter;
+
 /**
  * The top most concrete implementation of the Item
  * interface
@@ -56,11 +58,17 @@ public abstract class BuildableItem implements Item {
      * @param <T> The type of the concrete Builder subclass.
      */
     public abstract static class Builder<T extends Builder<T>> {
+        @Getter
         private String name;
+        @Getter
         private double purchasePrice;
+        @Getter
         private double listPrice;
+        @Getter
         private boolean newOrUsed = true;
+        @Getter
         private int dayArrived = 0;
+        @Getter
         private Condition condition = Condition.GOOD;
 
         public T name(String name) {

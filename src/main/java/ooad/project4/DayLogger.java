@@ -137,7 +137,7 @@ class DayLogger {
 
     @Subscribe
     public void onOpenTheStore(OpenTheStoreEvent event) {
-        logf("%s: %s opens the store.\n", event.getStore().getName(), event.getClerkName());
+        logf("%s: %s finished opening the store.\n", event.getStore().getName(), event.getClerkName());
         logf(" - there are %d buying and %d selling customers today.\n",
             event.getBuyingCustomers(), event.getSellingCustomers());
         logf(" - there were %d total sales and %d total purchases.\n",

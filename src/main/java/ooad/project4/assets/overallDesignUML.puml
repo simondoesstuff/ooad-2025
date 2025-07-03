@@ -75,9 +75,10 @@ package "model" {
 
     package "customers" {
       interface Customer {
-        Item getPurchase(List<Item> options)
-        Item getSaleOffer()
-        boolean acceptSale(Item item, double amount)
+        Item getPurchaseInterest(List<Item> options)
+        boolean acceptPurchase(Item item, double offer)
+        Item.Builder getSaleOffer()
+        boolean acceptSale(Item item)
       }
 
       class RandomCustomer implements Customer {
@@ -143,7 +144,7 @@ package "model" {
     provideFunds(String accountHolder, double amnt)  // (zero security)
   }
 
-  Bank <.. Clerk : withdraws
+  Bank <.. Clerk
 
 }
 
@@ -214,6 +215,7 @@ StoreManager --> ClerkPool
 MusicLandSimulator *-- StoreManager
 MusicLandSimulator *-- ClerkPool
 CommandHandler --> Clerk
+CommandHandler ..> CommandLineCustomer
 Store ..> ItemFactory
 ItemFactory ..> item : creates
 Logger <.. TheEventBus : notifies

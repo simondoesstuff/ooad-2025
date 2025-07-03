@@ -27,8 +27,8 @@ import ooad.project4.model.Bank;
 import ooad.project4.model.item.Condition;
 import ooad.project4.model.item.BuildableItem;
 import ooad.project4.model.item.Item;
-import ooad.project4.model.Customer;
 import ooad.project4.model.Inventory;
+import ooad.project4.model.customers.*;
 import ooad.project4.model.item.BuildableItem;
 import ooad.project4.model.item.clothing.Clothing;
 import ooad.project4.model.item.music.accessories.Cable;
@@ -211,6 +211,8 @@ public class Clerk {
     public void openTheStore() {
         verifyStoreExists();
 
+        System.out.printf("%s: %s opens the store.\n", store.getName(), getName());
+
         int numBuyingCustomers = rand.nextInt(4, 11); // (4-10, exclusive upper)
         int numSellingCustomers = rand.nextInt(1, 5);
 
@@ -219,12 +221,12 @@ public class Clerk {
 
         for (int i = 0; i < numBuyingCustomers + numSellingCustomers; i++) {
             final int custId = i + 1;
-            if (handleBuyingCustomer(new Customer(custId))) sales++;
+            if (handleBuyingCustomer(new RandomCustomer(custId))) sales++;
         }
 
         for (int i = 0; i < numSellingCustomers; i++) {
             final int custId = numBuyingCustomers + i + 1;
-            if (handleSellingCustomer(new Customer(custId))) purchases++;
+            if (handleSellingCustomer(new RandomCustomer(custId))) purchases++;
         }
 
         getBus().post(new OpenTheStoreEvent(this, numBuyingCustomers, numSellingCustomers, sales, purchases));
@@ -237,117 +239,58 @@ public class Clerk {
     public boolean handleBuyingCustomer(Customer customer) {
         verifyStoreExists();
 
-        Class<? extends BuildableItem> desiredType = ItemFactory.getRandomItemType();
+        Item item = customer.getPurchaseInterest(store.getInventory());
 
-        // matching items to desiredType
-        var available = store.getInventory().stream()
-                .filter(i -> i.getClass().equals(desiredType))
-                .collect(Collectors.toList());
-
-        if (available.isEmpty()) {
-            System.out.printf(" - %s wanted to buy a %s but none were in inventory, so they left.\n",
-                    customer, desiredType.getSimpleName());
+        if (item == null) {
+            System.out.printf(" - %s didn't see anything in the inventory of interest so they left.\n",
+                    customer);
             return false;
         }
 
-        Item itemToBuy = available.get(rand.nextInt(available.size()));
-        double allure = 0;
-
-        // certain well kept items are more likely to be bought
-        switch (itemToBuy) {
-            case Players i:
-                if (i.isEqualized()) allure += .10;
-                break;
-            case Stringed i:
-                if (i.isTuned()) allure += .15;
-                break;
-            case Wind i:
-                if (i.isAdjusted()) allure += .20;
-                break;
-            default:
-                break;
+        if (!store.getInventory().contains(item)) {
+            System.out.printf(" - %s tried to purchase an item that wasn't in the Inventory.\n",
+                    customer);
+            return false;
         }
 
-        double listPrice = itemToBuy.getListPrice();
-        boolean purchased = false;
-        double finalPrice = 0;
 
-        if (rand.nextDouble() < 0.50 + allure) { // 50% chance to buy at list price
-            purchased = true;
-            finalPrice = listPrice;
-            System.out.printf(" - %s sold a %s to %s for $%.2f.\n",
-                    getName(), itemToBuy.getClass().getSimpleName(), customer, finalPrice);
-        } else {
+        double listPrice = item.getListPrice();
+        boolean sale = false;
+
+        if (!trySell(customer, item, listPrice)) {
             System.out.printf(" - %s offered a %s to %s for $%.2f, but they hesitated.\n",
-                    getName(), itemToBuy.getClass().getSimpleName(), customer, listPrice);
-            double discountPrice = listPrice * 0.90;
+                    getName(), item.getClass().getSimpleName(), customer, listPrice);
+            listPrice *= .9;
 
-            if (rand.nextDouble() < 0.75) { // 75% chance to buy with 10% discount
-                purchased = true;
-                finalPrice = discountPrice;
-                System.out.printf(" - %s sold a %s to %s for $%.2f after a 10%% discount.\n",
-                        getName(), itemToBuy.getClass().getSimpleName(), customer, finalPrice);
-            } else {
+            if (!trySell(customer, item, listPrice)) {
                 System.out.printf(" - %s would not buy the %s, even with a discount, and left.\n",
-                        customer, itemToBuy.getClass().getSimpleName());
+                        customer, item.getClass().getSimpleName());
+            } else sale = true;
+        } else sale = true;
+
+        if (sale) {
+            if (item instanceof Stringed) {
+                System.out.printf(" - since the customer bought a Stringed instrument, perhaps they want extras?\n");
+                trySell(customer, store.getInventory().getFirstLike(GigBag.class));
+                trySell(customer, store.getInventory().getFirstLike(PracticeAmp.class));
+                trySell(customer, store.getInventory().getFirstLike(Cable.class));
+                trySell(customer, store.getInventory().getFirstLike(Strings.class));
             }
         }
 
-        if (purchased) {
-            store.sellItem(itemToBuy, finalPrice, today);
-            trySellExtras(itemToBuy);
-        }
-
-        return purchased;
+        return sale;
     }
 
-    private void trySellExtras(Item item) {
-        if (!(item instanceof Stringed)) return;
-
-        double offset = 0;
-
-        if (!((Stringed) item).isElectric()) offset -= 10;
-
-        var rand = ThreadLocalRandom.current();
-
-        if (rand.nextDouble(1) <= .2 + offset) {
-            System.out.printf("- sold a GigBag in a bundle!\n");
-            trySell(GigBag.class);
-        }
-
-        if (rand.nextDouble(1) <= .25 + offset) {
-            System.out.printf("- sold a PracticeAmp in a bundle!\n");
-            trySell(PracticeAmp.class);
-        }
-
-        if (rand.nextDouble(1) <= .3 + offset) {
-            for (int i = 0; i < rand.nextInt(2); i++) {
-                System.out.printf("- sold some Cable in a bundle!\n");
-                trySell(Cable.class);
-            }
-        }
-
-        if (rand.nextDouble(1) <= .4 + offset) {
-            for (int i = 0; i < rand.nextInt(1, 4); i++) {
-                System.out.printf("- sold some Strings in a bundle!\n");
-                trySell(Strings.class);
-            }
-        }
+    private boolean trySell(Customer customer, Item item) {
+        if (item == null) return false;
+        return trySell(customer, item, item.getListPrice());
     }
 
-    // TODO: announce
-    private boolean trySell(Class<? extends Item> desiredType) {
-        // matching items to desiredType
-        var available = store.getInventory().stream()
-                .filter(i -> i.getClass().equals(desiredType))
-                .collect(Collectors.toList());
-
-        if (available.isEmpty()) {
-            return false;
-        }
-
-        var choice = available.get(rand.nextInt(available.size()));
-        store.sellItem(choice, choice.getPurchasePrice(), today);
+    private boolean trySell(Customer customer, Item item, double offer) {
+        if (!customer.acceptPurchase(item, offer)) return false;
+        store.sellItem(item, offer, today);
+        System.out.printf(" - %s sold a %s to %s for $%.2f.\n",
+                getName(), item.getClass().getSimpleName(), customer, offer);
         return true;
     }
 
@@ -358,71 +301,51 @@ public class Clerk {
     public boolean handleSellingCustomer(Customer customer) {
         verifyStoreExists();
 
-        // TODO: intelligent clerk price offers
-        double baseOffer = rand.nextDouble(1, 35); // Base random price
+        var item = customer.getSaleOffer();
+        var condition = item.getCondition();
 
         // Determine purchase price based on condition
-        Condition condition = Utils.getRandomEnum(Condition.class);
+        double offer = rand.nextDouble(1, 35); // Base random price
         double purchasePrice = switch (condition) {
-            case Condition.POOR -> baseOffer * 0.5;
-            case Condition.FAIR -> baseOffer * 0.7;
-            case Condition.GOOD -> baseOffer * 1.0;
-            case Condition.VERY_GOOD -> baseOffer * 1.2;
-            case Condition.EXCELLENT ->  baseOffer * 1.5;
-            default -> baseOffer;
+            case Condition.POOR -> offer * 0.5;
+            case Condition.FAIR -> offer * 0.7;
+            case Condition.GOOD -> offer * 1.0;
+            case Condition.VERY_GOOD -> offer * 1.2;
+            case Condition.EXCELLENT ->  offer * 1.5;
+            default -> offer;
         };
 
-        Class<? extends BuildableItem> itemTypeToSell = ItemFactory.getRandomItemType();
+        var type = item.build().getClass();
 
         // dont buy clothes on ban
-        if (store.isClothingBan() && Clothing.class.isAssignableFrom(itemTypeToSell)) {
+        if (store.isClothingBan() && Clothing.class.isAssignableFrom(type)) {
             System.out.printf(" - %s wanted to sell clothing, but was refused on principle.\n", customer);
             return false;
         }
 
-        boolean bought = false;
-        double finalPrice = 0;
+        System.out.printf(" - %s wants to sell a %s condition used %s.\n", customer, condition, type.getSimpleName());
 
-        System.out.printf(" - %s wants to sell a %s condition used %s.\n", customer, condition, itemTypeToSell.getSimpleName());
+        if (!customer.acceptSale(item.purchasePrice(offer).build())) {
+            offer *= 1.1;
 
-        if (rand.nextDouble() < 0.50) { // 50% chance to accept initial offer
-            bought = true;
-            finalPrice = purchasePrice;
-        } else {
-            double increasedOffer = purchasePrice * 1.10;
-            System.out.printf(" - %s rejected the initial offer of $%.2f. %s offered 10%% more: $%.2f.\n",
-                    customer, purchasePrice, getName(), increasedOffer);
-
-            if (rand.nextDouble() < 0.75) { // 75% chance to accept new offer
-                bought = true;
-                finalPrice = increasedOffer;
+            if (!customer.acceptSale(item.purchasePrice(offer).build())) {
+                return false;
             }
         }
 
-        if (bought) {
-            if (store.getCashRegister().withdraw(finalPrice)) {
-                // Override random values with determined ones
-                Item itemToSell = ItemFactory.buildRandom(itemTypeToSell)
-                        .purchasePrice(finalPrice)
-                        .listPrice(finalPrice * 2)
-                        .newOrUsed(false)
-                        .dayArrived(today)
-                        .condition(condition)
-                        .build();
+        store.addItem(item
+                .newOrUsed(false)
+                .listPrice(item.getPurchasePrice() * 2)
+                .dayArrived(today)
+                .build());
 
-                store.addItem(itemToSell);
+        System.out.printf(" - %s bought a %s condition used %s from %s for $%.2f.\n",
+                getName(), condition, type.getSimpleName(), customer, offer);
 
-                System.out.printf(" - %s bought a %s condition used %s from %s for $%.2f.\n",
-                        getName(), condition, itemTypeToSell.getSimpleName(), customer, finalPrice);
-            } else {
-                System.out.printf(" - %s accepted the offer, but the store did not have enough cash to purchase the %s.\n",
-                        customer, itemTypeToSell.getSimpleName());
-            }
-        } else {
-            System.out.printf(" - %s decided not to sell their %s and left.\n", customer, itemTypeToSell.getSimpleName());
-        }
+        return true;
+    }
 
-        return bought;
+    private void tryBuy(Customer customer, Item item) {
     }
 
     public void cleanTheStore() {
@@ -443,12 +366,12 @@ public class Clerk {
             }
         }
 
+        getBus().post(new CleanTheStoreEvent(this, damaged));
+
         for (var item : destroyed) {
             store.getInventory().remove(item);
             System.out.printf(" - the item was already in POOR condition and has now been destroyed.\n");
         }
-
-        getBus().post(new CleanTheStoreEvent(this, damaged));
     }
 
     public void leaveTheStore() {

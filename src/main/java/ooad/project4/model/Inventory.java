@@ -12,4 +12,14 @@ public class Inventory extends ArrayList<Item> {
     public double getTotalPurchasePrice() {
         return this.stream().mapToDouble(Item::getPurchasePrice).sum();
     }
+
+    /**
+     * @returns first Item of matching class type
+     */
+    public Item getFirstLike(Class<? extends Item> type) {
+        return stream()
+            .filter(x -> type.isAssignableFrom(x.getClass()))
+            .findFirst()
+            .orElse(null);
+    }
 }
