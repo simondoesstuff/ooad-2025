@@ -1,11 +1,13 @@
 package ooad.project4.model.store;
 
 import ooad.project4.ItemFactory;
+import ooad.project4.events.TheEventBus;
 import ooad.project4.model.item.BuildableItem;
 import ooad.project4.model.Inventory;
 import ooad.project4.model.item.BuildableItem;
 import ooad.project4.model.item.Item;
 import ooad.project4.model.item.SoldItem;
+import ooad.project4.model.item.clothing.Clothing;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,6 +32,8 @@ public class Store {
     private final CashRegister cashRegister = new CashRegister();
     @Getter
     private final ArrayList<Order> orders = new ArrayList<>();
+    @Getter
+    private boolean clothingBan = false;
 
     public Store(String name) {
         this.name = name;
@@ -52,6 +56,19 @@ public class Store {
         inventory.remove(item);
         soldItems.add(soldItem);
         cashRegister.add(salePrice);
+    }
+
+    /**
+     * Once out of clothes, never sell them again.
+     * Mutates the clothing ban state.
+     * @returns true if the clothing ban has just now started.
+     */
+    public boolean tryClothingBan() {
+        if (clothingBan) return false;
+
+        clothingBan = !getInventory().stream()
+            .anyMatch(x -> x instanceof Clothing);
+        return clothingBan;
     }
 
     /**

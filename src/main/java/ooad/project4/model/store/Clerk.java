@@ -40,30 +40,35 @@ import ooad.project4.model.item.music.instruments.wind.Wind;
 import ooad.project4.model.item.music.players.Players;
 import ooad.project4.model.store.Clerk;
 import ooad.project4.model.store.tuning.Tuner;
+import ooad.project4.StoreNotAssignedException;
 import com.google.common.eventbus.EventBus;
 
+/**
+ * A "Clerk" is responsible for mutating the Store based on a set of actions.
+ * The Clerk requires knowledge of which Store they are assigned, as well as a
+ * a few other attributes necessary to their behavior.
+ */
 public class Clerk {
     private static final Random rand = ThreadLocalRandom.current();
-    private static final EventBus bus = TheEventBus.getInstance().getBus();
 
-    @Getter
-    private String name;
     @Getter
     private final double cleaningDamageChance;
     @Getter
-    private int workStreak = 0;
+    private String name;
     @Getter
-    private final Store store;
+    private int workStreak = 0;
+    @Getter @Setter
+    private Store store;
     @Getter @Setter
     private int today;
+    @Getter @Setter
+    private boolean sick;
 
     private final Tuner tuner;
-    private boolean clothingBan = false;
 
-    public Clerk(Store store, String name, double cleaningDamageChance, Tuner tuner) {
+    public Clerk(String name, double cleaningDamageChance, Tuner tuner) {
         this.name = name;
         this.cleaningDamageChance = cleaningDamageChance;
-        this.store = store;
         this.tuner = tuner;
     }
 
@@ -75,13 +80,23 @@ public class Clerk {
         this.workStreak = 0;
     }
 
+    private EventBus getBus() {
+        return TheEventBus.getInstance().getBus();
+    }
+
+    private void verifyStoreExists() {
+        if (store == null) throw new StoreNotAssignedException();
+    }
+
     /**
      * Clerk may find items waiting that have been delivered from a prior day.
      * These items are put into the inventory of merchandise items for the store
      */
     public void arriveAtStore() {
+        verifyStoreExists();
+
         var orders = store.getReadyOrders(today);
-        bus.post(new ArriveAtStoreEvent(this, orders));
+        getBus().post(new ArriveAtStoreEvent(this, orders));
         store.getOrders().removeAll(orders);
 
         for (var order : orders) {
@@ -97,8 +112,10 @@ public class Clerk {
      * @returns true if there is "sufficient" money in the register
      */
     public boolean checkRegister() {
+        verifyStoreExists();
+
         var cash = store.getCashRegister().getCash();
-        bus.post(new CheckRegisterEvent(this));
+        getBus().post(new CheckRegisterEvent(this));
         return cash >= 75;
     }
 
@@ -106,12 +123,14 @@ public class Clerk {
      * go to the bank, withdraw $1000, and put the money in the store register
      */
     public void goToBank() {
+        verifyStoreExists();
+
         double oldCash = store.getCashRegister().getCash();
         double withdrawalAmount = 1000d;
         Bank.getInstance().getAccount(store.getName()).withdraw(withdrawalAmount);
         store.getCashRegister().add(withdrawalAmount);
         double newCash = store.getCashRegister().getCash();
-        bus.post(new GoToBankEvent(this, oldCash, newCash));
+        getBus().post(new GoToBankEvent(this, oldCash, newCash));
     }
 
     /**
@@ -120,6 +139,9 @@ public class Clerk {
      * each missing item type
      */
     public void doInventory() {
+        verifyStoreExists();
+        var startedClothingBan = store.tryClothingBan();
+
         var types = store.getAvailableItemTypes();
         Inventory itemsDamaged = new Inventory();
         Inventory itemsDestroyed = new Inventory();
@@ -141,20 +163,16 @@ public class Clerk {
         // Check for out-of-stock
         for (Class<? extends BuildableItem> itemType : ItemFactory.getAllItemTypes()) {
             // dont buy clothes on ban
-            if (clothingBan && Clothing.class.isAssignableFrom(itemType)) continue;
+            if (store.isClothingBan()) {
+                if (Clothing.class.isAssignableFrom(itemType)) continue;
+            }
 
             if (!types.contains(itemType)) {
                 placeAnOrder(itemType);
             }
         }
 
-        var startedBan = clothingBan;
-        // ban if out of clothes
-        clothingBan = !store.getInventory().stream()
-            .anyMatch(x -> x instanceof Clothing);
-        startedBan = startedBan != clothingBan;
-
-        bus.post(new DoInventoryEvent(this, itemsDamaged, startedBan));
+        getBus().post(new DoInventoryEvent(this, itemsDamaged, startedClothingBan));
     }
 
     /**
@@ -164,6 +182,8 @@ public class Clerk {
      * should arrive at the store in the next 1 to 3 days
      */
     public void placeAnOrder(Class<? extends BuildableItem> itemType) {
+        verifyStoreExists();
+
         var deliveryTime = rand.nextInt(1, 4); // 1-3 days, exclusive bound
         var itemQueue = new ArrayList<Item>();
 
@@ -172,7 +192,7 @@ public class Clerk {
             var price = item.getPurchasePrice();
 
             if (!store.getCashRegister().withdraw(price)) {
-                bus.post(new OrderFailureEvent(this, itemType, 3-i));
+                getBus().post(new OrderFailureEvent(this, itemType, 3-i));
                 break;
             }
 
@@ -181,7 +201,7 @@ public class Clerk {
 
         var order = new Order(itemQueue, today + deliveryTime);
         store.addOrder(order);
-        bus.post(new PlaceAnOrderEvent(this, order));
+        getBus().post(new PlaceAnOrderEvent(this, order));
     }
 
     /**
@@ -189,6 +209,8 @@ public class Clerk {
      * in to either buy or sell a single item
      */
     public void openTheStore() {
+        verifyStoreExists();
+
         int numBuyingCustomers = rand.nextInt(4, 11); // (4-10, exclusive upper)
         int numSellingCustomers = rand.nextInt(1, 5);
 
@@ -205,14 +227,16 @@ public class Clerk {
             if (handleSellingCustomer(new Customer(custId))) purchases++;
         }
 
-        bus.post(new OpenTheStoreEvent(this, numBuyingCustomers, numSellingCustomers, sales, purchases));
+        getBus().post(new OpenTheStoreEvent(this, numBuyingCustomers, numSellingCustomers, sales, purchases));
     }
 
     /**
      * a utiltiy method for openTheStore(). Handles bartering regarding customers
      * looking to buy.
      */
-    private boolean handleBuyingCustomer(Customer customer) {
+    public boolean handleBuyingCustomer(Customer customer) {
+        verifyStoreExists();
+
         Class<? extends BuildableItem> desiredType = ItemFactory.getRandomItemType();
 
         // matching items to desiredType
@@ -331,7 +355,9 @@ public class Clerk {
      * a utiltiy method for openTheStore(). Handles bartering regarding customers
      * looking to sell.
      */
-    private boolean handleSellingCustomer(Customer customer) {
+    public boolean handleSellingCustomer(Customer customer) {
+        verifyStoreExists();
+
         // TODO: intelligent clerk price offers
         double baseOffer = rand.nextDouble(1, 35); // Base random price
 
@@ -349,7 +375,7 @@ public class Clerk {
         Class<? extends BuildableItem> itemTypeToSell = ItemFactory.getRandomItemType();
 
         // dont buy clothes on ban
-        if (clothingBan && Clothing.class.isAssignableFrom(itemTypeToSell)) {
+        if (store.isClothingBan() && Clothing.class.isAssignableFrom(itemTypeToSell)) {
             System.out.printf(" - %s wanted to sell clothing, but was refused on principle.\n", customer);
             return false;
         }
@@ -422,10 +448,10 @@ public class Clerk {
             System.out.printf(" - the item was already in POOR condition and has now been destroyed.\n");
         }
 
-        bus.post(new CleanTheStoreEvent(this, damaged));
+        getBus().post(new CleanTheStoreEvent(this, damaged));
     }
 
     public void leaveTheStore() {
-        bus.post(new LeaveTheStoreEvent(this));
+        getBus().post(new LeaveTheStoreEvent(this));
     }
 }
