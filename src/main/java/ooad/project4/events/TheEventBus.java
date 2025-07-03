@@ -1,6 +1,9 @@
 package ooad.project4.events;
 
 import lombok.Getter;
+
+import java.util.HashMap;
+
 import com.google.common.eventbus.EventBus;
 
 /**
@@ -13,11 +16,7 @@ import com.google.common.eventbus.EventBus;
 public class TheEventBus {
     private static TheEventBus instance = new TheEventBus(); // INFO: (unnecessary) eager instantiation
     @Getter
-    private final EventBus bus;
-
-    private TheEventBus() {
-        this.bus = new EventBus();
-    }
+    private final EventBus bus = new EventBus();
 
     public static TheEventBus getInstance() {
         return instance;

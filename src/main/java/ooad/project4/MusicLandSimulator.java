@@ -1,8 +1,6 @@
 package ooad.project4;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -10,43 +8,43 @@ import java.util.stream.Stream;
 import ooad.project4.model.store.tuning.HaphazardTuning;
 import ooad.project4.model.store.tuning.ManualTuning;
 import ooad.project4.model.store.tuning.ElectronicTuning;
-import ooad.project4.model.Bank;
 import ooad.project4.model.item.BuildableItem;
-import ooad.project4.model.item.BuildableItem;
-import ooad.project4.model.item.SoldItem;
 import ooad.project4.model.store.Clerk;
 import ooad.project4.model.store.Store;
 
 /**
- * Main simulation class for MusicLand.
- * This class orchestrates the entire simulation, including the daily loop,
- * clerk scheduling, and executing all daily actions.
+ * Manages system-wide things like the day cycle & logger.
+ * Controls all Stores in the overall simulation.
  */
 public class MusicLandSimulator {
-    private static final Random rand = ThreadLocalRandom.current();
+    private final StoreManager northern, southern;
+    private final ClerkPool pool = new ClerkPool();
+    private final String logDir;
 
-    private final Store store;
-    private ArrayList<Clerk> staff = new ArrayList<>();
-    private Clerk activeClerk;
-    private int today = 0;
-    private DayLogger log;
-    private String logDir = "./src/main/java/ooad/project4/assets/logs";
+    public MusicLandSimulator(String logDir) {
+        this.logDir = logDir;
 
-    public MusicLandSimulator(Store store) {
-        this.store = store;
-        setupStore(this.store);
+        addStaff();
+        northern = new StoreManager(setupStore(new Store("North")), pool);
+        southern = new StoreManager(setupStore(new Store("South")), pool);
+    }
+
+    private void addStaff() {
+        // Add staff
+        pool.add(new Clerk("Fred", 0.20, new ManualTuning()));
+        pool.add(new Clerk("Ginger", 0.05, new ElectronicTuning()));
+        pool.add(new Clerk("Rita", 0.95, new HaphazardTuning()));
+
+        pool.add(new Clerk("Gigatron-XV", 0.90, new ElectronicTuning()));
+        pool.add(new Clerk("Zomzar-X", 0.91, new ElectronicTuning()));
+        pool.add(new Clerk("DOM-I", 0.92, new ElectronicTuning()));
     }
 
     /**
-     * Initializes the store with proper works and items.
-     * Impure
+     * Initializes the store with proper items.
+     * @returns argument
      */
-    private void setupStore(Store store) {
-        // Add staff
-        staff.add(new Clerk(store, "Fred", 0.20, new ManualTuning()));
-        staff.add(new Clerk(store, "Ginger", 0.05, new ElectronicTuning()));
-        staff.add(new Clerk(store, "Rita", 0.95, new HaphazardTuning()));
-
+    private Store setupStore(Store store) {
         // Initialize inventory with 3 of each item type
         for (Class<? extends BuildableItem> itemType : ItemFactory.getAllItemTypes()) {
             var batch = Stream.generate(() -> store.makeRandomItem(itemType, 0).build())
@@ -56,130 +54,72 @@ public class MusicLandSimulator {
         }
 
         System.out.println("Initial store inventory has been created.");
+        return store;
     }
 
-    /**
-     * Main simulation loop that runs for 30 days.
-     */
     public void run() {
-        marchDay(null); // day zero is sunday, but we want the simulation
-                        // to start on a monday.
+        DayLogger log = null;
 
-        for (today = 1; today <= 30; today++) {
-            System.out.println("\n========================================");
-            System.out.printf("================ Day %-2d ================\n", today);
-            System.out.println("========================================");
-
+        for (int today = 1; today <= 30; today++) {
+            // reset the logger
             if (log != null) log.close();
             log = new DayLogger(logDir, today);
 
-            // is it sunday?
+            log.logf("\n========================================\n");
+            log.logf("================ Day %-2d ================\n", today);
+            log.logf("========================================\n");
+
+            // ClerkPool#rest assigns the day to all Clerks
+            //   and resets work streaks
+            pool.rest(today);
+
+            // the stores are closed on sunday
             if (today % 7 == 0) {
-                System.out.println("Store is closed on Sunday.");
-                marchDay(null); // null: no active clerk today
+                log.logf("All MusicLand stores are closed on Sunday.\n");
+                continue;
             }
 
-            var clerk = selectClerk();
+            // reserve some workers as being sick
+            var sick = new ArrayList<Clerk>();
 
-            if (clerk == null) continue;
-
-            marchDay(clerk);
-            runDailyActions(clerk);
-        }
-
-        printFinalSummary();
-    }
-
-    /**
-     * Go to the next day and specify a new Clerk.
-     * Inactive Clerk's days worked streaks are reset.
-     */
-    private void marchDay(Clerk todaysClerk) {
-        activeClerk = todaysClerk;
-
-        for (var clerk : staff) {
-            if (clerk != activeClerk) {
-                clerk.resetWorkStreak();
+            // there can only be at most 2 sick workers for some reason
+            while (ThreadLocalRandom.current().nextDouble(0, 1) <= .1 && sick.size() < 2) {
+                var clerk = pool.assign();
+                // TODO: extract SickClerkEvent
+                log.logf("Oh no! %s was sick and cannot work today.\n", clerk.getName());
+                sick.add(clerk);
             }
 
-            clerk.setToday(today);
-        }
-    }
+            // put all stores to work
+            northern.runDailyActions(today, log);
+            southern.runDailyActions(today, log);
 
-    /**
-     * Filters the store's Clerks for ones not overworked
-     */
-    public List<Clerk> getAvailableClerks() {
-        return staff.stream()
-            .filter(c -> c.getWorkStreak() < 3)
-            .collect(Collectors.toList());
-    }
-
-    private Clerk selectClerk() {
-        var clerks = getAvailableClerks();
-
-        if (clerks.size() == 0) {
-            System.out.println("All clerks are overworked so the store can't open today.");
-            return null;
-        }
-
-        var clerk = clerks.get(rand.nextInt(clerks.size()));
-
-        if (rand.nextDouble(0, 1) <= .1) {
-            System.err.printf("Oh no! %s was sick and cannot work today.\n", clerk.getName());
-            clerk.resetWorkStreak();
-            clerk = selectClerk();  // reselect
-        }
-
-        return clerk;
-    }
-
-    private void runDailyActions(Clerk clerk) {
-        clerk.arriveAtStore();
-        if (!clerk.checkRegister())
-            clerk.goToBank();
-        clerk.doInventory();
-        clerk.openTheStore();
-        clerk.cleanTheStore();
-        clerk.leaveTheStore();
-    }
-
-    /**
-     * Summary of the final items in the inventory,
-     * the total items sold, and the financial summary.
-     */
-    private void printFinalSummary() {
-        System.out.println("\n########################################");
-        System.out.println("###### 30-DAY SIMULATION COMPLETE ######");
-        System.out.println("########################################\n");
-
-        System.out.println("--- Final Inventory ---");
-
-        if (store.getInventory().isEmpty()) {
-            System.out.println("No items left in inventory.");
-        } else {
-            store.getInventory().forEach(System.out::println);
-        }
-
-        System.out.printf("\nTotal value of remaining inventory (by purchase price): $%.2f\n", store.getInventory().getTotalPurchasePrice());
-
-        System.out.println("\n--- Items Sold ---");
-        double totalSales = 0;
-
-        if (store.getSoldItems().isEmpty()) {
-            System.out.println("No items were sold during the simulation.");
-        } else {
-            for (SoldItem item : store.getSoldItems()) {
-                System.out.printf("%s sold on day %d for $%.1f\n",
-                        item.getName(), item.getDaySold(), item.getSalePrice());
-                totalSales += item.getSalePrice();
+            // at the end of the day, consider sick workers now rested
+            for (var clerk : sick) {
+                pool.makeAssignable(clerk);
             }
         }
 
-        System.out.printf("\nTotal of all sales: $%.2f\n", totalSales);
+        // now that the simulation has run for 30 days, the 31st day will
+        // be dedicated to the summary and the CLI for manual customer interaction
+        log.close();
+        log = new DayLogger(logDir, 31);
+        printSummary(log);
 
-        System.out.println("\n--- Financial Summary ---");
-        System.out.printf("Final money in Cash Register: $%.2f\n", store.getCashRegister().getCash());
-        System.out.printf("Total money withdrawn from the Bank: $%.2f\n", Bank.getInstance().getTotalWithdrawn());
+        // Customer CLI...
+        log.logf("\n");
+        // TODO: impl
+    }
+
+    public void printSummary(DayLogger log) {
+        log.logf("\n########################################");
+        log.logf("###### 30-DAY SIMULATION COMPLETE ######");
+        log.logf("########################################\n");
+
+        log.logf("\n---- Northern Store ----\n");
+        northern.printSummary();
+
+        log.logf("\n---- Southern Store ----\n");
+        southern.printSummary();
     }
 }

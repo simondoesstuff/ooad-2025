@@ -1,6 +1,8 @@
 package ooad.project4;
 
-import ooad.project4.model.store.Store;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.random.RandomGenerator;
 
 /**
  * Main entry point for the MusicLand simulation.
@@ -8,7 +10,8 @@ import ooad.project4.model.store.Store;
  */
 public class Main {
     public static void main(String[] args) {
-        MusicLandSimulator simulator = new MusicLandSimulator(new Store());
+        var logDir = "./src/main/java/ooad/project4/assets/logs";
+        MusicLandSimulator simulator = new MusicLandSimulator(logDir);
         simulator.run();
     }
 }
