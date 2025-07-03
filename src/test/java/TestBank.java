@@ -1,4 +1,3 @@
-
 import org.junit.jupiter.api.Test;
 
 import ooad.project2.model.Bank;

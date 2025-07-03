@@ -1,0 +1,92 @@
+❮ gradle test --rerun-tasks
+Reusing configuration cache.
+
+> Task :test
+
+TestCommandLineCustomer > test_getPurchaseInterest_providesInvalidText() STANDARD_OUT
+    Please select an option from the list.
+     - [0] Guitar, Condition: GOOD, $10.00
+    You may respond blank if you are uninterested.
+    Since you didn't specify an integer, you're considered uninterested.
+
+TestCommandLineCustomer > test_getPurchaseInterest_providesInvalidText() PASSED
+
+TestCommandLineCustomer > test_acceptSale_accepts() STANDARD_OUT
+    You're being offered $50.00 for the Guitar.
+    Interested? [y/n]
+
+TestCommandLineCustomer > test_acceptSale_accepts() PASSED
+
+TestCommandLineCustomer > test_acceptPurchase_handlesInvalidInputThenAccepts() STANDARD_OUT
+    You're being offered an item: Guitar for $40.00. Purchase? [y/n]
+    Your decision is unclear. Expecting y or n.
+
+TestCommandLineCustomer > test_acceptPurchase_handlesInvalidInputThenAccepts() PASSED
+
+TestCommandLineCustomer > test_acceptPurchase_rejects() STANDARD_OUT
+    You're being offered an item: Guitar for $40.00. Purchase? [y/n]
+
+TestCommandLineCustomer > test_acceptPurchase_rejects() PASSED
+
+TestCommandLineCustomer > test_getSaleOffer_selectsAnItemToBuild() STANDARD_OUT
+    Select an item to build. Enter 'y' to select the type. Enter blank to skip.
+     - Build GigBag?
+     - Build CD?
+    You built a EXCELLENT condition CD.
+
+TestCommandLineCustomer > test_getSaleOffer_selectsAnItemToBuild() PASSED
+
+TestCommandLineCustomer > test_getPurchaseInterest_selectsValidItem() STANDARD_OUT
+    Please select an option from the list.
+     - [0] Flute, Condition: GOOD, $10.00
+     - [1] Guitar, Condition: GOOD, $20.00
+    You may respond blank if you are uninterested.
+
+TestCommandLineCustomer > test_getPurchaseInterest_selectsValidItem() PASSED
+
+TestCommandLineCustomer > test_acceptSale_rejects() STANDARD_OUT
+    You're being offered $50.00 for the Guitar.
+    Interested? [y/n]
+
+TestCommandLineCustomer > test_acceptSale_rejects() PASSED
+
+TestCommandLineCustomer > test_getPurchaseInterest_selectsOutOfBounds() STANDARD_OUT
+    Please select an option from the list.
+     - [0] Guitar, Condition: GOOD, $10.00
+    You may respond blank if you are uninterested.
+    That number isn't in range.
+
+TestCommandLineCustomer > test_getPurchaseInterest_selectsOutOfBounds() PASSED
+
+TestCommandLineCustomer > test_acceptPurchase_accepts() STANDARD_OUT
+    You're being offered an item: Guitar for $40.00. Purchase? [y/n]
+
+TestCommandLineCustomer > test_acceptPurchase_accepts() PASSED
+
+TestCommandLineCustomer > test_getPurchaseInterest_providesBlankInput() STANDARD_OUT
+    Please select an option from the list.
+     - [0] Guitar, Condition: GOOD, $10.00
+    You may respond blank if you are uninterested.
+    Since you didn't specify an integer, you're considered uninterested.
+
+TestCommandLineCustomer > test_getPurchaseInterest_providesBlankInput() PASSED
+
+TestBank > verifySingleton() PASSED
+
+TestBank > testWithdraws() PASSED
+
+TestCashRegister > addCash() PASSED
+
+TestCashRegister > withdraw() PASSED
+
+[Incubating] Problems report is available at: file:///home/simon/code/class/ooad-2025/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 3s
+3 actionable tasks: 3 executed
+Configuration cache entry reused.

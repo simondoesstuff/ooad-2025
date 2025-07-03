@@ -44,7 +44,7 @@ tasks.withType<Test> {
 
     // Optional: This shows test results in the console as they run.
     testLogging {
-        events("passed", "skipped", "failed")
+        events("passed", "skipped", "failed", "standardOut", "standardError")
     }
 }
 
