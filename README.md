@@ -25,6 +25,32 @@ PlantUML is included in the nix flake to render UML diagrams from .puml files.
 `plantuml file.puml` to render it into a png, `file.png` in the same directory.
 
 # Project Details
+### Project4
+
+**Key changes:**
+- To enable multiple `Store`s, the `Bank` singleton was given multiple `Account`s
+accessible by name. Thus, `Store` also had to be given a name.
+- What was previously `MusicLandSimulator` is now composed of `StoreManager` which associates
+a `Clerk` with a `Store` and manages the logic regarding sickness/exhaustion of staff.
+
+**Results:**
+- [Proj5 Proposal.md](md/proj5 proposal.md)
+- [Output.txt](src/main/java/ooad/project4/assets/logs/output.txt)
+- [Test Output.txt](src/main/java/ooad/project4/assets/TestOuput.txt)
+- [logs](src/main/java/ooad/project4/assets/logs)
+- The primary UML diagram was strongly simplified. It has two large sections that were omitted
+from the primary diagram -- related to the item hierarchy and the event types.
+   - [overallDesignUML.png](src/main/java/ooad/project4/assets/overallDesignUML.png)
+   - [eventsUML.png](src/main/java/ooad/project4/assets/eventsUML.png)
+   - [itemsUML.png](src/main/java/ooad/project4/assets/itemsUML.png)
+ - Sequence diagram [state.png](src/main/java/ooad/project4/assets/seq.png) (of project3)
+
+**Where to find the design patterns:**
+- [Factory](src/main/java/ooad/project4/ItemFactory.java)
+- [Command](src/main/java/ooad/project4/CommandHandler.java)
+- [Singleton (eager init)](src/main/java/ooad/project4/events/TheEventBus.java)
+- [Singleton (lazy init)](src/main/java/ooad/project4/model/Bank.java)
+
 ### Project3
 This project contains tests. See above for details.
 
