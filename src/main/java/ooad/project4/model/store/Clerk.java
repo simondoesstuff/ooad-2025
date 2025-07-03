@@ -108,7 +108,7 @@ public class Clerk {
     public void goToBank() {
         double oldCash = store.getCashRegister().getCash();
         double withdrawalAmount = 1000d;
-        Bank.getInstance().withdraw(withdrawalAmount);
+        Bank.getInstance().getAccount(store.getName()).withdraw(withdrawalAmount);
         store.getCashRegister().add(withdrawalAmount);
         double newCash = store.getCashRegister().getCash();
         bus.post(new GoToBankEvent(this, oldCash, newCash));
