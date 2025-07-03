@@ -1,0 +1,89 @@
+@startuml
+
+!theme crt-amber
+<style>
+header {
+  HorizontalAlignment left
+}
+</style>
+
+title "Sequence Diagram: A Clerk's Day (Event-Driven - Simplified)"
+
+actor "Simulator" as sim
+participant "Clerk" as clerk
+participant "Store" as store
+participant "TheEventBus" as bus
+participant "DayLogger" as logger
+
+sim -> clerk: performDailyTasks()
+activate clerk
+
+    note over clerk
+      The Clerk begins the daily sequence of actions.
+      For each action, it gathers data and publishes
+      an event encapsulating what happened.
+    end note
+
+    ' --- Arrive At Store ---
+    clerk -> store: processDeliveries()
+    activate store
+    store --> clerk: deliveredOrders
+    deactivate store
+    clerk -> bus: post(new ArriveAtStoreEvent(clerk, deliveredOrders))
+    activate bus
+    bus -> logger: onArriveAtStore(event)
+    activate logger
+    deactivate logger
+    deactivate bus
+
+    ' --- Check Register ---
+    clerk -> store: getCashAmount()
+    activate store
+    store --> clerk: cashAmount
+    deactivate store
+    clerk -> bus: post(new CheckRegisterEvent(clerk, cashAmount))
+    activate bus
+    bus -> logger: onCheckRegister(event)
+    activate logger
+    deactivate logger
+    deactivate bus
+
+    ' --- Do Inventory ---
+    clerk -> store: getInventory()
+    activate store
+    store --> clerk: inventory
+    deactivate store
+    clerk -> bus: post(new DoInventoryEvent(clerk, inventory))
+    activate bus
+    bus -> logger: onDoInventory(event)
+    activate logger
+    deactivate logger
+    deactivate bus
+
+    ' --- Open The Store ---
+    group Customer Interactions
+        note over clerk
+            Internal logic for handling
+            buying and selling customers.
+            This results in a summary of totals.
+        end note
+    end
+    clerk -> bus: post(new OpenTheStoreEvent(clerk, totals))
+    activate bus
+    bus -> logger: onOpenTheStore(event)
+    activate logger
+    deactivate logger
+    deactivate bus
+
+    ' --- Leave The Store ---
+    clerk -> bus: post(new LeaveTheStoreEvent(clerk))
+    activate bus
+    bus -> logger: onLeaveTheStore(event)
+    activate logger
+    deactivate logger
+    deactivate bus
+
+
+clerk --> sim:
+deactivate clerk
+@enduml
