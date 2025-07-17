@@ -10,10 +10,10 @@ Using JDK 21.
 dependencies including gradle & the JDK)
 - If you have nix & direnv, `direnv allow` (automatic env)
 
-**Each runnable project or sub-project can also be built individually:**  
+**Each runnable project or sub-project can also be built individually:**
 eg, `gradle build-project1b` to build the second program under project1.
 
-**Run**: jars are located (after built) in `build/libs`  
+**Run**: jars are located (after built) in `build/libs`
 eg: to run task project1b, `java -jar build/libs/project1b.jar`
 
 ### Run all tests
@@ -21,7 +21,7 @@ eg: to run task project1b, `java -jar build/libs/project1b.jar`
 
 ## Utilities
 
-PlantUML is included in the nix flake to render UML diagrams from .puml files.  
+PlantUML is included in the nix flake to render UML diagrams from .puml files.
 `plantuml file.puml` to render it into a png, `file.png` in the same directory.
 
 # Project Details
@@ -44,7 +44,7 @@ manages.
 assignment requirements.
 
 **Results:**
-- [Proj5 Proposal.md](md/proj5 proposal.md)
+- [Proj5 Proposal.md](md/proj5_proposal.md)
 - [Output.txt](src/main/java/ooad/project4/assets/logs/output.txt)
 - [Test Output.txt](src/main/java/ooad/project4/assets/TestOuput.txt)
 - [logs](src/main/java/ooad/project4/assets/logs)
@@ -77,7 +77,7 @@ This project contains tests. See above for details.
    `StoreEvent` classes were created to support it. This allowed me to extract nearly all logging
    from `Clerk` in a strongly typed and highly scalable way.
    - `interface Tuner` helps implement the Strategy pattern for `Clerk`
-   - 
+   -
 **Results:**
 - [Output.txt](src/main/java/ooad/project3/assets/logs/Output.txt)
 - [Test Results](src/main/java/ooad/project3/assets/logs/Tests.txt)
