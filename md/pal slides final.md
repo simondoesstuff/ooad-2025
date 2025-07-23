@@ -1,5 +1,5 @@
 ---
-modified: 2025-07-23T13:25:42-06:00
+modified: 2025-07-23T13:38:11-06:00
 theme: night
 width: 2000
 height: 1125
@@ -627,3 +627,26 @@ FP code is self-describing of it's architecture. The lack of state/logic couplin
 8. [Gregor Kiczales et al: Aspect-oriented programming, 2006](https://link.springer.com/chapter/10.1007/BFb0053381)
 9. [Eric Normand: Grokking Simplicity, 2021](https://www.manning.com/books/grokking-simplicity)
 10. [Radu Marinescu, Daniel Ratiu, Quantifying the quality of object-oriented design: The factor-strategy model, 2004](https://www.researchgate.net/publication/4114674_Quantifying_the_quality_of_object-oriented_design_The_factor-strategy_model)
+
+---
+I looked at many resources, some of which I did not make use of in the final product. In total:
+1. https://www.researchgate.net/publication/2356000_Design_Patterns_as_Language_Constructs
+2. https://www.researchgate.net/publication/4114674_Quantifying_the_quality_of_object-oriented_design_The_factor-strategy_model
+3. https://qef.gts.org/html/docs/swhygiene.pdf
+4. https://www.degruyterbrill.com/document/doi/10.1515/comp-2016-0016/html
+5. https://www.sciencedirect.com/science/article/pii/S016412121830044X?casa_token=tHw2wLKGrjQAAAAA:fhiyWdxbGYcPD-uqbkcYaGkKBOK0OCG59aD0qCq73M2g94R5jFrgTD22CmC_m3p4RDzV7ODL5io
+6. https://fsharpforfunandprofit.com/fppatterns/
+7. https://www.sciencedirect.com/science/article/pii/S1319157822001124
+8. https://wiki.c2.com/?ImplementingPatterns
+9. https://www.mydistributed.systems/2025/01/genefication.html
+10. https://dafny.org/
+11. https://rescript-lang.org/docs/manual/v11.0.0/polymorphic-variant
+12. https://increment.com/software-architecture/primer-on-functional-architecture/#:~:text=In%20a%20functional%20architecture%2C%20the,you%20want%20to%20call%20it.
+13. https://api.pageplace.de/preview/DT0400.9781492043423_A49444423/preview-9781492043423_A49444423.pdf
+14. https://clojure.org/about/rationale
+15. https://en.wikipedia.org/wiki/Aspect-oriented_programming#Criticism
+16. https://www.manning.com/books/grokking-simplicity
+---
+I have very little experience with functional programming. My understanding of its philosophy was developed entirely through this exploration en route to finding a superior way to describe code. I am motivated to produce simple code that I can expand iteratively. I've been frustrated with some unnecessary constraints often imposed by object-oriented languages. Surprisingly, functional programming can be seen as an architecture.
+
+Thanks for reading.
