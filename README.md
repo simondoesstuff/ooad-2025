@@ -1,6 +1,12 @@
 Simon Walker's OOAD assignments
 
-# Building
+# Design Patterns as Language Constructs
+
+https://simondoesstuff.github.io/ooad-2025/
+
+Borrowing principles from functional programming for architecture can dramatically simplify things. Code is self-describing. Design patterns become the default, idiomatic way of writing code.
+
+# Building Java Projects
 
 Using JDK 21.
 
