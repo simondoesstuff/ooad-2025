@@ -1,5 +1,5 @@
 ---
-modified: 2025-07-23T13:08:11-06:00
+modified: 2025-07-23T13:25:42-06:00
 theme: night
 width: 2000
 height: 1125
@@ -40,7 +40,7 @@ which all compromise maintainability.
 This first point is crucial.
 
 In Fundamentals of Software Architecture textbook, (Mark Richards & Neal Ford)
-$$^2$$
+$^2$
 - **First Law: Everything in software architecture is a trade-off**
 - **Second Law: _Why_ is more important than _how_**
  
